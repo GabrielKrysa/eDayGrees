@@ -119,9 +119,9 @@ body {
 .botao {
     position: absolute;
     top: 59%;
-    left: 60%;
+    left: 63%;
     transform: translate(-50%, -50%);
-    font-size: 13px;
+    font-size: 11px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
