@@ -10,56 +10,66 @@
 <body>
     <form>
         <div class="register-box">
+            <h1>Cadastro de Proprietário<br></br<br></br></h1>
             <div class="form-row">
-                <div class="col-md-4 mb-3">
+                <div class="campo">
                     <label for="validationServer01">Nome</label>
-      
-                    <input type="text" class="form-control is-valid" id="validationServer01" placeholder="" value="" required maxlength="10" minlenght="3">
+
+                    <input type="text" class="form-control is-valid" id="validationServer01" placeholder="" value=""
+                        required maxlength="10" minlenght="3">
 
                 </div>
-                <div class="col-md-4 mb-3">
+                <div class="campo">
                     <label for="validationServer02">Sobrenome</label>
-                    <input type="text" class="form-control is-valid" id="validationServer02" placeholder="" value="" required maxlength="15" minlenght="3">
+                    <input type="text" class="form-control is-valid" id="validationServer02" placeholder="" value=""
+                        required maxlength="15" minlenght="3">
                 </div>
-                <div class="col-md-4 mb-3">
-                    <label for="validationServerUsername">E-mail</label>
-                    <div class="input-group">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text" id="inputGroupPrepend3"></span>
-                        </div>
-                        <input type="text" class="form-control is-invalid" id="validationServerUsername" placeholder="" aria-describedby="inputGroupPrepend3" required maxlength="10" minlenght="3">
-                      
-                    </div>
+
+                <div class="campo">
+                    <label for="validationServerUsername">Email</label>
+                    <input type="email" class="form-control is-valid" id="validationServerUsername" placeholder=""
+                        value="" required maxlength="35" minlenght="11"
+                        pattern="[a-zA-Z0-9.-_]{1,}@[a-zA-Z.-]{2,}[.]{1}[a-zA-Z]{2,}">
+
                 </div>
-                <div class="col-md-3 mb-3">
+                <div class="campo">
                     <label for="validationServer05">CPF</label>
-                    <input type="text" class="form-control is-invalid" id="validationServer05" placeholder="" required maxlength="11" minlenght="9">
-                   
+                    <input type="text" class="form-control is-invalid" id="validationServer05" placeholder="" required
+                        maxlength="11" minlenght="9">
+
                 </div>
             </div>
+
             <div class="form-row">
-                <div class="col-md-6 mb-3">
+                <div class="campo">
                     <label for="validationServer03">Cidade</label>
-                    <input type="text" class="form-control is-invalid" id="validationServer03" placeholder="" required maxlength="20" minlenght="2">
-                   
+                    <input type="text" class="form-control is-invalid" id="validationServer03" placeholder="" required
+                        maxlength="20" minlenght="2">
+
                 </div>
-                <div class="col-md-3 mb-3">
+                <div class="campo">
                     <label for="validationServer04">Estado</label>
-                    <input type="text" class="form-control is-invalid" id="validationServer04" placeholder="" required maxlength="2" minlenght="2">
-                    
+                    <input type="text" class="form-control is-invalid" id="validationServer04" placeholder="" required
+                        maxlength="2" minlenght="2">
+
                 </div>
             </div>
+
             <div class="form-group">
-                <div class="form-check">
+                <div class="campo_check">
                     <input class="form-check-input is-invalid" type="checkbox" value="" id="invalidCheck3" required>
                     <label class="form-check-label" for="invalidCheck3">
                         Eu aceito os termos!
                     </label>
-                    
+
                 </div>
             </div>
-            <button class="btn btn-primary" type="submit">Submit form</button>
+            <div class="middle">
+                <button class="btn btn1" type="submit">Cadastrar</button>
+            </div>
+
         </div>
+
     </form>
 </body>
 
