@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Esqueceu sua senha</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="_css/styles_esqueceu_senha.css">
+</head>
+
+<body>
+    <form>
+        <div class="redef-box">
+            <h1>Redefinição de senha</h1>
+            <div class="campo">
+                <label for="validationServerUsername">Email</label>
+                <input type="text" class="form-check-input is-invalid" placeholder="" value="" required maxlength="35"
+                    minlenght="11" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+            </div>
+
+            <div class="campo">
+                <label for="validationServer05">CPF</label>
+                <input type="text" class="form-control is-invalid" id="validationServer05" placeholder="" required
+                    maxlength="11" minlenght="9">
+            </div>
+
+            <div class="campo">
+                <label for="password">Senha</label>
+                <input type="password" id="password" name="password" required placeholder=" " required maxlength="30"
+                    minlenght="9" />
+            </div>
+
+            <div class="campo">
+                <label for="password">Repita a Senha</label>
+                <input type="password" id="password" name="password" required placeholder=" " required maxlength="30"
+                    minlenght="9" />
+            </div>
+
+            <div class="middle">
+                <button class="btn btn1" type="submit">Redefinir senha</button>
+            </div>
+        </div>
+    </form>
+</body>
+
+
+</html>
