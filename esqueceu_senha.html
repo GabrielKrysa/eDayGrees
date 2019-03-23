@@ -5,36 +5,38 @@
     <title>Esqueceu sua senha</title>
     <meta charset="utf-8">
     <link rel="stylesheet" href="_css/styles_esqueceu_senha.css">
+    <style>p.alinha{padding-left: 1.8px }</style>
 </head>
 
 <body>
     <form>
-        <div class="redef-box">
-            <h1>Redefinição de senha</h1>
+        <div class="redef-box">      
+            <h1>Redefinição de Senha</h1>
             <div class="campo">
-                <label for="validationServerUsername">Email</label>
-                <input type="text" class="form-check-input is-invalid" placeholder="" value="" required maxlength="35"
-                    minlenght="11" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+                <label for="validationServerUsername">Digite seu Email</label>
+                
+              
             </div>
+            <input type="text" class="form-check-input is-invalid" placeholder="" value="" required maxlength="35" minlenght="11" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
 
             <div class="campo">
-                <label for="validationServer05">CPF</label>
-                <input type="text" class="form-control is-invalid" id="validationServer05" placeholder="" required
-                    maxlength="11" minlenght="9">
+                <label for="validationServer05">Informe seu CPF</label>
             </div>
+
+            <input type="text" class="form-control is-invalid" id="validationServer05" placeholder="" required maxlength="11" minlenght="9">
 
             <div class="campo">
-                <label for="password">Senha</label>
-                <input type="password" id="password" name="password" required placeholder=" " required maxlength="30"
-                    minlenght="9" />
+                <label for="password">Senha </label>
             </div>
+
+            <input type="password" id="password" name="password" required placeholder=" " required maxlength="30" minlenght="9" />
 
             <div class="campo">
-                <label for="password">Repita a Senha</label>
-                <input type="password" id="password" name="password" required placeholder=" " required maxlength="30"
-                    minlenght="9" />
+                <label for="password">Senha novamente</label>
             </div>
-
+            <input type="password" id="password" name="password" required placeholder=" " required maxlength="30" minlenght="9" />
+            <br>
+            <br>
             <div class="middle">
                 <button class="btn btn1" type="submit">Redefinir senha</button>
             </div>
