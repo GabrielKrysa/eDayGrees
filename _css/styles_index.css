@@ -4,16 +4,40 @@ html {
     background: url("../_images/background.jpg") no-repeat;
 }
 
+
 .root {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: flex-start;
+    width: 1024px;
+    height: 0 auto;
+    margin: 0 auto;
+    
 }
 
 body {
     width: 100%;
+}
+
+.banner{
+    width: 100%;
+    text-align: center; 
+    position: absolute;
+    right: 0.1%;
+    left: 0.1.9%;
+    border-radius: 20px;
+    border: 1px solid;
+    border-color: rgb(0, 0, 0);
+    font-family: 'Kaushan Script', cursive;
+    /*font-family: 'Shadows Into Light', cursive;*/
+    background: url("../_images/benn.jpg") no-repeat;
+    
+}
+    
+
+.banner h1{
+    color: #fff;
+    font-family: 'Kaushan Script', cursive;
+}
+.banner h3{
+    color: #ffffff
 }
 
 .login-box {
@@ -37,6 +61,7 @@ body {
     color: rgb(73, 73, 73);
     position: relative;
     left: 40%;
+    
 }
 
 .login-box h2 {
@@ -45,7 +70,8 @@ body {
     font-family: sans-serif;
     position: relative;
     bottom: 8%;
-    left: 19%;
+    left: 20%;
+
 }
 
 .middle {
@@ -67,6 +93,7 @@ body {
     text-transform: uppercase;
     min-width: 200px;
     margin: 10px;
+    border-radius: 20px;
     cursor: pointer;
     transition: color 0.4s linear;
     position: relative;
@@ -86,6 +113,7 @@ body {
     background: rgb(134, 134, 134);
     z-index: -1;
     transition: transform 0.5s;
+    border-radius: 20px;    
     transform-origin: 0 0;
     transition-timing-function: cubic-bezier(0.5, 1.6, 0.4, 0.7);
 }
@@ -118,8 +146,8 @@ body {
 
 .botao {
     position: absolute;
-    top: 59%;
-    left: 63%;
+    top: 60%;
+    left: 35%;
     transform: translate(-50%, -50%);
     font-size: 11px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -169,13 +197,14 @@ input[type=submit] {
 .textbox-l {
     position: absolute;
     top: 45%;
-    left: 49%;
+    left: 50%;
     transform: translate(-50%, -50%);
 }
+
 
 .textbox-p {
     position: absolute;
     top: 55%;
-    left: 49%;
+    left: 50%;
     transform: translate(-50%, -50%);
 }

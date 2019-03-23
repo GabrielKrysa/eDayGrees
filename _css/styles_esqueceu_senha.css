@@ -12,9 +12,10 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    text-align: center;
+    width: 28em;
+    height: 385px;
     position: absolute;
-    width: 450px;
-    height: 350px;
     padding: 25px 25px;
     margin: 0px auto;
     border-radius: 20px;
@@ -22,11 +23,24 @@ body {
     border-color: rgb(0, 0, 0);
     background-color: rgba(255, 255, 255, 0.904);
 }
+.redef-box h1 {
+    position: relative;
+    padding: 20px;
+    left: 1%;
+    color: rgb(73, 73, 73);
+    font-size: 30px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.campo {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 5px;
+    color: #800080;
+}
 
 .middle {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     position: absolute;
-    top: 80%;
+    top: 90%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
@@ -42,6 +56,7 @@ body {
     text-transform: uppercase;
     min-width: 200px;
     margin: 10px;
+    border-radius: 20px;
     cursor: pointer;
     transition: color 0.4s linear;
     position: relative;
@@ -61,6 +76,7 @@ body {
     background: rgb(134, 134, 134);
     z-index: -1;
     transition: transform 0.5s;
+    border-radius: 20px;
     transform-origin: 0 0;
     transition-timing-function: cubic-bezier(0.5, 1.6, 0.4, 0.7);
 }
@@ -115,18 +131,4 @@ input[type=text]:hover, textarea:hover {
 input[type=password]:hover, textarea:hover {
     background: #ffffff;
     border: 1px solid #990000;
-}
-
-.campo {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    padding: 5px;
-    color: #800080;
-}
-
-.redef-box h1 {
-    position: relative;
-    padding: 20px;
-    left: 27%;
-    color: rgb(73, 73, 73);
-    font-size: 20px;
 }

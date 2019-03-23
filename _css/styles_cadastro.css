@@ -1,33 +1,37 @@
 html {
-    width: 90%;
-    height: 100%;
-    background: url("../_images/background.jpg") no-repeat;
+    width: 100%;
+    height: auto;
+    background-image: url("../_images/background.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: #464646;
 }
 
 .register-box {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    position: absolute;
-    width: 450px;
-    height: 500px;
     padding: 25px 25px;
-    margin: 0px auto;
+    position: absolute;
+    width: 40%;
+    text-align: center;
+    height: 60%;
     border-radius: 20px;
     border: 1px solid;
     border-color: rgb(0, 0, 0);
     background-color: rgba(255, 255, 255, 0.904);
 }
-
 .register-box h1 {
     position: relative;
-    left: 27%;
     color: rgb(73, 73, 73);
-    font-size: 20px;
+    font-size: 25px;
 }
 
 .campo {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    width: auto;
     padding: 5px;
     color: #800080;
 }
@@ -51,6 +55,7 @@ html {
     text-transform: uppercase;
     min-width: 200px;
     margin: 10px;
+    border-radius: 20px;
     cursor: pointer;
     transition: color 0.4s linear;
     position: relative;
@@ -70,24 +75,33 @@ html {
     background: rgb(134, 134, 134);
     z-index: -1;
     transition: transform 0.5s;
+    border-radius: 21px;
     transform-origin: 0 0;
     transition-timing-function: cubic-bezier(0.5, 1.6, 0.4, 0.7);
 }
 
 .btn1::before {
     transform: scaleX(0);
+    border-radius: 20px;
 }
 
 .btn2::before {
     transform: scaleY(0);
+    border-radius: 20px;
 }
 
 .btn1:hover::before {
     transform: scaleX(1);
+    border-radius: 20px;
 }
 
 .btn2:hover::before {
     transform: scaleY(1);
+    border-radius: 20px;
+}
+
+.teste {
+    width: 250px;
 }
 
 input {
@@ -100,7 +114,6 @@ input {
     -webkit-box-shadow: 1px 1px 2px #333333;
     background: #cccccc;
     border: 1px solid #000000;
-    width: 250px
 }
 
 textarea {
@@ -130,8 +143,6 @@ input[type=email]:hover, textarea:hover {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    position: absolute;
-    width: 3px;
+    width: 0px; /*largura*/
     height: 3px;
 }
-
