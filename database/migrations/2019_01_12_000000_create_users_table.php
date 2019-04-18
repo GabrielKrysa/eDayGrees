@@ -13,7 +13,7 @@ class CreateUsersTable extends Migration
      */
     public function up()
     {
-        Schema::create('usuario', function (Blueprint $table) {
+        Schema::create('user', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('login')->unique();
             $table->string('senha');
@@ -29,12 +29,12 @@ class CreateUsersTable extends Migration
     }
 
     /**
-     * Reverse the migrations.
+     * Reverse the migrations.3
      *
      * @return void
      */
     public function down()
     {
-        Schema::dropIfExists('usuario');
+        Schema::dropIfExists('user');
     }
 }
