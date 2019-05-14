@@ -11,6 +11,7 @@ Homestead.yaml
 npm-debug.log
 yarn-error.log
 .idea/workspace.xml
+<<<<<<< HEAD
 /node_modules
 /public/hot
 /public/storage
@@ -110,3 +111,5 @@ fabric.properties
 .idea/sonarlint
 
 # End of https://www.gitignore.io/api/phpstorm
+=======
+>>>>>>> a0f6bc10db829ef8bd59da8efb2672b8e475407e
