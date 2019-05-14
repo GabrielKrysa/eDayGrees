@@ -14,13 +14,3 @@
 Route::get('/', function () {
     return view('welcome');
 });
-
-/* TESTES
-Route::get('/login/{id?}', function ($id = null){
-    return "contato = $id";
-});
-
-
-Route::post('/login', function () {
-    return "contato";
-});*/

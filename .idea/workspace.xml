@@ -2,11 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="754ba2e9-8ec0-49ff-b67b-d0b907b466e3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/api/advidorWeatherApiTokens.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/php-test-framework.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/api/advidorWetherApi.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/api/advidorWeatherApi.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/api/advidorWetherApiTokens.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/api/requestWetherApi.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/api/requestWetherApi.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/ForgotPasswordController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/ResetPasswordController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/VerificationController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/factories/UserFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/UserFactory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2019_01_12_000000_create_users_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/api/advisorWeatherApi.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/api/advisorWeatherApi.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/api/advisorWeatherApiTokens.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/api/advisorWeatherApiTokens.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/api/requestWetherApi.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/api/requestWetherApi.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Feature/ExampleTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/ExampleTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/TestCase.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Unit/TestCase.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Unit/ExampleTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Unit/ExampleTest.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -19,29 +31,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/api/requestWetherApi.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-7">
-              <caret line="15" column="19" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/public/api/advidorWeatherApi.php">
+        <entry file="file://$PROJECT_DIR$/database/migrations/2019_05_13_045606_create_propriedade_table.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="62" selection-start-line="11" selection-start-column="62" selection-end-line="11" selection-end-column="62" />
+            <state relative-caret-position="272">
+              <caret line="18" column="34" lean-forward="true" selection-start-line="18" selection-start-column="34" selection-end-line="18" selection-end-column="34" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/api/advidorWeatherApiTokens.php">
+        <entry file="file://$PROJECT_DIR$/database/migrations/2019_05_13_045443_create_proprietario_table.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-7">
-              <caret line="7" selection-start-line="7" selection-end-line="7" />
+            <state relative-caret-position="68">
+              <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
             </state>
           </provider>
         </entry>
@@ -60,7 +63,6 @@
         <option value="$PROJECT_DIR$/database/migrations/2019_04_17_234629_create_uvas_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_usuario_table.php" />
-        <option value="$PROJECT_DIR$/.env" />
         <option value="$PROJECT_DIR$/app/model/usuario.php" />
         <option value="$PROJECT_DIR$/database/migrations/2019_01_12_000000_create_usuario_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2019_01_12_000000_create_users_table.php" />
@@ -68,7 +70,6 @@
         <option value="$PROJECT_DIR$/app/model/propriedade.php" />
         <option value="$PROJECT_DIR$/app/model/User.php" />
         <option value="$PROJECT_DIR$/app/model/Propriedade.php" />
-        <option value="$PROJECT_DIR$/app/model/Uva.php" />
         <option value="$PROJECT_DIR$/app/model/Clima.php" />
         <option value="$PROJECT_DIR$/database/migrations/2019_04_17_235251_create_clima_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2019_04_18_184112_create_uvas_table.php" />
@@ -87,18 +88,33 @@
         <option value="$PROJECT_DIR$/public/api/advidorWetherApiTokens.php" />
         <option value="$PROJECT_DIR$/public/api/advidorWetaherApi.php" />
         <option value="$PROJECT_DIR$/public/api/advidorWeatherApiTokens.php" />
-        <option value="$PROJECT_DIR$/public/api/requestWetherApi.php" />
         <option value="$PROJECT_DIR$/public/api/advidorWeatherApi.php" />
+        <option value="$PROJECT_DIR$/public/api/advisorWeatherApi.php" />
+        <option value="$PROJECT_DIR$/public/api/requestWetherApi.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2019_05_13_045605_create_uva_table.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2019_05_13_051344_create_doencas_table.php" />
+        <option value="$PROJECT_DIR$/tests/Unit/ExampleTest.php" />
+        <option value="$PROJECT_DIR$/tests/Unit/TestCase.php" />
+        <option value="$PROJECT_DIR$/tests/Feature/ExampleTest.php" />
+        <option value="$PROJECT_DIR$/database/factories/UserFactory.php" />
+        <option value="$PROJECT_DIR$/routes/web.php" />
+        <option value="$PROJECT_DIR$/routes/api.php" />
+        <option value="$PROJECT_DIR$/.env" />
+        <option value="$PROJECT_DIR$/database/migrations/2019_05_13_045443_create_proprieraio_table.php" />
+        <option value="$PROJECT_DIR$/app/model/Uva.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2019_05_13_045443_create_proprietario_table.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2019_05_13_045605_create_cultivar_table.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2019_05_13_045606_create_propriedade_table.php" />
       </list>
     </option>
   </component>
-  <component name="PhpWorkspaceProjectConfiguration">
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP 7.1">
     <include_path>
-      <path value="$PROJECT_DIR$/vendor/league/flysystem" />
       <path value="$PROJECT_DIR$/vendor/dragonmantank/cron-expression" />
       <path value="$PROJECT_DIR$/vendor/monolog/monolog" />
       <path value="$PROJECT_DIR$/vendor/opis/closure" />
       <path value="$PROJECT_DIR$/vendor/mockery/mockery" />
+      <path value="$PROJECT_DIR$/vendor/league/flysystem" />
       <path value="$PROJECT_DIR$/vendor/psy/psysh" />
       <path value="$PROJECT_DIR$/vendor/dnoegel/php-xdg-base-dir" />
       <path value="$PROJECT_DIR$/vendor/fideloper/proxy" />
@@ -171,6 +187,7 @@
       <path value="$PROJECT_DIR$/vendor/tijsverkoyen/css-to-inline-styles" />
       <path value="$PROJECT_DIR$/vendor/erusev/parsedown" />
       <path value="$PROJECT_DIR$/vendor/vlucas/phpdotenv" />
+      <path value="" />
     </include_path>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
@@ -184,7 +201,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -201,40 +217,18 @@
               <item name="eDayGress" type="b2602c69:ProjectViewProjectNode" />
               <item name="eDayGress" type="462c0819:PsiDirectoryNode" />
               <item name="database" type="462c0819:PsiDirectoryNode" />
-              <item name="factories" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="eDayGress" type="b2602c69:ProjectViewProjectNode" />
-              <item name="eDayGress" type="462c0819:PsiDirectoryNode" />
-              <item name="database" type="462c0819:PsiDirectoryNode" />
               <item name="migrations" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="eDayGress" type="b2602c69:ProjectViewProjectNode" />
               <item name="eDayGress" type="462c0819:PsiDirectoryNode" />
-              <item name="database" type="462c0819:PsiDirectoryNode" />
-              <item name="seeds" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="eDayGress" type="b2602c69:ProjectViewProjectNode" />
-              <item name="eDayGress" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="eDayGress" type="b2602c69:ProjectViewProjectNode" />
-              <item name="eDayGress" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="eDayGress" type="b2602c69:ProjectViewProjectNode" />
-              <item name="eDayGress" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="routes" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -243,10 +237,13 @@
     <property name="editor.config.ad.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Gabri\Desktop\eDayGress\tests\Unit" />
+      <recent name="C:\Users\Gabri\Desktop\eDayGress\app\Http\Middleware" />
+      <recent name="C:\Users\Gabri\Desktop\eDayGress\app\Http\Controllers" />
       <recent name="C:\Users\Gabri\Desktop\eDayGress\app\model" />
     </key>
   </component>
@@ -285,12 +282,47 @@
       <workItem from="1555610902102" duration="3218000" />
       <workItem from="1555960776577" duration="354000" />
       <workItem from="1557333346870" duration="1324000" />
-      <workItem from="1557505806914" duration="2881000" />
+      <workItem from="1557505806914" duration="5241000" />
+      <workItem from="1557719616749" duration="4678000" />
+      <workItem from="1557747030432" duration="1208000" />
+      <workItem from="1557830274453" duration="4672000" />
     </task>
     <servers />
   </component>
+  <component name="TestHistory">
+    <history-entry file="phpunit_xml - 2019.05.13 at 02h 41m 10s.xml">
+      <configuration name="phpunit.xml" configurationId="PHPUnitRunConfigurationType" />
+    </history-entry>
+    <history-entry file="phpunit_xml - 2019.05.13 at 02h 42m 49s.xml">
+      <configuration name="phpunit.xml" configurationId="PHPUnitRunConfigurationType" />
+    </history-entry>
+    <history-entry file="phpunit_xml - 2019.05.13 at 02h 44m 36s.xml">
+      <configuration name="phpunit.xml" configurationId="PHPUnitRunConfigurationType" />
+    </history-entry>
+    <history-entry file="phpunit_xml - 2019.05.13 at 08h 30m 40s.xml">
+      <configuration name="phpunit.xml" configurationId="PHPUnitRunConfigurationType" />
+    </history-entry>
+    <history-entry file="phpunit_xml - 2019.05.13 at 08h 31m 18s.xml">
+      <configuration name="phpunit.xml" configurationId="PHPUnitRunConfigurationType" />
+    </history-entry>
+    <history-entry file="phpunit_xml - 2019.05.13 at 08h 32m 42s.xml">
+      <configuration name="phpunit.xml" configurationId="PHPUnitRunConfigurationType" />
+    </history-entry>
+    <history-entry file="phpunit_xml - 2019.05.13 at 08h 33m 14s.xml">
+      <configuration name="phpunit.xml" configurationId="PHPUnitRunConfigurationType" />
+    </history-entry>
+    <history-entry file="phpunit_xml - 2019.05.13 at 08h 33m 42s.xml">
+      <configuration name="phpunit.xml" configurationId="PHPUnitRunConfigurationType" />
+    </history-entry>
+    <history-entry file="phpunit_xml - 2019.05.13 at 08h 34m 58s.xml">
+      <configuration name="phpunit.xml" configurationId="PHPUnitRunConfigurationType" />
+    </history-entry>
+    <history-entry file="phpunit_xml - 2019.05.14 at 07h 40m 40s.xml">
+      <configuration name="phpunit.xml" configurationId="PHPUnitRunConfigurationType" />
+    </history-entry>
+  </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13412000" />
+    <option name="totallyTimeSpent" value="26330000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -305,13 +337,13 @@
     <frame x="-8" y="-8" width="1320" height="784" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22936508" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.32222223" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32872504" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.30107528" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.49615976" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -319,8 +351,8 @@
       <window_info anchor="bottom" id="TODO" order="7" weight="0.32822478" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32950193" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" weight="0.32872504" />
-      <window_info anchor="bottom" id="Terminal" order="11" weight="0.5453149" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50079364" side_tool="true" weight="0.6451613" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49920633" weight="0.5299539" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -331,142 +363,9 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/tests/TestCase.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/factories/UserFactory.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="13" column="61" selection-start-line="13" selection-start-column="61" selection-end-line="13" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/CreatesApplication.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="1" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Database/Connection.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="309">
-          <caret line="665" column="10" selection-start-line="662" selection-start-column="8" selection-end-line="665" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/model/propriedades.php" />
-    <entry file="file://$PROJECT_DIR$/app/model/Propriedade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="8" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="8" />
-          <folding>
-            <element signature="e#32#87#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2019_04_17_233741_create_propriedades_table.php" />
-    <entry file="file://$PROJECT_DIR$/routes/channels.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/web.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/phpunit.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/model/Uva.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/model/User.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" lean-forward="true" selection-start-line="11" selection-start-column="3" selection-end-line="19" />
-          <folding>
-            <element signature="e#23#63#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/model/Clima.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2019_04_18_184650_create_uva_table.php" />
-    <entry file="file://$PROJECT_DIR$/database/migrations/2019_04_18_184112_create_uvas_table.php" />
-    <entry file="file://$PROJECT_DIR$/database/migrations/2019_04_15_234629_create_uvas_table.php" />
-    <entry file="file://$PROJECT_DIR$/package-lock.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4548">
-          <caret line="9099" column="41" selection-start-line="9099" selection-start-column="41" selection-end-line="9099" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2019_04_17_235251_create_clima_table.php" />
-    <entry file="file://$PROJECT_DIR$/database/migrations/2019_01_12_000000_create_users_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="15" column="23" lean-forward="true" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.env">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="12" column="16" lean-forward="true" selection-start-line="12" selection-start-column="16" selection-end-line="12" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/app.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="864">
-          <caret line="53" column="11" selection-start-line="53" selection-start-column="11" selection-end-line="53" selection-end-column="11" />
-          <folding>
-            <element signature="e#67879#68079#2" expanded="true" />
-            <element signature="e#68309#68458#2" expanded="true" />
-            <element signature="e#69021#69167#2" expanded="true" />
-            <element signature="e#69535#69701#1" expanded="true" />
-            <element signature="e#82813#83056#2" expanded="true" />
-            <element signature="e#84010#84259#2" expanded="true" />
-            <element signature="e#116012#116202#2" expanded="true" />
-            <element signature="e#116258#116448#2" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Controller.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="11" column="8" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/about.html" />
-    <entry file="file://$PROJECT_DIR$/public/icons.html" />
-    <entry file="file://$PROJECT_DIR$/public/gallery.html" />
-    <entry file="file://$PROJECT_DIR$/public/index.html" />
-    <entry file="file://$PROJECT_DIR$/public/login.html" />
-    <entry file="file://$PROJECT_DIR$/public/mail.html" />
     <entry file="file://$PROJECT_DIR$/public/registro.html" />
     <entry file="file://$PROJECT_DIR$/public/single.html" />
     <entry file="file://$PROJECT_DIR$/public/typography.html" />
-    <entry file="file://$PROJECT_DIR$/public/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-216" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/js/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="337">
@@ -474,24 +373,288 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/api/advidorWeatherApiTokens.php">
+    <entry file="file://$PROJECT_DIR$/app/Http/Middleware/api/advisorWeatherApiTokens.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-7">
+        <state relative-caret-position="119">
           <caret line="7" selection-start-line="7" selection-end-line="7" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/api/requestWetherApi.php">
+    <entry file="file://$PROJECT_DIR$/app/Http/Middleware/api/requestWetherApi.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-7">
-          <caret line="15" column="19" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
+        <state relative-caret-position="51">
+          <caret line="3" column="6" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/api/advidorWeatherApi.php">
+    <entry file="file://$PROJECT_DIR$/app/Http/Middleware/api/advisorWeatherApi.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="6" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package-lock.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1706">
+          <caret line="8691" column="9" lean-forward="true" selection-start-line="8691" selection-start-column="9" selection-end-line="8691" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/composer.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/composer.lock">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-74469" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/welcome.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1734">
+          <caret line="102" column="22" selection-start-line="102" selection-start-column="22" selection-end-line="102" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" />
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Auth/VerificationController.php" />
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Auth/ResetPasswordController.php" />
+    <entry file="file://$PROJECT_DIR$/app/Http/Middleware/VerifyCsrfToken.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Middleware/TrustProxies.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Middleware/TrimStrings.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Middleware/RedirectIfAuthenticated.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Middleware/EncryptCookies.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Middleware/Authenticate.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/channels.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bootstrap/app.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="28" column="10" selection-start-line="28" selection-start-column="10" selection-end-line="28" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/app.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/view.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2019_05_13_051301_create_doenças_table.php" />
+    <entry file="file://$PROJECT_DIR$/database/migrations/2019_01_12_000000_create_users_table.php" />
+    <entry file="file://$PROJECT_DIR$/vendor/bin/phpunit">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2019_05_13_045638_create_clima_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="16" column="12" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/seeds/DatabaseSeeder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="6" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2019_05_13_051344_create_doencas_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/Unit/ExampleTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="5" lean-forward="true" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/Feature/ExampleTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+          <folding>
+            <element signature="e#33#83#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/Unit/TestCase.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="18" lean-forward="true" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
+          <folding>
+            <element signature="e#30#89#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/console.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/factories/UserFactory.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" selection-start-line="12" selection-start-column="1" selection-end-line="28" />
+          <folding>
+            <element signature="e#7#20#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/api.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/web.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
+          <folding>
+            <element signature="e#7#389#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="54" column="22" selection-start-line="54" selection-start-column="22" selection-end-line="54" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Controller.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="9" column="6" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="67">
+          <caret line="418" selection-start-line="418" selection-end-line="418" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/model/Uva.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/model/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/model/Clima.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/model/Propriedade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="10" column="6" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.env">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
-          <caret line="11" column="62" selection-start-line="11" selection-start-column="62" selection-end-line="11" selection-end-column="62" />
+          <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/database.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="62" column="26" selection-start-line="62" selection-start-column="26" selection-end-line="62" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Database/Connection.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="603">
+          <caret line="663" selection-start-line="663" selection-end-line="663" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2019_05_13_045605_create_cultivar_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2019_05_13_045443_create_proprietario_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2019_05_13_045606_create_propriedade_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="18" column="34" lean-forward="true" selection-start-line="18" selection-start-column="34" selection-end-line="18" selection-end-column="34" />
         </state>
       </provider>
     </entry>

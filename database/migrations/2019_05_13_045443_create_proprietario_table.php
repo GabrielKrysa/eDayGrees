@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateUsersTable extends Migration
+class CreateProprietarioTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,28 +13,28 @@ class CreateUsersTable extends Migration
      */
     public function up()
     {
-        Schema::create('users', function (Blueprint $table) {
+        Schema::create('proprietario', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('login')->unique();
+            $table->string('login');
             $table->string('senha');
             $table->string('nome');
-            $table->string('ultimo_nome');
-            $table->string('email')->unique();
-            $table->string('cpf',11);
-            $table->string('cidade');
+            $table->string('sobrenome');
+            $table->string('email');
+            $table->string('CPF');
             $table->string('estado');
+            $table->string('cidade');
             $table->rememberToken();
             $table->timestamps();
         });
     }
 
     /**
-     * Reverse the migrations.3
+     * Reverse the migrations.
      *
      * @return void
      */
     public function down()
     {
-        Schema::dropIfExists('users');
+        Schema::dropIfExists('proprietario');
     }
 }
