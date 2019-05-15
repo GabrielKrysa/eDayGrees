@@ -8,7 +8,7 @@ Route::get('/cadastro', function(){
     return view('registro');
 })->name('cadastro');
 
-Route::get('/login', function() {
+Route::get('/entrar', function() {
     return view('login');
 })->name('login');
 
@@ -16,11 +16,11 @@ Route::get('/sobre', function(){
     return view('about');
 })->name('sobre');
 
-Route::get('/cadastraPropriedade', function(){
+Route::get('/cadastrapropriedade', function(){
     return view('propriedade');
 })->name('propriedade');
 
-Route::get('/recuperarSenha', function(){
+Route::get('/recuperarsenha', function(){
     return view('senha');
 })->name('recuperaSenha');
 

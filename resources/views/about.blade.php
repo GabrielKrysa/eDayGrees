@@ -17,18 +17,18 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         }
     </script>
     <!-- bootstrap-css -->
-    <link href="../../public/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="{{asset('/css/bootstrap.css')}}" rel="stylesheet" type="text/css" media="all" />
     <!--// bootstrap-css -->
     <!-- css -->
-    <link rel="stylesheet" href="../../public/css/style.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="{{asset('/css/style.css')}}}" type="text/css" media="all" />
     <!--// css -->
     <!-- font-awesome icons -->
-    <link href="../../public/css/font-awesome.css" rel="stylesheet">
+    <link href="{{asset('/css/font-awesome.css')}}" rel="stylesheet">
     <!-- //font-awesome icons -->
     <!-- font -->
-    <script src="../../public/js/jquery-1.11.1.min.js"></script>
-    <script src="../../public/js/bootstrap.js"></script>
-    <script src="../../public/js/SmoothScroll.min.js"></script>
+    <script src="{{asset('/js/jquery-1.11.1.min.js')}}"></script>
+    <script src="{{asset('/js/bootstrap.js')}}"></script>
+    <script src="{{asset('/js/SmoothScroll.min.js')}}"></script>
     <script type="text/javascript">
         jQuery(document).ready(function($) {
             $(".scroll").click(function(event) {
@@ -55,7 +55,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         <span class="icon-bar"></span>
                     </button>
                     <div class="w3layouts-logo">
-                        <h1><a href="index.php">eDayGrees</a></h1>
+                        <h1><a href="{{route('login')}}">eDayGrees</a></h1>
                     </div>
                 </div>
 
@@ -63,10 +63,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <div class="collapse navbar-collapse nav-wil" id="bs-example-navbar-collapse-1">
                     <nav>
                         <ul class="nav navbar-nav">
-                            <li><a href="index.php" class="hvr-sweep-to-bottom">Inicio</a></li>
-                            <li class="active"><a href="about.php" class="hvr-sweep-to-bottom">Sobre</a></li>
-                            <li><a href="login.php" class="hvr-sweep-to-bottom">Entrar</a></li>
-                            <li><a href="registro.php" class="hvr-sweep-to-bottom">Registre-se</a></li>
+                            <li><a href="{{route('login')}}" class="hvr-sweep-to-bottom">Inicio</a></li>
+                            <li class="active"><a href="{{route('sobre')}}" class="hvr-sweep-to-bottom">Sobre</a></li>
+                            <li><a href="{{route('login')}}" class="hvr-sweep-to-bottom">Entrar</a></li>
+                            <li><a href="{{route('cadastro')}}" class="hvr-sweep-to-bottom">Registre-se</a></li>
                     </nav>
                 </div>
         </div>
@@ -90,21 +90,21 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <div class="agileits-feature-grids">
                     <div class="col-sm-4 agileinfo-feature-grid">
                         <div class="agileinfo-feature-info">
-                            <img src="../../public/images/quemSomos.jpg" alt="" />
+                            <img src="{{asset('/images/quemSomos.jpg"')}} alt="" />
                             <h5>Quem somos ? </h5>
                             <p>A história do software eDayGress surgiu com uma parceria entra o departamento de Ciência da Computação com membros Graduados na área da Agronomia, com vista sempre no bem estar e facilidade de uso. Esse sistema foi muito bem planejado com diversas idéias e aplicações usando as melhores técnicas e aprendizados para sua funcionalidade ser a mais completa possivel. Tem a garantir um controle prático de produções em propriedades da cultura da uva. </p>
                         </div>
                     </div>
                     <div class="col-sm-4 agileinfo-feature-grid">
                         <div class="agileinfo-feature-info">
-                            <img src="../../public/images/nossaMissao.jpg" alt="" />
+                            <img src="{{asset('/images/nossaMissao.jpg')}}" alt="" />
                             <h5>Missão</h5>
                             <p>Proporcionar as pessoas uma melhor qualidade de vida. Dando suporte a produção, com base nesse método de acompanhamento prático e fácil de usar. Proporcionando assim uma vida mais leve. Aplicação de atualizações para melhoria de nosso suporte para as pessoas que estão utulizando nosso sistema</p>
                         </div>
                     </div>
                     <div class="col-sm-4 agileinfo-feature-grid">
                         <div class="agileinfo-feature-info">
-                            <img src="../../public/images/valores.jpg" alt="" />
+                            <img src="{{asset('/images/valores.jpg')}}" alt="" />
                             <h5>Valores</h5>
                             <p>Nossos valores sempre serão no profissionalismo de toda equipe. O comprometimento pelo desafio de sempre estar ao dispor de melhorias para as pessoas que usam nosso sistema. Mantendo o respeito e dedicação com todos.</p>
                         </div>
@@ -124,7 +124,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <div class="team-row">
                     <div class="col-md-3 team-grids">
                         <div class="team-img">
-                            <img class="img-responsive" src="../../public/images/equipe1.jpg" alt="">
+                            <img class="img-responsive" src="{{asset('/images/equipe1.jpg')}}" alt="">
                             <div class="captn">
                                 <div class="captn-top">
                                     <h4>Tiago Alves</h4>
@@ -142,7 +142,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     </div>
                     <div class="col-md-3 team-grids">
                         <div class="team-img">
-                            <img class="img-responsive" src="../../public/images/equipe2.jpg" alt="">
+                            <img class="img-responsive" src="{{asset('/images/equipe2.jpg')}}" alt="">
                             <div class="captn">
                                 <div class="captn-top">
                                     <h4>Mark Willian</h4>
@@ -160,7 +160,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     </div>
                     <div class="col-md-3 team-grids">
                         <div class="team-img">
-                            <img class="img-responsive" src="../../public/images/equipe3.jpg" alt="">
+                            <img class="img-responsive" src="{{asset('/images/equipe3.jpg')}}" alt="">
                             <div class="captn">
                                 <div class="captn-top">
                                     <h4>Gabriel Krysa</h4>
@@ -178,7 +178,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     </div>
                     <div class="col-md-3 team-grids">
                         <div class="team-img">
-                            <img class="img-responsive" src="../../public/images/professor.jpg" alt="">
+                            <img class="img-responsive" src="{{asset('/images/professor.jpg')}}" alt="">
                             <div class="captn">
                                 <div class="captn-top">
                                     <h4>Marcos Quinaia</h4>
@@ -206,7 +206,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <div class="agileinfo_footer_grids">
                     <div class="col-md-4 agileinfo_footer_grid">
                         <div class="agile-logo">
-                            <h4><a href="index.php">eDayGrees</a></h4>
+                            <h4><a href="i{{route('principal.index')}}">eDayGrees</a></h4>
                         </div>
                         <p>Unindo a tecnologia com o campo.</p>
                         <div class="agileinfo-social-grids">
@@ -239,8 +239,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             </div>
         </div>
         <!-- //footer -->
-        <script type="text/javascript" src="../../public/js/move-top.js"></script>
-        <script type="text/javascript" src="../../public/js/easing.js"></script>
+        <script type="text/javascript" src="{{asset('/js/move-top.js')}}"></script>
+        <script type="text/javascript" src="{{asset('/js/easing.js')}}"></script>
         <!-- here stars scrolling icon -->
         <script type="text/javascript">
             $(document).ready(function() {

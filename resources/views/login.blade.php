@@ -3,7 +3,7 @@
 
 <body>
     <title>eDayGrees</title>
-    <link rel="shortcut icon" href="../../public/images/uvinha.png">
+    <link rel="shortcut icon" href="{{asset('/images/uvinha.png')}}">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name = "csrf-token" content = "{{ csrf_token() }}">
@@ -20,13 +20,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         }
     </script>
     <!-- bootstrap-css -->
-    <link href="../../public/css/bootstrap.css" rel="stylesheet" type="text/css" media="all">
-    <link rel="stylesheet" href="../../public/css/style.css" type="text/css" media="all">
-    <link href="../../public/css/font-awesome.css" rel="stylesheet">
+    <link href="{{asset('/css/bootstrap.css')}}" rel="stylesheet" type="text/css" media="all">
+    <link rel="stylesheet" href="{{asset('/css/style.css')}}" type="text/css" media="all">
+    <link href="{{asset('/css/font-awesome.css')}}" rel="stylesheet">
 
-    <script src="../../public/js/jquery-1.11.1.min.js"></script>
-    <script src="../../public/js/bootstrap.js"></script>
-    <script src="../../public/js/SmoothScroll.min.js"></script>
+    <script src="{{asset('/js/jquery-1.11.1.min.js')}}"></script>
+    <script src="{{asset('/js/bootstrap.js')}}"></script>
+    <script src="{{asset('/js/SmoothScroll.min.js')}}"></script>
     <script type="text/javascript">
         jQuery(document).ready(function($) {
             $(".scroll").click(function(event) {
@@ -148,8 +148,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         </div>
     </div>
     <!-- //footer -->
-    <script type="text/javascript" src="../../public/js/move-top.js"></script>
-    <script type="text/javascript" src="../../public/js/easing.js"></script>
+    <script type="text/javascript" src="{{asset('/js/move-top.js')}}"></script>
+    <script type="text/javascript" src="{{asset('/js/easing.js')}}"></script>
     <!-- here stars scrolling icon -->
     <script type="text/javascript">
         $(document).ready(function() {
