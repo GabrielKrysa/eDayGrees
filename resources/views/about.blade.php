@@ -20,7 +20,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <link href="{{asset('/css/bootstrap.css')}}" rel="stylesheet" type="text/css" media="all" />
     <!--// bootstrap-css -->
     <!-- css -->
-    <link rel="stylesheet" href="{{asset('/css/style.css')}}}" type="text/css" media="all" />
+    <link rel="stylesheet" href="{{asset('/css/style.css')}}" type="text/css" media="all" />
     <!--// css -->
     <!-- font-awesome icons -->
     <link href="{{asset('/css/font-awesome.css')}}" rel="stylesheet">
@@ -63,7 +63,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <div class="collapse navbar-collapse nav-wil" id="bs-example-navbar-collapse-1">
                     <nav>
                         <ul class="nav navbar-nav">
-                            <li><a href="{{route('login')}}" class="hvr-sweep-to-bottom">Inicio</a></li>
+                            <li><a href="{{route('principal.index')}}" class="hvr-sweep-to-bottom">Inicio</a></li>
                             <li class="active"><a href="{{route('sobre')}}" class="hvr-sweep-to-bottom">Sobre</a></li>
                             <li><a href="{{route('login')}}" class="hvr-sweep-to-bottom">Entrar</a></li>
                             <li><a href="{{route('cadastro')}}" class="hvr-sweep-to-bottom">Registre-se</a></li>
@@ -90,7 +90,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <div class="agileits-feature-grids">
                     <div class="col-sm-4 agileinfo-feature-grid">
                         <div class="agileinfo-feature-info">
-                            <img src="{{asset('/images/quemSomos.jpg"')}} alt="" />
+                            <img src="{{asset('/images/quemSomos.jpg')}}" alt="" />
                             <h5>Quem somos ? </h5>
                             <p>A história do software eDayGress surgiu com uma parceria entra o departamento de Ciência da Computação com membros Graduados na área da Agronomia, com vista sempre no bem estar e facilidade de uso. Esse sistema foi muito bem planejado com diversas idéias e aplicações usando as melhores técnicas e aprendizados para sua funcionalidade ser a mais completa possivel. Tem a garantir um controle prático de produções em propriedades da cultura da uva. </p>
                         </div>
