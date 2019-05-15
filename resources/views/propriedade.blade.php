@@ -23,18 +23,18 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     }
   </script>
   <!-- bootstrap-css -->
-  <link href="../../public/css/bootstrap.css" rel="stylesheet" type="text/css" media="all">
+  <link href="{{asset('/css/bootstrap.css')}}" rel="stylesheet" type="text/css" media="all">
   <!--// bootstrap-css -->
   <!-- css -->
-  <link rel="stylesheet" href="../../public/css/style.css" type="text/css" media="all">
+  <link rel="stylesheet" href="{{asset('/css/style.css')}}" type="text/css" media="all">
   <!--// css -->
   <!-- font-awesome icons -->
-  <link href="../../public/css/font-awesome.css" rel="stylesheet">
+  <link href="{{asset('/css/font-awesome.css')}}" rel="stylesheet">
   <!-- //font-awesome icons -->
   <!-- font -->
-  <script src="../../public/js/jquery-1.11.1.min.js"></script>
-  <script src="../../public/js/bootstrap.js"></script>
-  <script src="../../public/js/SmoothScroll.min.js"></script>
+  <script src="{{asset('/js/jquery-1.11.1.min.js')}}"></script>
+  <script src="{{asset('/js/bootstrap.js')}}"></script>
+  <script src="{{asset('/js/SmoothScroll.min.js')}}"></script>
   <script type="text/javascript">
     jQuery(document).ready(function($) {
       $(".scroll").click(function(event) {
@@ -86,7 +86,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
   <!-- //banner -->
   <!-- contact -->
   <div class="logincadastro">
-    <form class="form-horizontal">
+    <form method="POST" class="form-horizontal">
       @csrf
       <fieldset>
         <!-- Text input-->
@@ -112,32 +112,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         <div class="form-group">
           <div class="col-md-2">
             <select id="selectbasic" name="selectbasic" class="form-control">
-              <option value="1">AC</option>
-              <option value="2">AL</option>
-              <option value="3">AP</option>
-              <option value="4">AN</option>
-              <option value="5">BA</option>
-              <option value="6">CE</option>
-              <option value="7">DF</option>
-              <option value="8">ES</option>
-              <option value="9">GO</option>
-              <option value="10">MA</option>
-              <option value="11">MT</option>
-              <option value="12">MS</option>
-              <option value="13">MG</option>
-              <option value="14">PA</option>
-              <option value="15">PB</option>
-              <option value="16">PR</option>
-              <option value="17">PE</option>
-              <option value="18">PI</option>
-              <option value="19">RJ</option>
-              <option value="20">RN</option>
-              <option value="21">RO</option>
-              <option value="22">RR</option>
-              <option value="23">SC</option>
-              <option value="24">SP</option>
-              <option value="25">SE</option>
-              <option value="26">TO</option>
+              <!-- ADICIONAR METODO QUE PUXA O ESTADO E CIDADE DO BANCO DE DADOS -->
             </select>
           </div>
         </div>
@@ -202,8 +177,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     </div>
   </div>
   <!-- //footer -->
-  <script type="text/javascript" src="../../public/js/move-top.js"></script>
-  <script type="text/javascript" src="../../public/js/easing.js"></script>
+  <script type="text/javascript" src="{{asset('/js/move-top.js')}}"></script>
+  <script type="text/javascript" src="{{asset('/js/easing.js')}}"></script>
   <!-- here stars scrolling icon -->
   <script type="text/javascript">
     $(document).ready(function() {
