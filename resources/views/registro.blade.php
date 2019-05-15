@@ -75,18 +75,18 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     }
   </script>
   <!-- bootstrap-css -->
-  <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all">
+  <link href="../../public/css/bootstrap.css" rel="stylesheet" type="text/css" media="all">
   <!--// bootstrap-css -->
   <!-- css -->
-  <link rel="stylesheet" href="css/style.css" type="text/css" media="all">
+  <link rel="stylesheet" href="../../public/css/style.css" type="text/css" media="all">
   <!--// css -->
   <!-- font-awesome icons -->
-  <link href="css/font-awesome.css" rel="stylesheet">
+  <link href="../../public/css/font-awesome.css" rel="stylesheet">
   <!-- //font-awesome icons -->
   <!-- font -->
-  <script src="js/jquery-1.11.1.min.js"></script>
-  <script src="js/bootstrap.js"></script>
-  <script src="js/SmoothScroll.min.js"></script>
+  <script src="../../public/js/jquery-1.11.1.min.js"></script>
+  <script src="../../public/js/bootstrap.js"></script>
+  <script src="../../public/js/SmoothScroll.min.js"></script>
   <script type="text/javascript">
     jQuery(document).ready(function($) {
       $(".scroll").click(function(event) {
@@ -289,8 +289,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     </div>
   </div>
   <!-- //footer -->
-  <script type="text/javascript" src="js/move-top.js"></script>
-  <script type="text/javascript" src="js/easing.js"></script>
+  <script type="text/javascript" src="../../public/js/move-top.js"></script>
+  <script type="text/javascript" src="../../public/js/easing.js"></script>
   <!-- here stars scrolling icon -->
   <script type="text/javascript">
     $(document).ready(function() {
