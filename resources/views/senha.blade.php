@@ -56,7 +56,7 @@
 
 <body>
     <title>eDayGrees</title>
-    <link rel="shortcut icon" href="../../public/images/uvinha.png">
+    <link rel="shortcut icon" href="{{asset('/images/uvinha.png')}}">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="keywords" content="Farming Company Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
@@ -106,16 +106,16 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         <span class="icon-bar"></span>
                     </button>
                     <div class="w3layouts-logo">
-                        <h1><a href="index.php">eDayGrees</a></h1>
+                        <h1><a href="{{route('principal.index')}}">eDayGrees</a></h1>
                     </div>
                 </div>
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse nav-wil" id="bs-example-navbar-collapse-1">
                     <nav>
                         <ul class="nav navbar-nav">
-                            <li><a href="index.php" class="hvr-sweep-to-bottom">Inicio</a></li>
-                            <li><a href="about.php" class="hvr-sweep-to-bottom">Sobre</a></li>
-                            <li><a href="mail.php" class="hvr-sweep-to-bottom">Contato</a></li>
+                            <li><a href="{{route('principal.index')}}" class="hvr-sweep-to-bottom">Inicio</a></li>
+                            <li><a href="{{route('sobre')}}" class="hvr-sweep-to-bottom">Sobre</a></li>
+                            <li><a href="{{route('contato')}}" class="hvr-sweep-to-bottom">Contato</a></li>
                         </ul>
                     </nav>
                 </div>

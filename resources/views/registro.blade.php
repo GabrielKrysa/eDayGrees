@@ -111,22 +111,22 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     <span class="icon-bar"></span>
                 </button>
                 <div class="w3layouts-logo">
-                    <h1><a href="index.php">eDayGrees</a></h1>
+                    <h1><a href="{{route('principal.index')}}">eDayGrees</a></h1>
                 </div>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse nav-wil" id="bs-example-navbar-collapse-1">
                 <nav>
                     <ul class="nav navbar-nav">
-                        <li><a href="index.php" class="hvr-sweep-to-bottom">Inicio</a></li>
-                        <li><a href="about.php" class="hvr-sweep-to-bottom">Sobre</a></li>
+                        <li><a href="{{route('principal.index')}}" class="hvr-sweep-to-bottom">Inicio</a></li>
+                        <li><a href="{{route('sobre')}}" class="hvr-sweep-to-bottom">Sobre</a></li>
                         <!--<li><a href="#" class="dropdown-toggle hvr-sweep-to-bottom" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Codes<span class="caret"></span></a>
                                           <ul class="dropdown-menu">
                                               <li><a class="hvr-sweep-to-bottom" href="icons.php">Icons</a></li>
                                               <li><a class="hvr-sweep-to-bottom" href="typography.php">Typography</a></li>
                                           </ul>
                                       </li>-->
-                        <li><a href="mail.php" class="hvr-sweep-to-bottom">Contato</a></li>
+                        <li><a href="{{route('contato')}}" class="hvr-sweep-to-bottom">Contato</a></li>
                     </ul>
                 </nav>
             </div>

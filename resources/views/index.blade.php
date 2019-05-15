@@ -54,7 +54,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         <span class="icon-bar"></span>
                     </button>
                     <div class="w3layouts-logo">
-                        <h1><a href="index.php">eDayGrees</a></h1>
+                        <h1><a href="{{route('principal.index')}}">eDayGrees</a></h1>
                     </div>
                 </div>
 
@@ -62,12 +62,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <div class="collapse navbar-collapse nav-wil" id="bs-example-navbar-collapse-1">
                     <nav>
                         <ul class="nav navbar-nav">
-                            <li class="active"><a href="index.php">Inicio</a></li>
-                            <li><a href="about.php" class="hvr-sweep-to-bottom">Sobre</a></li>
-                            <li><a href="login.php" class="hvr-sweep-to-bottom">Entrar</a></li>
-                            <li><a href="registro.php" class="hvr-sweep-to-bottom">Registre-se</a></li>
+                            <li class="active"><a href="{{route('principal.index')}}">Inicio</a></li>
+                            <li><a href="{{route('sobre')}}" class="hvr-sweep-to-bottom">Sobre</a></li>
+                            <li><a href="{{route('login')}}" class="hvr-sweep-to-bottom">Entrar</a></li>
+                            <li><a href="{{route('registro')}}" class="hvr-sweep-to-bottom">Registre-se</a></li>
                             </li>
-                            <li><a href="mail.php" class="hvr-sweep-to-bottom">Contato</a></li>
+                            <li><a href="{{route('contato')}}" class="hvr-sweep-to-bottom">Contato</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -166,7 +166,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                             <a href="single.php"><img src="{{asset('/images/controleClima.jpg')}}" alt="" /></a>
                         </div>
                         <div class="w3-agileits-blog-text">
-                            <a href="single.php">Analise Climática</a>
+                            <a href="#">Analise Climática</a>
                             <p>Sistema tem incluso um controle de clima, aonde pode buscar por dados
                                 reais da propriedade. Vazendo um balanço de humidade e calor. Com isso
                                 é realizado diversas análises de acumulo de graus e possiveis doenças.</p>
@@ -180,7 +180,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                             <a href="single.php"><img src="{{asset('/images/doencaUva.jpg')}}" alt="" /></a>
                         </div>
                         <div class="w3-agileits-blog-text">
-                            <a href="single.php">Avisos e análises de doenças</a>
+                            <a href="#">Avisos e análises de doenças</a>
                             <p>Através de busca de dados, o sistema pode dar avisos de possiveis
                                 doenças que podem estar presente na cultura.</p>
                         </div>
@@ -193,7 +193,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                             <a href="single.php"><img src="{{asset('/images/relatorios.jpg')}}" alt="" /></a>
                         </div>
                         <div class="w3-agileits-blog-text">
-                            <a href="single.php">Geração de relatórios diários</a>
+                            <a href="#">Geração de relatórios diários</a>
                             <p>Geração de relatórios diários para possivel acompanhamento de como anda
                                 a cultura. Dados como graus acumulados, ciclo, além dos avisos e o clima em
                                 tempo real.</p>
@@ -211,7 +211,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             <div class="agileinfo_footer_grids">
                 <div class="col-md-4 agileinfo_footer_grid">
                     <div class="agile-logo">
-                        <h4><a href="index.php">eDayGrees</a></h4>
+                        <h4><a href="{{route('principal.index')}}">eDayGrees</a></h4>
                     </div>
                     <p>Unindo tecnologia com campo.</p>
                     <div class="agileinfo-social-grids">
