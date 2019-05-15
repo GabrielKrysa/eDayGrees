@@ -56,7 +56,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     <span class="icon-bar"></span>
                 </button>
                 <div class="w3layouts-logo">
-                    <h1><a href="index.php">eDayGrees</a></h1>
+                    <h1><a href="{{route('principal.index')}}">eDayGrees</a></h1>
                 </div>
             </div>
 
@@ -64,12 +64,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             <div class="collapse navbar-collapse nav-wil" id="bs-example-navbar-collapse-1">
                 <nav>
                     <ul class="nav navbar-nav">
-                        <li><a href="index.php">Inicio</a></li>
-                        <li><a href="about.php" class="hvr-sweep-to-bottom">Sobre</a></li>
-                        <li><a href="login.php" class="hvr-sweep-to-bottom">Entrar</a></li>
-                        <li><a href="registro.php" class="hvr-sweep-to-bottom">Registre-se</a></li>
+                        <li><a href="{{route('principal.index')}}">Inicio</a></li>
+                        <li><a href="{{route('sobre')}}" class="hvr-sweep-to-bottom">Sobre</a></li>
+                        <li><a href="{{route('login')}}" class="hvr-sweep-to-bottom">Entrar</a></li>
+                        <li><a href="{{route('cadastro')}}" class="hvr-sweep-to-bottom">Registre-se</a></li>
 
-                        <li class="active"><a href="mail.php" class="hvr-sweep-to-bottom">Contato</a></li>
+                        <li class="active"><a href="{{route('contato')}}" class="hvr-sweep-to-bottom">Contato</a></li>
                     </ul>
                 </nav>
             </div>
@@ -130,7 +130,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         <div class="agileinfo_footer_grids">
             <div class="col-md-4 agileinfo_footer_grid">
                 <div class="agile-logo">
-                    <h4><a href="index.php">eDayGrees</a></h4>
+                    <h4><a href="{{route('principal.index')}}">eDayGrees</a></h4>
                 </div>
                 <p>Unindo a tecnologia com o campo.</p>
                 <div class="agileinfo-social-grids">
