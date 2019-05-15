@@ -103,7 +103,7 @@
                 @csrf //Gera um tokem para segurança, todo formulario precisa de um token
                 <input type="text" name="nome" placeholder="Nome / post">
                 <button>Enviar</button>
-            </form> 
+            </form>
         </div>-->
     </div>
 </body>

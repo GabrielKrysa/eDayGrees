@@ -17,18 +17,18 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         }
     </script>
     <!-- bootstrap-css -->
-    <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="../../public/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
     <!--// bootstrap-css -->
     <!-- css -->
-    <link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="../../public/css/style.css" type="text/css" media="all" />
     <!--// css -->
     <!-- font-awesome icons -->
-    <link href="css/font-awesome.css" rel="stylesheet">
+    <link href="../../public/css/font-awesome.css" rel="stylesheet">
     <!-- //font-awesome icons -->
     <!-- font -->
-    <script src="js/jquery-1.11.1.min.js"></script>
-    <script src="js/bootstrap.js"></script>
-    <script src="js/SmoothScroll.min.js"></script>
+    <script src="../../public/js/jquery-1.11.1.min.js"></script>
+    <script src="../../public/js/bootstrap.js"></script>
+    <script src="../../public/js/SmoothScroll.min.js"></script>
     <script type="text/javascript">
         jQuery(document).ready(function($) {
             $(".scroll").click(function(event) {
@@ -93,7 +93,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <div class="single">
         <div class="container">
             <div class="agileits-single-img">
-                <img src="images/s1.jpg" alt="" />
+                <img src="../../public/images/s1.jpg" alt="" />
 
                 <h4>Suspendisse ornare vitae ex nec aliquam. Nunc et massa ut purus porta euismod quis eu erat. Nam ornare faucibus elit sed tempor. Quisque iaculis odio nibh, et auctor tellus rhoncus vel.</h4>
                 <div class="agileinfo-single-icons">
@@ -112,7 +112,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <h3>Comments</h3>
                 <div class="agileits_three_comment_grid">
                     <div class="agileits_tom">
-                        <img src="images/t2.jpg" alt=" " class="img-responsive">
+                        <img src="../../public/images/t2.jpg" alt=" " class="img-responsive">
                     </div>
                     <div class="agileits_tom_right">
                         <div class="hardy">
@@ -131,7 +131,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 </div>
                 <div class="agileits_three_comment_grid agileits_three_comment_grid1">
                     <div class="agileits_tom">
-                        <img src="images/t3.jpg" alt=" " class="img-responsive">
+                        <img src="../../public/images/t3.jpg" alt=" " class="img-responsive">
                     </div>
                     <div class="agileits_tom_right">
                         <div class="hardy">
@@ -150,7 +150,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 </div>
                 <div class="agileits_three_comment_grid">
                     <div class="agileits_tom">
-                        <img src="images/t4.jpg" alt=" " class="img-responsive">
+                        <img src="../../public/images/t4.jpg" alt=" " class="img-responsive">
                     </div>
                     <div class="agileits_tom_right">
                         <div class="hardy">
@@ -229,8 +229,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         </div>
     </div>
     <!-- //footer -->
-    <script type="text/javascript" src="js/move-top.js"></script>
-    <script type="text/javascript" src="js/easing.js"></script>
+    <script type="text/javascript" src="../../public/js/move-top.js"></script>
+    <script type="text/javascript" src="../../public/js/easing.js"></script>
     <!-- here stars scrolling icon -->
     <script type="text/javascript">
         $(document).ready(function() {
