@@ -14,7 +14,7 @@ class CreateClimaTable extends Migration
     public function up()
     {
         Schema::create('clima', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->bigIncrements('id'); 
             $table->timestamps();
         });
     }

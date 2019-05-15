@@ -14,10 +14,10 @@ class CreateCultivarTable extends Migration
     public function up()
     {
         Schema::create('cultivar', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->string('cultivar');
-            $table->string('ciclo');
-            $table->double('temperatura_base');
+            $table->bigIncrements('id'); // chave primária dentro do sistema
+            $table->string('cultivar');  // nome da cultiva 
+            $table->string('ciclo'); // clide de cada cultivar
+            $table->double('temperatura_base'); // temperatura base da minha cultivar que está sendo cadastrada 
         });
     }
 
