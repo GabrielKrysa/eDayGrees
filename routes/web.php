@@ -31,3 +31,6 @@ Route::get('/relatorio', function(){
 Route::get('/contato', function(){
     return view('mail');
 })->name('contato');
+
+
+Route::post('/cadastro','ControllerCadastroProprietario@cadastro');

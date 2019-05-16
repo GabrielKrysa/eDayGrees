@@ -13,37 +13,12 @@
             obj.value = masc(obj.value)
         }
 
-        function mTel(tel) {
-            tel = tel.replace(/\D/g, "")
-            tel = tel.replace(/^(\d)/, "($1")
-            tel = tel.replace(/(.{3})(\d)/, "$1)$2")
-            if (tel.length == 9) {
-                tel = tel.replace(/(.{1})$/, "-$1")
-            } else if (tel.length == 10) {
-                tel = tel.replace(/(.{2})$/, "-$1")
-            } else if (tel.length == 11) {
-                tel = tel.replace(/(.{3})$/, "-$1")
-            } else if (tel.length == 12) {
-                tel = tel.replace(/(.{4})$/, "-$1")
-            } else if (tel.length > 12) {
-                tel = tel.replace(/(.{4})$/, "-$1")
-            }
-            return tel;
-        }
-
         function mCPF(cpf) {
             cpf = cpf.replace(/\D/g, "")
             cpf = cpf.replace(/(\d{3})(\d)/, "$1.$2")
             cpf = cpf.replace(/(\d{3})(\d)/, "$1.$2")
             cpf = cpf.replace(/(\d{3})(\d{1,2})$/, "$1-$2")
             return cpf
-        }
-
-        function mCEP(cep) {
-            cep = cep.replace(/\D/g, "")
-            cep = cep.replace(/^(\d{2})(\d)/, "$1.$2")
-            cep = cep.replace(/\.(\d{3})(\d)/, ".$1-$2")
-            return cep
         }
 
         function mNum(num) {
@@ -152,7 +127,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             <label class="col-md-4 control-label" for="textinput">Nome</label>
             <div class="form-group">
                 <div class="col-md-5">
-                    <input id="textinput" name="textinput" type="text" placeholder="Digite nome do usuário "
+                    <input id="textinput" name="nomeUsuario" type="text" placeholder="Digite nome do usuário "
                            class="form-control input-md w-25" required="">
                 </div>
             </div>
@@ -160,7 +135,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             <label class="col-md-4 control-label" for="textinput">Último nome</label>
             <div class="form-group">
                 <div class="col-md-5">
-                    <input id="textinput" name="textinput" type="text" placeholder="Digite sobrenome do usuário"
+                    <input id="textinput" name="sobrenomeUsuario" type="text" placeholder="Digite sobrenome do usuário"
                            class="form-control input-md" required="">
                 </div>
             </div>
@@ -168,7 +143,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             <label class="col-md-4 control-label" for="textinput">CPF</label>
             <div class="form-group">
                 <div class="col-md-5">
-                    <input id="textinput" name="textinput" onkeydown="javascript: fMasc( this, mCPF );" type="text"
+                    <input id="textinput" name="cpfUsuario" onkeydown="javascript: fMasc( this, mCPF );" type="text"
                            placeholder="Digite o CPF do usuário" class="form-control input-md" required="">
                 </div>
             </div>
@@ -176,7 +151,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             <label class="col-md-4 control-label" for="textinput">Email</label>
             <div class="form-group">
                 <div class="col-md-5">
-                    <input id="textinput" name="textinput" type="text" placeholder="Digite o email do usuário"
+                    <input id="textinput" name="emailUsuario" type="text" placeholder="Digite o email do usuário"
                            class="form-control input-md" required="">
                 </div>
             </div>
@@ -184,21 +159,21 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             <label class="col-md-4 control-label" for="textinput">Login</label>
             <div class="form-group">
                 <div class="col-md-5">
-                    <input id="textinput" name="textinput" type="text" placeholder="Digite o login do usuário"
+                    <input id="textinput" name="loginUsuario" type="text" placeholder="Digite o login do usuário"
                            class="form-control input-md" required="">
                 </div>
             </div>
             <label class="col-md-4 control-label" for="passwordinput">Senha</label>
             <div class="form-group">
                 <div class="col-md-4">
-                    <input id="passwordinput" name="passwordinput" type="password"
+                    <input id="passwordinput" name="senhaUsuario" type="password"
                            placeholder="Digite sua senha para cadastro" class="form-control input-md" required="">
                 </div>
             </div>
             <label class="col-md-4 control-label" for="passwordinput">Confirmar senha</label>
             <div class="form-group">
                 <div class="col-md-4">
-                    <input id="passwordinput2" name="passwordinput" type="password"
+                    <input id="passwordinput2" name="senhaUsuario2" type="password"
                            placeholder="Digite novamente sua senha" class="form-control input-md" required="">
                 </div>
             </div>
@@ -223,7 +198,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             <div class="form-group">
                 <label class="col-md-4 control-label" for="singlebutton"></label>
                 <div class="col-md-4">
-                    <button id="singlebutton" name="singlebutton" class="btn btn-primary">Cadastrar</button>
+                    <button type="submit" id="singlebutton" name="singlebutton" class="btn btn-primary">Cadastrar</button>
                 </div>
             </div>
         </fieldset>
