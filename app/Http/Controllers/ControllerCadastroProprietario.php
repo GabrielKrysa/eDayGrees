@@ -6,7 +6,7 @@ use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Http\Request;
-use App\ModelCadastroProprietario;
+use App\ModelProprietario;
 
 class ControllerCadastroProprietario extends Controller
 {
@@ -34,9 +34,13 @@ class ControllerCadastroProprietario extends Controller
         );
 
 
-        $cadastro = new ModelCadastroProprietario();
+        $cadastro = new ModelProprietario();
 
-        $cadastro->insertProprietario($data);
+        if($cadastro->insertProprietario($data)){
+            return view('propriedade');
+        }else{
+            return view('registro');
+        }
 
     }
 }
