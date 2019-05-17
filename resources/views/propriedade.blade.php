@@ -93,14 +93,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         <label class="col-md-4 control-label" for="textinput">Nome da propriedade</label>
         <div class="form-group">
           <div class="col-md-5">
-            <input id="textinput" name="textinput" type="text" placeholder="Digite o nome da propriedade " class="form-control input-md w-25" required="">
+            <input id="textinput" name="nomePropriedade" type="text" placeholder="Digite o nome da propriedade " class="form-control input-md w-25" required="">
           </div>
         </div>
         <!-- Select input-->
         <label class="col-md-4 control-label" for="selectbasic">Videira</label>
         <div class="form-group">
           <div class="col-md-2">
-            <select id="selectbasic" name="selectbasic" class="form-control">
+            <select id="selectbasic" name="tipoCultivar" class="form-control">
               <option value="1">TIPO 1</option>
               <option value="2">TIPO 2</option>
               <option value="3">TIPO 3</option>
@@ -128,7 +128,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         <div class="form-group">
           <label class="col-md-4 control-label" for="singlebutton"></label>
           <div class="col-md-4">
-            <button id="singlebutton" name="singlebutton" class="btn btn-primary">Cadastrar</button>
+            <button type="submit" id="singlebutton" name="singlebutton" class="btn btn-primary">Cadastrar</button>
           </div>
         </div>
       </fieldset>
