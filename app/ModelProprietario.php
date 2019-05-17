@@ -5,7 +5,7 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\DB;
 
-class ModelCadastroProprietario extends Model
+class ModelProprietario extends Model
 {
 
     function __construct()
@@ -20,5 +20,11 @@ class ModelCadastroProprietario extends Model
         } else {
             return view('registro');
         }
+    }
+
+    function selectProprietarioLogin()
+    {
+        $data = DB::table('proprietario')->select('login', 'senha')->get();
+        return $data;
     }
 }
