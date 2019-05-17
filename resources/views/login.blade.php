@@ -85,7 +85,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <label class="col-md-4 control-label" for="textinput">Login</label>
                 <div class="form-group">
                     <div class="col-md-4">
-                        <input id="textinput" name="textinput" type="text" placeholder="Digite o nome do Usuário" class="form-control input-md" required="" style="">
+                        <input id="textinput" name="loginUsuario" type="text" placeholder="Digite o nome do Usuário" class="form-control input-md" required="" style="">
                     </div>
                 </div>
                 </br>
@@ -94,16 +94,17 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <label class="col-md-4 control-label" for="passwordinput">Senha</label>
                 <div class="form-group">
                     <div class="col-md-4">
-                        <input id="passwordinput" name="passwordinput" type="password" placeholder="Digite sua senha" class="form-control input-md" required="">
+                        <input id="passwordinput" name="senhaUsuario" type="password" placeholder="Digite sua senha" class="form-control input-md" required="">
                     </div>
                 </div>
                 <!-- Button -->
                 <div class="form-group">
                     <label class="col-md-4 control-label" for="singlebutton"></label>
                     <div class="col-md-4">
-                        <button id="singlebutton" name="singlebutton" class="btn btn-primary w-100">Entrar</button>
+                        <button type="submit" id="singlebutton" name="singlebutton" class="btn btn-primary w-100">Entrar</button>
                     </div>
                 </div>
+
             </fieldset>
         </form>
     </div>
