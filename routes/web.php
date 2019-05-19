@@ -34,4 +34,5 @@ Route::get('/contato', function(){
 
 
 Route::post('/cadastro','ControllerCadastroProprietario@cadastro');
-Route::post('/entrar','ControllerLoginProprietario@verificaLogin');
+Route::post('/entrar','ControllerLoginProprietario@login');
+

@@ -13,7 +13,7 @@ class ControllerLoginProprietario extends Controller
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
 
-    function verificaLogin(Request $req)
+    function login(Request $req)
     {
         $login = $req->input('loginUsuario');
         $senha = $req->input('senhaUsuario');
