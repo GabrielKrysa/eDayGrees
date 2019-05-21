@@ -11,6 +11,6 @@ class CidadeTableSeeder extends Seeder
      */
     public function run()
     {
-        DB::unprepared(file_get_contents(dirname(__FILE__) . '/CidadeTableSeed.sql'));
+        DB::unprepared(file_get_contents(dirname(__FILE__) . 'SQL Files/CidadeTableSeed.sql'));
     }
 }
