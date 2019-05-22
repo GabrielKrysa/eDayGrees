@@ -27,7 +27,7 @@ return [
     'ses' => [
         'key' => env('AWS_ACCESS_KEY_ID'),
         'secret' => env('AWS_SECRET_ACCESS_KEY'),
-        'region' => env('AWS_REGION', 'us-east-1'),
+        'region' => env('AWS_DEFAULT_REGION', 'us-east-1'),
     ],
 
     'sparkpost' => [
@@ -35,7 +35,7 @@ return [
     ],
 
     'stripe' => [
-        'model' => App\user::class,
+        'model' => App\User::class,
         'key' => env('STRIPE_KEY'),
         'secret' => env('STRIPE_SECRET'),
         'webhook' => [
