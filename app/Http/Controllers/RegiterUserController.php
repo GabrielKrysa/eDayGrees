@@ -27,9 +27,9 @@ class RegiterUserController extends Controller
 
         $user = new User();
         if($user->Register($data)){
-            dd("FOI");
+            dd("FOI");//implementar aqui a função que diz que cadastrou e puxa a tela de cadastro de propriedade
         }else{
-            dd("NAO FOI");
+            dd("NAO FOI");//implementar aqui função que diz que algo deu errado na hora do cadastro e dizer o que deu errado.
         }
 
     }
