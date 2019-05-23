@@ -49,8 +49,9 @@ Route::get('/contato', function () {
 
 
 Route::post('/logout', 'Auth\LoginController@logout')->name('logout');
+Route::post('/registro', 'RegiterUserController@RegisterUser')->name('registro');
+
 Auth::routes();
 
-//Route::get('/relatorio', 'HomeController@index')->name('relatorio');
 Route::post('/login', 'Auth\LoginController@login')->name('login');
 
