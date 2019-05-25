@@ -12,12 +12,18 @@ class CreateClimaTable extends Migration
      * @return void
      */
     public function up()
-    {
+            {
         Schema::create('clima', function (Blueprint $table) {
-            $table->bigIncrements('id'); 
+            $table->double('temperaturaMaxima');
+            $table->double('temperaturaMinima');
+            $table->double('temperaturaMedia');
+            $table->double('precipitacao');
+            $table->double('umidadeRelativa');
+            $table->date('data');
+            $table->string('cidade');
+            $table->string('estado');
             $table->timestamps();
-        });
-    }
+        });}
 
     /**
      * Reverse the migrations.

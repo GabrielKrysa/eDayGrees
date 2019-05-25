@@ -15,6 +15,8 @@ class CreatePropriedadeTable extends Migration
     {
         Schema::create('propriedade', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->string('cidade');
+            $table->string('estado');
             $table->bigInteger('id_proprietario')->unsigned();
             $table->bigInteger('id_cultivar')->unsigned();
             $table->string('status');
