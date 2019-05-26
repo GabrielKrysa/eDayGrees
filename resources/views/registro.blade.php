@@ -191,6 +191,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             <div class="form-group">
                 <div class="col-md-4">
                     <select id="selectbasic" name="selectbasic" class="form-control">
+                        <option></option>
                     </select>
                 </div>
             </div>
