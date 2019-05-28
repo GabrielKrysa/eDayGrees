@@ -56,7 +56,7 @@ $banco = new cidadeEstadoModel();
     </script>
 </head>
 
-<body>﻿
+<body> 
 
 <title>eDayGrees</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
