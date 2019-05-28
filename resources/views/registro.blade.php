@@ -1,5 +1,18 @@
-<!DOCTYPE html>
+
+
+<?php
+
+include('./php/script.php');
+
+$banco = new cidadeEstadoModel();
+
+
+
+?>
+
 <html>
+
+
 
 <head>
     <script type="text/javascript">
@@ -26,15 +39,25 @@
             return num
         }
     </script>
+    <script language = "javascript" src = "js/jquery-1.11.1.min.js"></script>
+
+    <script language = "javascript">
+        $(document).ready(function()
+        {
+            $("#selectestado").change(function(){
+                $("#selectestado option:selected").each(function(){
+                    estado_id = $(this).val();
+                    $.post("./php/cidade.php", {estado_id : estado_id}, function(data){
+                        $("#selectcidade").html(data);
+                    });
+                });
+            });
+        });
+    </script>
 </head>
 
 <body>﻿
-<!--A Design by W3layouts
-Author: W3layout
-Author URL: http://w3layouts.com
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
--->
+
 <title>eDayGrees</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -181,8 +204,20 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             <label class="col-md-4 control-label" for="selectbasic">Estado</label>
             <div class="form-group">
                 <div class="col-md-2">
-                    <select id="selectbasic" name="selectbasic" class="form-control">
+                    <select id="selectestado" name="selectestado" class="form-control">
                         <!-- ADICIONAR METODO QUE PUXA O ESTADO E CIDADE DO BANCO DE DADOS -->
+                    <option value="0">Seleciona Estado</option>
+                    <?php 
+                    
+                    $banco = new cidadeEstadoModel();
+
+                    $states = $banco->selectState();
+                     for($i = 0; $i<count($states); $i++)
+                     { ?>
+                              <option value="<?php echo $states[$i]->id; ?>"><?php echo $states[$i]->nome?></option>
+                      <?php }
+                    ?>
+
                     </select>
                 </div>
             </div>
@@ -190,8 +225,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             <label class="col-md-4 control-label" for="selectbasic">Cidade</label>
             <div class="form-group">
                 <div class="col-md-4">
-                    <select id="selectbasic" name="selectbasic" class="form-control">
-                        <option></option>
+                    <select id="selectcidade" name="selectcidade" class="form-control">
+                        
                     </select>
                 </div>
             </div>
