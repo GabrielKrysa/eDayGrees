@@ -1,20 +1,28 @@
-<?php 
+<?php
 
-use Illuminate\Support\Facades\DB;
+#use Illuminate\Support\Facades\DB;
 
-$estado_id = $_POST['id'];
 
-$queryM = DB::table('cidade')
-            ->where('estado_id', '=' , $estado_id)
-            ->get();
+$estado_id = $_POST['estado_id'];
 
-            for($i = 0; i < count($queryM); $i++){
-                $html = "<option value='".$queryM[$i]->$id."'>".$queryM[$i]->nome."</option>";
-            }
+#$queryM = DB::table('cidade')->where('estado_id', '=', $estado_id)->get();
 
-            echo $html;
-            var_dump($html);
-            
-            console.log(ffefe);
+$host = "localhost";
+$user = "root";
+$pasword = "";
+$db = "teste";
+$mysqli = new mysqli($host, $user, $pasword, $db) or die;
 
-?>
+$query = "SELECT id,nome FROM cidade WHERE estado_id = " . $estado_id;
+$result = $mysqli->query($query);
+while ($dado = $result->fetch_array()) {
+    $id[] = utf8_encode($dado['id']);
+    $nome[] = utf8_encode($dado['nome']);
+}
+
+
+for ($i = 0; $i < count($id); $i++) {
+    $html = "<option value='" . $id[$i] . "'>" . $nome[$i] . "</option>";
+    echo($html);
+}
+
