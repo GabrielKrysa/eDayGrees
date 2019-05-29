@@ -31,10 +31,6 @@ Route::get('/sobre', function () {
     return view('about');
 })->name('sobre');
 
-Route::get('/cadastrapropriedade', function () {
-    return view('propriedade');
-})->name('propriedade');
-
 Route::get('/recuperarsenha', function () {
     return view('senha');
 })->name('recuperaSenha');
@@ -49,7 +45,7 @@ Route::get('/contato', function () {
 
 
 Route::post('/logout', 'Auth\LoginController@logout')->name('logout');
-Route::post('/registro', 'RegiterUserController@RegisterUser')->name('registro');
+Route::post('/registro', 'RegisterController@Register')->name('registro');
 
 Auth::routes();
 
