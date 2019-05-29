@@ -39,13 +39,17 @@ class User extends Authenticatable
     {
 
         if ($user != null) {
-            DB::table('users')->insert([
-                $user
-            ]);
+            DB::table('users')->insert([$user]);
             return true;
         } else {
             return false;
         }
     }
 
+    function getUsername($NameUser)
+    {
+        $users = DB::table('users')->select('id')->where('nome', '=', $NameUser)->get();
+
+        return $users[0]->id;
+    }
 }

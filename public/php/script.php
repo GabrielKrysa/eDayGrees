@@ -1,34 +1,32 @@
 <?php
 
 use Illuminate\Support\Facades\DB;
-class cidadeEstadoModel 
+
+class selects
 {
-    function connectDB(){
+    function connectDB()
+    {
         $host = "localhost";
         $user = "root";
         $pasword = "";
         $db = "teste";
         $mysqli = new mysqli($host, $user, $pasword, $db) or die;
-       
+
         return $mysqli;
     }
 
     function selectState()
     {
         $state = DB::table('estado')->select('id', 'nome')->get();
-        
-        /*$mysqli = $this->connectDB();
-
-        $query = 'SELECT id, nome FROM estado';
-        $resultQuery = $mysqli->query($query);
-
-        while ($dado = $resultQuery->fetch_array()) { 
-            $data[] = utf8_encode($dado['nome']);
-        }
-        
-        mysqli_close($mysqli);*/
 
         return $state;
+    }
+
+    function selectVideiras()
+    {
+        $videira = DB::table('cultivar')->select('id', 'cultivar')->get();
+
+        return $videira;
     }
 
     function selectCity($id)
@@ -38,12 +36,11 @@ class cidadeEstadoModel
         $query = 'SELECT nome FROM cidade WHERE estado_id = ' . $id;
         $resultQuery = $mysqli->query($query);
 
-        while ($dado = $resultQuery->fetch_array()) { 
+        while ($dado = $resultQuery->fetch_array()) {
             $data[] = utf8_encode($dado['nome']);
         }
-        
+
         mysqli_close($mysqli);
-       
 
 
         return $data;
