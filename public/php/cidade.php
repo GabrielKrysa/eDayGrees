@@ -1,11 +1,9 @@
 <?php
 
-#use Illuminate\Support\Facades\DB;
 
 
 $estado_id = $_POST['estado_id'];
 
-#$queryM = DB::table('cidade')->where('estado_id', '=', $estado_id)->get();
 
 $host = "localhost";
 $user = "root";
