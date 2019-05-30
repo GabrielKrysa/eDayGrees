@@ -139,7 +139,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <div class="logincadastro">
     <form method="POST" action="{{ route('registro') }}" class="form-horizontal">
         <div class="container">
-            <h3>Cadastrar de Usuário</h3>
+            <b><h3 align = "center">Cadastro de Usuário</h3></b>
+            </br>
             <div class="agileits-line"></div>
         </div>
         @csrf
@@ -202,7 +203,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             <br>
 
             <div class="container">
-                <h3>Cadastrar Propriedade</h3>
+                <b align = "center"><h3>Cadastro de Propriedade</h3></b>
+                </br>
                 <div class="agileits-line"></div>
             </div>
 

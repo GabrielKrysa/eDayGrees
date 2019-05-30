@@ -4,8 +4,54 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "94d4bf9ac7f4a933030e46a346ee2917",
+    "content-hash": "899ad18928774c3636da42ca02cb7c25",
     "packages": [
+        {
+            "name": "adinan-cenci/climatempo-api",
+            "version": "3.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/adinan-cenci/climatempo-api.git",
+                "reference": "335d6975bf797c882b7381c9fdcf5b4c669b2bad"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/adinan-cenci/climatempo-api/zipball/335d6975bf797c882b7381c9fdcf5b4c669b2bad",
+                "reference": "335d6975bf797c882b7381c9fdcf5b4c669b2bad",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^6.2"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "AdinanCenci\\Climatempo\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Adinan Cenci",
+                    "email": "adinancenci@gmail.com",
+                    "role": "developer"
+                }
+            ],
+            "description": "Uma api para previsão de tempo escrita em PHP.",
+            "keywords": [
+                "api",
+                "forecast",
+                "previsão do tempo",
+                "weather"
+            ],
+            "time": "2018-04-15T13:49:24+00:00"
+        },
         {
             "name": "dnoegel/php-xdg-base-dir",
             "version": "0.1",
