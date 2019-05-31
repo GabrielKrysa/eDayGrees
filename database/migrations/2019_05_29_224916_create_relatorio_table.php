@@ -16,7 +16,7 @@ class CreateRelatorioTable extends Migration
         Schema::create('relatorio', function (Blueprint $table) {
             $table->bigIncrements('id')->unique();
             $table->string('descricao');
-            $table->Integer('propriedade_id')->unsigned();
+            $table->BigInteger('propriedade_id')->unsigned();
             $table->foreign('propriedade_id')->references('id')->on('propriedade');
             $table->timestamps();
         });
