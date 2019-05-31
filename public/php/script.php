@@ -53,4 +53,9 @@ class selects
 
         return $relat;
     }
+
+    function selectIdUser()
+    {
+        return auth()->user()->id;
+    }
 }
