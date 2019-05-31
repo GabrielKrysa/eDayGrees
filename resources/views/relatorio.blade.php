@@ -1,4 +1,7 @@
-<!DOCTYPE html>
+<?php
+include('./php/script.php');
+?>
+
 <html lang="en">
 
 <head>
@@ -86,12 +89,56 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <div class="contact-top">
         <div class="container">
             <div class="contact-grids">
-				<label class="col-md-4 control-label" for="selectbasic">Avisos importantes</label>
+				
                 <form method="POST"  action="{{ route('logout') }}">
                     @csrf
-                   <div>
-                       <button type="submit" id="singlebutton" name="singlebutton" class="btn btn-primary w-100">sair</button>
+                    <h1><b>Avisos Importantes</b></h1>
+                    <div float = right>
+                       <button type="submit" id="singlebutton" name="singlebutton" class="btn btn-primary w-100" float = "right">sair</button>
                    </div>
+                    </br>
+                    </br>
+                    </br>
+                    </br>
+                    <table>
+                        
+                        <?php
+
+                        $banco = new selects();
+
+                        $idp = 1; // aqui temos que passar o id da propriedade de quem esta logado no sistema, fazendo isso com join ate chegar no id_dono
+                        $relatorio = $banco->selectRelatorio($idp);
+                        
+
+                        
+                            for ($i = 0; $i < count($relatorio); $i++) { ?>
+                            
+                               <?php
+                               if ($i == 0){ 
+                               "<table>";
+
+                               "<tr>";
+                                    echo "<td  width = 200 height = 50 bgcolor = grey><b>ID PROPRIEDADE</b></td>";
+                                    echo "<td  width = 200 height = 50 bgcolor = grey><b>DESCRICAO</b></td>";
+                                    echo "<td  width = 200 height = 50 bgcolor = grey><b>OQUE FAZER</b></td>";
+                                "<tr>";}
+
+                               echo "<tr>";
+
+                               ?>
+                                <?php
+                               echo "<td font-size = 6>" .$relatorio[$i]->propriedade_id. "</td>"; ?> 
+                               <?php
+                               echo "<td>" .$relatorio[$i]->descricao. "</td>"; 
+                               "</tr>";
+                               "</table>" ?>  
+                             <?php }
+                            
+
+                        ?>
+                        
+                    </table>
+                  
                 </form>
 
 			</div>
@@ -99,12 +146,15 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<br/>
 					<br/>
                 <div class="col-md-7 contact-form">
-					<div style="overflow:scroll;height: 200px;width:100%;overflow:auto" class='table_container'>
-					<!-- aqui fazer o negocio de scroll com banco de dados-->
-					</div>
+					
                 </div>
             </div>
         </div>
+    </div>
+    <div>
+    <h1 align = "center"><b>Grafico com relação a graus dia</b></h1>
+
+
     </div>
     <div class="footer">
         <div class="container">

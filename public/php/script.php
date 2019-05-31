@@ -47,4 +47,10 @@ class selects
     }
 
 
+    function selectRelatorio($idPropriedade)
+    {
+        $relat = DB::table('relatorio')->select('propriedade_id', 'descricao')->where('propriedade_id', '=', $idPropriedade)->get();
+
+        return $relat;
+    }
 }
