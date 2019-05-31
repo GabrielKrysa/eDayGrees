@@ -18,5 +18,9 @@ class DatabaseSeeder extends Seeder
         $this->call(PropriedadeSeeder::class);
         $this->call(DoencasSeeder::class);
         $this->call(RelatorioSeeder::class);
+        $this->call(RelatorioSeeder::class);
+        $this->call(RelatorioSeeder::class);
+        $this->call(RelatorioSeeder::class);
+        $this->call(RelatorioSeeder::class);
     }
 }

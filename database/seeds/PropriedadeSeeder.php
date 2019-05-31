@@ -14,6 +14,7 @@ class PropriedadeSeeder extends Seeder
         DB::table('propriedade')->insert([
             'cidade' => 'Taió',
             'estado' => 'SC',
+            'nome_propriedade' => 'ADMIN',
             'id_proprietario' => 1,
             'id_cultivar' => 1,
             'status' => 'OK',

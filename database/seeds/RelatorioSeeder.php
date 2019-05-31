@@ -12,7 +12,7 @@ class RelatorioSeeder extends Seeder
     public function run()
     {
         DB::table('relatorio')->insert([
-            'descricao' => 'TESTANDO TESTANDO',
+            'descricao' => 'TESTANDO TESTANDOTESTANDO TESTANDOTESTANDO TESTANDOTESTANDO TESTANDO',
             'propriedade_id' => 1
         ]);
     }
