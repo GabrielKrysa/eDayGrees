@@ -7,10 +7,9 @@ use Illuminate\Support\Facades\DB;
 
 class Relatorio extends Model{
 
-    function register($array)
+    function guardaRelatorio($idPropriedade, $descricao) // id da propriedade que vai receber o aviso / descricao do aviso realizado  
     {
-        $propriedade = new Propriedade();
-        
+        if (DB::table('relatorio')->insert(['id_propriedade' => $idPropriedade, 'descricao' => $descricao, 'data' => $timeStamp]));
     }
-
+    
 }
