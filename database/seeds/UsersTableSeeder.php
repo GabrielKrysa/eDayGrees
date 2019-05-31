@@ -13,7 +13,7 @@ class UsersTableSeeder extends Seeder
     public function run()
     {
         User::create([
-            'username' => 'damin',
+            'username' => 'admin',
             'password' => bcrypt('admin'),
             'nome' => 'admin',
             'sobrenome' => 'admin',
