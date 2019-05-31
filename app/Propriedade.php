@@ -19,6 +19,7 @@ class Propriedade extends Model
 
         $colunas['cidade'] = $cidadeEstado->getCidadeId($array['cidade']);
         $colunas['estado'] = $cidadeEstado->getEstadoId($array['estado']);
+        $colunas['nome_propriedade'] = $array['nomePropriedade'];
         $colunas['id_proprietario'] = $array['idproprietario'];
         $colunas['id_cultivar'] = $array['cultivar'];
         $colunas['status'] = 'nao definido';
@@ -31,14 +32,16 @@ class Propriedade extends Model
         }
 
     }
-    function getPro($idd){
+
+    function getPro($idd)
+    {
 
         $prop = DB::table('proprietario')->select('id')->where('id', '=', $idd)->get();
 
         return $prop[0]->id;
     }
-    
-    
+
+
     function atualizaGrausAcumulado($id, $calculo) // chama sempre a atualizacao de graus depois fazemos as verificacoes de status, deixei separado para ficar mais completo, mas ambas podem ser feitas dentro de um for com os memos parametros passados um para o outro
     {
         $prop = DB::table('propriedade')->select('Acumulo_graus')->where('id', '=', $id)->get(); // pego o graus dia total da minha propriedade
@@ -51,7 +54,8 @@ class Propriedade extends Model
 
         $propriedade->verificaStatus($id, $calculo); // chamada de funcao para atualizacao dos status caso verdadeiro, fazendo assim não precisamos chamar as duas, somente a de atualizacao 
     }
-    function verificaStatus($id, $calculo) // esse calculo e o valor de graus dia pela conta feita no dia pelo sistema 
+
+    function verificaStatus($id, $calculo) // esse calculo e o valor de graus dia pela conta feita no dia pelo sistema
     {
 
         $relato = new Relatorio();
@@ -62,7 +66,7 @@ class Propriedade extends Model
         //falta fazer as requisicoes para uma funcao que manda para o relatorio a cada mudanca de ciclo dentro do sistema apois o if constatar verdadeiro
 
         $valorGema = DB::table('cultivar')->select('gemaAlgodao')->where($idCult, '=', 'id')->get();
-        if ($acProp >= $valorGema){
+        if ($acProp >= $valorGema) {
             DB::table('propriedade')->update(['status' => 'gema algodao'])->where($id, '=', 'id');
 
             $desc = "mudanca de status da cultivar para gema algodao";
@@ -70,8 +74,8 @@ class Propriedade extends Model
         }
 
 
-        $valorBrotacao = DB::table('cultivar')->select('brotacao')->where($idCult, '=', 'id')-get();
-        if ($acProp >= $valorBrotacao){
+        $valorBrotacao = DB::table('cultivar')->select('brotacao')->where($idCult, '=', 'id') - get();
+        if ($acProp >= $valorBrotacao) {
             DB::table('propriedade')->update(['status' => 'brotacao'])->where($id, '=', 'id');
 
             $desc = "mudanca de status da cultivar para brotacao";
@@ -80,7 +84,7 @@ class Propriedade extends Model
 
 
         $valorFlorescimento = DB::table('cultivar')->select('florescimento')->where($idCult, '=', 'id')->get();
-        if ($acProp >= $valorFlorescimento){
+        if ($acProp >= $valorFlorescimento) {
             DB::table('propriedade')->update(['status' => 'florecimento'])->where($id, '=', 'id');
 
             $desc = "mudanca de status da cultivar para florescimento";
@@ -89,7 +93,7 @@ class Propriedade extends Model
 
 
         $valorAInflorescencia = DB::table('cultivar')->select('aparecimentoInflorescencia')->where($idCult, '=', 'id')->get();
-        if ($acProp >= $valorAInflorescencia){
+        if ($acProp >= $valorAInflorescencia) {
             DB::table('propriedade')->update(['status' => 'aparecimento inflorescencia'])->where($id, '=', 'id');
 
             $desc = "mudanca de status da cultivar para aparecimento da inflorescencia";
@@ -97,8 +101,8 @@ class Propriedade extends Model
         }
 
 
-        $valorInicioMaturacao = DB::table('cultivar')->select('inicioMaturacao')->where($idCult, '=', 'id')->get();  
-        if ($acProp >= $valorInicioMaturacao){
+        $valorInicioMaturacao = DB::table('cultivar')->select('inicioMaturacao')->where($idCult, '=', 'id')->get();
+        if ($acProp >= $valorInicioMaturacao) {
             DB::table('propriedade')->update(['status' => 'inicio maturacao'])->where($id, '=', 'id');
 
             $desc = "mudanca de status da cultivar para inicio maturacao";
@@ -106,8 +110,8 @@ class Propriedade extends Model
         }
 
 
-        $valorColheita = DB::table('cultivar')->select('colheita')->where($idCult, '=', 'id')->get();     
-        if ($acProp >= $valorColheita){
+        $valorColheita = DB::table('cultivar')->select('colheita')->where($idCult, '=', 'id')->get();
+        if ($acProp >= $valorColheita) {
             DB::table('propriedade')->update(['status' => 'colheita'])->where($id, '=', 'id');
 
             $desc = "mudanca de status da cultivar para videira pronta para colheita";
