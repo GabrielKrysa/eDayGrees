@@ -70,6 +70,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         <li><a href="{{route('principal.index')}}">Inicio</a></li>
                         <li><a href="{{route('sobre')}}" class="hvr-sweep-to-bottom">Sobre</a></li>
                         <li><a href="{{route('contato')}}" class="hvr-sweep-to-bottom">Contato</a></li>
+                        <li><a class="hvr-sweep-to-bottom">Bem vindo, <?php echo auth()->user()->username ?></a></li>
+                        <li><a href="{{route('logout')}}" class="hvr-sweep-to-bottom">sair</a></li>
                     </ul>
                 </nav>
             </div>
@@ -105,10 +107,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
                     $banco = new selects();
 
-                    $id = auth()->user()->id; // aqui temos que passar o id da propriedade de quem esta logado no sistema, fazendo isso com join ate chegar no id_dono
+                    $id = auth()->user()->id;
+
                     $relatorio = $banco->selectRelatorio($id);
-
-
 
                     for ($i = 0; $i < count($relatorio); $i++) { ?>
                             

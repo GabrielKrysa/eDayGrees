@@ -64,9 +64,16 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     <nav>
                         <ul class="nav navbar-nav">
                             <li><a href="{{route('principal.index')}}" class="hvr-sweep-to-bottom">Inicio</a></li>
-                            <li class="active"><a href="{{route('sobre')}}" class="hvr-sweep-to-bottom">Sobre</a></li>
-                            <li><a href="{{route('login')}}" class="hvr-sweep-to-bottom">Entrar</a></li>
-                            <li><a href="{{route('cadastro')}}" class="hvr-sweep-to-bottom">Registre-se</a></li>
+                            @if(auth()->user() == null)
+                                <li><a href="{{route('login')}}" class="hvr-sweep-to-bottom">Entrar</a></li>
+                                <li><a href="{{route('cadastro')}}" class="hvr-sweep-to-bottom">Registre-se</a></li>
+                                <li><a href="{{route('contato')}}" class="hvr-sweep-to-bottom">Contato</a></li>
+                            @else
+                                <li><a href="{{route('contato')}}" class="hvr-sweep-to-bottom">Contato</a></li>
+                                <li><a href="{{route('relatorio')}}" class="hvr-sweep-to-bottom">Relatório</a></li>
+                                <li><a class="hvr-sweep-to-bottom">Bem vindo, <?php echo auth()->user()->username ?></a></li>
+                                <li><a href="{{route('logout')}}" class="hvr-sweep-to-bottom">sair</a></li>
+                            @endif
                     </nav>
                 </div>
         </div>
