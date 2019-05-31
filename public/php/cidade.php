@@ -1,7 +1,5 @@
 <?php
 
-
-
 $estado_id = $_POST['estado_id'];
 
 

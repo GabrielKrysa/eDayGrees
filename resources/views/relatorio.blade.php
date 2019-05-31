@@ -105,8 +105,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
                     $banco = new selects();
 
-                    $idp = 1; // aqui temos que passar o id da propriedade de quem esta logado no sistema, fazendo isso com join ate chegar no id_dono
-                    $relatorio = $banco->selectRelatorio($idp);
+                    $id = auth()->user()->id; // aqui temos que passar o id da propriedade de quem esta logado no sistema, fazendo isso com join ate chegar no id_dono
+                    $relatorio = $banco->selectRelatorio($id);
 
 
 
@@ -117,9 +117,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                             "<table>";
 
                             "<tr>";
-                            echo "<td  width = 200 height = 50 bgcolor = grey><b>ID PROPRIEDADE</b></td>";
-                            echo "<td  width = 200 height = 50 bgcolor = grey><b>DESCRICAO</b></td>";
-                            echo "<td  width = 200 height = 50 bgcolor = grey><b>OQUE FAZER</b></td>";
+                            echo "<td  width = 250 height = 40 bgcolor = grey><b>NOME DA PROPRIEDADE</b></td>";
+                            echo "<td  width = 200 height = 40 bgcolor = grey><b>DESCRICAO</b></td>";
+                            echo "<td  width = 200 height = 40 bgcolor = grey><b> OQUE FAZER</b></td>";
                             "<tr>";
                         }
 
@@ -127,7 +127,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
                         ?>
                                 <?php
-                        echo "<td font-size = 6>" . $relatorio[$i]->propriedade_id . "</td>"; ?>
+                        echo "<td font-size = 6>" . $relatorio[$i]->nome_propriedade . "</td>"; ?>
                                <?php
                         echo "<td>" . $relatorio[$i]->descricao . "</td>";
                         "</tr>";
@@ -138,7 +138,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     ?>
 
                 </table>
-                <div float=>
+                <div float=right>
                     <button type="submit" id="singlebutton" name="singlebutton" class="btn btn-primary w-100"
                             float="right">sair
                     </button>

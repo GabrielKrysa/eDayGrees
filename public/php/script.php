@@ -46,12 +46,21 @@ class selects
         return $data;
     }
 
+    private function getNomePropriedade($idPropriedade){
+        $nome = DB::table('propriedade')->select('nome_propriedade')->where('id','=',$idPropriedade)->get();
+        return $nome[0]->nome_propriedade;
+    }
 
     function selectRelatorio($idPropriedade)
     {
-        $relat = DB::table('relatorio')->select('propriedade_id', 'descricao')->where('propriedade_id', '=', $idPropriedade)->get();
+        $relatorio= DB::table('relatorio')->select('propriedade_id', 'descricao')->where('propriedade_id', '=', $idPropriedade)->get();
 
-        return $relat;
+
+        for($i = 0; $i < count($relatorio);$i++){
+            $relatorio[$i]->nome_propriedade = $this->getNomePropriedade($relatorio[$i]->propriedade_id);
+        }
+
+        return $relatorio;
     }
 
     function selectIdUser()
