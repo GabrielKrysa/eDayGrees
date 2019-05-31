@@ -71,8 +71,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                             @else
                                 <li><a href="{{route('contato')}}" class="hvr-sweep-to-bottom">Contato</a></li>
                                 <li><a href="{{route('relatorio')}}" class="hvr-sweep-to-bottom">Relatório</a></li>
-                                <li><a class="hvr-sweep-to-bottom">Bem vindo, <?php echo auth()->user()->username ?></a></li>
+                                <li><a >Bem vindo, <?php echo auth()->user()->username ?></a></li>  
                                 <li><a href="{{route('logout')}}" class="hvr-sweep-to-bottom">sair</a></li>
+
                             @endif
                     </nav>
                 </div>
