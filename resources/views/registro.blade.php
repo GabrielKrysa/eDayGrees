@@ -50,7 +50,7 @@ include('./php/script.php');
     </script>
 </head>
 
-<body>﻿
+<body>
 
 <title>eDayGrees</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -139,7 +139,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <div class="logincadastro">
     <form method="POST" action="{{ route('registro') }}" class="form-horizontal">
         <div class="container">
-            <h3>Cadastrar de Usuário</h3>
+            <b><h3 align="center">Cadastro de Usuário</h3></b>
+            </br>
             <div class="agileits-line"></div>
         </div>
         @csrf
@@ -202,7 +203,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             <br>
 
             <div class="container">
-                <h3>Cadastrar Propriedade</h3>
+                <b align="center"><h3>Cadastro de Propriedade</h3></b>
+                </br>
                 <div class="agileits-line"></div>
             </div>
 
@@ -238,7 +240,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             <div class="form-group">
                 <div class="col-md-2">
                     <select id="selectestado" name="selectestado" class="form-control">
-                        <!-- ADICIONAR METODO QUE PUXA O ESTADO E CIDADE DO BANCO DE DADOS -->
                         <option value="0">Seleciona Estado</option>
                         <?php
 

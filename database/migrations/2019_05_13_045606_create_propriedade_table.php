@@ -17,6 +17,7 @@ class CreatePropriedadeTable extends Migration
             $table->bigIncrements('id');
             $table->string('cidade');
             $table->string('estado');
+            $table->string('nome_propriedade');
             $table->bigInteger('id_proprietario')->unsigned();
             $table->bigInteger('id_cultivar')->unsigned();
             $table->string('status');

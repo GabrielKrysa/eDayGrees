@@ -11,9 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('index');
@@ -37,12 +35,13 @@ Route::get('/recuperarsenha', function () {
 
 Route::get('/relatorio', function () {
     return view('relatorio');
-})->name('relatorio');
+})->name('relatorio')->middleware('auth');
 
 Route::get('/contato', function () {
     return view('mail');
 })->name('contato');
 
+Route::get('/logout','Auth\LoginController@logout')->name('logout');
 
 Route::post('/logout', 'Auth\LoginController@logout')->name('logout');
 Route::post('/registro', 'RegisterController@Register')->name('registro');

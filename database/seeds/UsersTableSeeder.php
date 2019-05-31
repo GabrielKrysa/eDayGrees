@@ -13,14 +13,14 @@ class UsersTableSeeder extends Seeder
     public function run()
     {
         User::create([
-            'username' => 'krysa',
-            'password' => bcrypt('secret'),
-            'nome' => 'Krysa',
-            'sobrenome' => 'Krysa',
-            'email' => 'teste@teste.com',
-            'CPF' => Str::random(11),
-            'estado' => Str::random(5),
-            'cidade' => Str::random(2)
+            'username' => 'admin',
+            'password' => bcrypt('admin'),
+            'nome' => 'admin',
+            'sobrenome' => 'admin',
+            'email' => 'admin@admin.com',
+            'CPF' => '000.000.000-00',
+            'estado' => 'AD',
+            'cidade' => 'AD'
         ]);
     }
 }

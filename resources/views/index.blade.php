@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -65,10 +64,16 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     <ul class="nav navbar-nav">
                         <li class="active"><a href="{{route('principal.index')}}">Inicio</a></li>
                         <li><a href="{{route('sobre')}}" class="hvr-sweep-to-bottom">Sobre</a></li>
-                        <li><a href="{{route('login')}}" class="hvr-sweep-to-bottom">Entrar</a></li>
-                        <li><a href="{{route('cadastro')}}" class="hvr-sweep-to-bottom">Registre-se</a></li>
-                        </li>
-                        <li><a href="{{route('contato')}}" class="hvr-sweep-to-bottom">Contato</a></li>
+                        @if(auth()->user() == null)
+                            <li><a href="{{route('login')}}" class="hvr-sweep-to-bottom">Entrar</a></li>
+                            <li><a href="{{route('cadastro')}}" class="hvr-sweep-to-bottom">Registre-se</a></li>
+                            <li><a href="{{route('contato')}}" class="hvr-sweep-to-bottom">Contato</a></li>
+                        @else
+                            <li><a href="{{route('contato')}}" class="hvr-sweep-to-bottom">Contato</a></li>
+                            <li><a href="{{route('relatorio')}}" class="hvr-sweep-to-bottom">Relatório</a></li>
+                            <li><a>Bem vindo, <?php echo auth()->user()->username ?></a></li>
+                            <li><a href="{{route('logout')}}" class="hvr-sweep-to-bottom">sair</a></li>
+                        @endif
                     </ul>
                 </nav>
             </div>
