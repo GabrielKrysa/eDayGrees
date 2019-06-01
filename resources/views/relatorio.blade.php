@@ -101,7 +101,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 </br>
                 </br>
                 </br>
-                <table>
+                <table border=2>
 
                     <?php
 
@@ -113,39 +113,29 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
                     for ($i = 0; $i < count($relatorio); $i++) { ?>
                             
-                               <?php
+                        <?php
                         if ($i == 0) {
-                            "<table>";
-
                             "<tr>";
-                            echo "<td  width = 250 height = 40 bgcolor = grey><b>NOME DA PROPRIEDADE</b></td>";
-                            echo "<td  width = 200 height = 40 bgcolor = grey><b>DESCRICAO</b></td>";
-                            echo "<td  width = 200 height = 40 bgcolor = grey><b> OQUE FAZER</b></td>";
+                            echo "<td  width = 250 height = 40 align='center'><b>NOME DA PROPRIEDADE</b></td>";
+                            echo "<td  width = 200 height = 40 align='center'><b>DESCRICAO</b></td>";
+                            echo "<td  width = 200 height = 40 align='center'><b> OQUE FAZER</b></td>";
                             "<tr>";
                         }
 
                         echo "<tr>";
 
                         ?>
-                                <?php
-                        echo "<td font-size = 6>" . $relatorio[$i]->nome_propriedade . "</td>"; ?>
-                               <?php
-                        echo "<td>" . $relatorio[$i]->descricao . "</td>";
-                        "</tr>";
-                        "</table>" ?>
-                             <?php }
 
+                        <?php echo "<td font-size = 6 align='center'>" . $relatorio[$i]->nome_propriedade . "</td>"; ?>
+                        <?php echo "<td align='center'>" . $relatorio[$i]->descricao . "</td>"; ?>
+                        <?php echo "<td align='center' >" . 'teste' . "</td>"; ?>
 
-                    ?>
+                        <?php echo "</tr>"; ?>
+                        <?php "</table>" ?>
+                        <?php }?>
 
                 </table>
-                <div float=right>
-                    <button type="submit" id="singlebutton" name="singlebutton" class="btn btn-primary w-100"
-                            float="right">sair
-                    </button>
-                </div>
             </form>
-
         </div>
         <br/>
         <br/>
