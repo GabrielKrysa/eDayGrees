@@ -52,4 +52,23 @@ class User extends Authenticatable
 
         return $users[0]->id;
     }
+
+    function getCPF($cpf)
+    {
+        $data = DB::table('users')->select('CPF')->where('CPF', '=', $cpf)->get();
+        if (count($data) == 0) {
+            return false;
+        } else {
+            return true;
+        }
+    }
+
+    function uptadeLogin($array)
+    {
+        if(DB::table('users')->where('CPF', '=',$array['cpf'])->update(['password' => $array['senha']])){
+            return true;
+        }else{
+            return false;
+        }
+    }
 }

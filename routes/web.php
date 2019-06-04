@@ -41,10 +41,15 @@ Route::get('/contato', function () {
     return view('mail');
 })->name('contato');
 
+Route::get('/redefinirsenha', function () {
+    return view('redefinirSenha');
+})->name('redefinirsenha');
+
 Route::get('/logout','Auth\LoginController@logout')->name('logout');
 
 Route::post('/logout', 'Auth\LoginController@logout')->name('logout');
 Route::post('/registro', 'RegisterController@Register')->name('registro');
+Route::post('/resetPassword', 'ResetPassword@redefinirSenha')->name('resetPassword');
 
 Auth::routes();
 

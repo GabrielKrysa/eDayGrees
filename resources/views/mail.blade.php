@@ -24,7 +24,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <!--// css -->
     <!-- font-awesome icons -->
     <link href="{{asset('/css/font-awesome.css')}}" rel="stylesheet">
-    <!-- //font-awesome icons -->
     <!-- font -->
     <script src="{{asset('/js/jquery-1.11.1.min.js')}}"></script>
     <script src="{{asset('/js/bootstrap.js')}}"></script>
