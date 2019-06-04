@@ -18,6 +18,8 @@ class Verifications
             $cpf = preg_replace("/[^0-9]/", "", $cpf);
             $cpf = str_pad($cpf, 11, '0', STR_PAD_LEFT);
 
+            dd($cpf);
+
             if (strlen($cpf) != 11) {
                 return false;
             }
