@@ -112,12 +112,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     <ul class="nav navbar-nav">
                         <li><a href="{{route('principal.index')}}" class="hvr-sweep-to-bottom">Inicio</a></li>
                         <li><a href="{{route('sobre')}}" class="hvr-sweep-to-bottom">Sobre</a></li>
-                        <!--<li><a href="#" class="dropdown-toggle hvr-sweep-to-bottom" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Codes<span class="caret"></span></a>
-                                      <ul class="dropdown-menu">
-                                          <li><a class="hvr-sweep-to-bottom" href="icons.php">Icons</a></li>
-                                          <li><a class="hvr-sweep-to-bottom" href="typography.php">Typography</a></li>
-                                      </ul>
-                                  </li>-->
                         <li><a href="{{route('contato')}}" class="hvr-sweep-to-bottom">Contato</a></li>
                     </ul>
                 </nav>
@@ -137,19 +131,23 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!-- //banner -->
 <!-- contact -->
 <div class="logincadastro">
-    <form method="POST" action="{{ route('resetPassword') }}" class="form-horizontal">
+    <form method="POST" action="{{route('resetPassword')}}" class="form-horizontal">
+        @csrf
         <div class="container">
             <b><h3 align="center">Dados de usuário</h3></b>
             </br>
             <div class="agileits-line"></div>
         </div>
-        @csrf
+
         <fieldset>
             <label class="col-md-4 control-label" for="textinput">CPF</label>
             <div class="form-group">
                 <div class="col-md-5">
                     <input id="textinput" name="cpf" onkeydown="javascript: fMasc( this, mCPF );" type="text"
                            placeholder="Digite o CPF do usuário" class="form-control input-md" required="">
+                    @if(isset($erroCPF))
+                        <p style="font-size:70%; color:#ac2925">{{$erroCPF}}</p>
+                    @endif
                 </div>
             </div>
 
@@ -158,6 +156,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <div class="col-md-5">
                     <input id="textinput" name="email" type="text" placeholder="Digite o email do usuário"
                            class="form-control input-md" required="">
+                    @if(isset($erroEmail))
+                        <p style="font-size:70%; color:#ac2925">{{$erroEmail}}</p>
+                    @endif
                 </div>
             </div>
 
@@ -166,6 +167,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <div class="col-md-4">
                     <input id="passwordinput" name="password" type="password"
                            placeholder="Digite sua nova senha" class="form-control input-md" required="">
+                    @if(isset($erroSenhaCurta))
+                        <p style="font-size:70%; color:#ac2925">{{$erroSenhaCurta}}</p>
+                    @endif
                 </div>
             </div>
 
@@ -174,6 +178,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <label class="col-md-4 control-label" for="singlebutton"></label>
                 <div class="col-md-4">
                     <input type="checkbox" name="checkbox"> Concorda em alterar minha senha
+                    @if(isset($erroCheck))
+                        <p style="font-size:70%; color:#ac2925">{{$erroCheck}}</p>
+                    @endif
                     <button type="submit" id="singlebutton" name="singlebutton" class="btn btn-primary">Redefinir Senha
                     </button>
                 </div>
@@ -181,6 +188,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         </fieldset>
     </form>
 </div>
+
+
+
 
 <div class="footer">
     <div class="container">
@@ -211,11 +221,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             <div class="col-md-4 agileinfo_footer_grid">
                 <h3>Navegação</h3>
                 <ul class="agileinfo_footer_grid_nav">
-                    <li><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span><a href="index.php">Inicio</a>
+                    <li><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span><a
+                            href="{{route('principal.index')}}">Inicio</a>
                     </li>
-                    <li><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span><a href="about.php">Sobre</a>
+                    <li><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span><a
+                            href="{{route('sobre')}}">Sobre</a>
                     </li>
-                    <li><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span><a href="mail.php">Contato</a>
+                    <li><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span><a
+                            href="{{route('sobre')}}">Contato</a>
                     </li>
                 </ul>
             </div>
