@@ -65,61 +65,67 @@ class Propriedade extends Model
 
         $relato = new Relatorio();
 
-        $acProp = DB::table('propriedade')->select('Acumulo_graus')->where('id', '=', $id)->get(); // seleciona acumulo de graus das propriedades pelo id
+        $acumuloAttPropriedade = DB::table('propriedade')->select('Acumulo_graus')->where('id', '=', $id)->get(); // seleciona acumulo de graus das propriedades pelo id
         $idCult = DB::table('propriedade')->select('id_cultivar')->where('id', '=', $id)->get(); // seleciona id da cultivar que temos na propriedade, assim podemos comparar o acumulo de graus da propriedade com os ciclos que temos na cultivar
 
         //falta fazer as requisicoes para uma funcao que manda para o relatorio a cada mudanca de ciclo dentro do sistema apois o if constatar verdadeiro
 
         $valorGema = DB::table('cultivar')->select('gemaAlgodao')->where($idCult, '=', 'id')->get();
-        if ($acProp >= $valorGema) {
+        if ($acumuloAttPropriedade >= $valorGema) {
             DB::table('propriedade')->update(['status' => 'gema algodao'])->where($id, '=', 'id');
 
             $desc = "mudanca de status da cultivar para gema algodao";
-            $relato->guardaRelatorio($id, $desc);
+            $oqueFazer = "continuar bom gerenciamento da planta";
+            $relato->guardaRelatorio($id, $desc, $oqueFazer);
         }
 
 
         $valorBrotacao = DB::table('cultivar')->select('brotacao')->where($idCult, '=', 'id') - get();
-        if ($acProp >= $valorBrotacao) {
+        if ($acumuloAttPropriedade >= $valorBrotacao) {
             DB::table('propriedade')->update(['status' => 'brotacao'])->where($id, '=', 'id');
 
             $desc = "mudanca de status da cultivar para brotacao";
+            $oqueFazer = "continuar bom gerenciamento da planta";
             $relato->guardaRelatorio($id, $desc);
         }
 
 
         $valorFlorescimento = DB::table('cultivar')->select('florescimento')->where($idCult, '=', 'id')->get();
-        if ($acProp >= $valorFlorescimento) {
+        if ($acumuloAttPropriedade >= $valorFlorescimento) {
             DB::table('propriedade')->update(['status' => 'florecimento'])->where($id, '=', 'id');
 
             $desc = "mudanca de status da cultivar para florescimento";
+            $oqueFazer = "continuar bom gerenciamento da planta";
             $relato->guardaRelatorio($id, $desc);
         }
 
 
         $valorAInflorescencia = DB::table('cultivar')->select('aparecimentoInflorescencia')->where($idCult, '=', 'id')->get();
-        if ($acProp >= $valorAInflorescencia) {
+        if ($acumuloAttPropriedade >= $valorAInflorescencia) {
             DB::table('propriedade')->update(['status' => 'aparecimento inflorescencia'])->where($id, '=', 'id');
 
             $desc = "mudanca de status da cultivar para aparecimento da inflorescencia";
+            $oqueFazer = "continuar bom gerenciamento da planta";
             $relato->guardaRelatorio($id, $desc);
         }
 
 
         $valorInicioMaturacao = DB::table('cultivar')->select('inicioMaturacao')->where($idCult, '=', 'id')->get();
-        if ($acProp >= $valorInicioMaturacao) {
+        if ($acumuloAttPropriedade >= $valorInicioMaturacao) {
             DB::table('propriedade')->update(['status' => 'inicio maturacao'])->where($id, '=', 'id');
 
             $desc = "mudanca de status da cultivar para inicio maturacao";
+            $oqueFazer = "continuar bom gerenciamento da planta";
             $relato->guardaRelatorio($id, $desc);
         }
 
 
         $valorColheita = DB::table('cultivar')->select('colheita')->where($idCult, '=', 'id')->get();
-        if ($acProp >= $valorColheita) {
+        if ($acumuloAttPropriedade >= $valorColheita) {
             DB::table('propriedade')->update(['status' => 'colheita'])->where($id, '=', 'id');
 
             $desc = "mudanca de status da cultivar para videira pronta para colheita";
+            $oqueFazer = "continuar bom gerenciamento da planta";
             $relato->guardaRelatorio($id, $desc);
         }
 
