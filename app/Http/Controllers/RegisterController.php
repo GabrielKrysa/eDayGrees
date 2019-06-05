@@ -1,6 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
+
+use App\Http\Verifications;
 use App\Propriedade;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Foundation\Bus\DispatchesJobs;
@@ -18,7 +20,7 @@ class RegisterController extends Controller
     {
         $data = array(
             'username' => $req->input('username'),
-            'password' =>bcrypt($req->input('password')),
+            'password' => bcrypt($req->input('password')),
             'nome' => $req->input('name'),
             'sobrenome' => $req->input('lastname'),
             'CPF' => $req->input('cpf'),
@@ -26,6 +28,7 @@ class RegisterController extends Controller
             'estado' => $req->input('selectestado'),
             'cidade' => $req->input('selectcidade')
         );
+
 
         $propriedade = array(
             'nomeProprietario' => $req->input('name'),
@@ -37,16 +40,50 @@ class RegisterController extends Controller
 
         $user = new User();
         $prop = new Propriedade();
+        $veri = new Verifications();
 
+        //dd($propriedade);
 
-        echo  "<script>alert('Email enviado com Sucesso!);</script>";
-
-        if($user->Register($data) && $prop->register($propriedade)){
-            return redirect()->route('login')->with('alert-success','DEU BOA PORRA');
-        }else{
-            //RETORNAR ERRO PARA A VIEW
+        if (!$veri->validaCPF($data['CPF'])) {
+            return view('registro')->with('erroCpf', 'O CPF '.$data['CPF'].' é invalido');
         }
 
+        if (!$user->verificaExistenciaCPF($data['CPF'])) {
+            return view('registro')->with('erroCpfexiste', 'O CPF '.$data['CPF'].' já está cadastrado');
+        }
 
+        if ($user->verificaExistenciaEmail($data['email']) == false) {
+            return view('registro')->with('erroEmail', 'Email '.$data['email'].' já cadastrado');
+        }
+
+        if ($user->verificaExistenciaUsername($user['username']) == false) {
+            return view('registro')->with('erroUsername', 'Nome de usuário '.$user['username'].' já cadastrado');
+        }
+
+        if (!(strlen($req->input('password') >= 8))) {
+            return view('registro')->with('erroSenhaCurta', 'Senha curta demais');
+        }
+
+        if ($req->input('password') != $req->input('repeatpassaword')) {
+            return view('registro')->with('erroSenhaDif', 'Senhas não coincidem');
+        }
+
+        if ($prop['cultivar'] > 0) {
+            return view('registro')->with('erroCultivar', 'Selecione um cultivar valido');
+        }
+
+        if ($prop['estado'] > 0) {
+            return view('registro')->with('erroEstado', 'Selecione um estado valido');
+        }
+
+        if ($prop['cidade'] > 0 || $prop['cidade'] == null) {
+            return view('registro')->with('erroCidade', 'Selecione uma cidade valida');
+        }
+
+        if ($user->Register($data)) {
+            if ($prop->register($propriedade)) {
+                return view('login')->with('alert', 'Usuário e propriedade cadastrados com sucesso, realize seu login!');
+            }
+        }
     }
 }
