@@ -32,18 +32,6 @@ include('./php/script.php');
             return num
         }
 
-        function repeatpassword() {
-            let firstInput = document.getElementById("passwordinput").value;
-            let secondInput = document.getElementById("passwordinput2").value;
-            let empName = document.getElementById('emp').value;
-            if (firstInput === secondInput) {
-                lbl.innerText = empName;
-            } else if (firstInput > secondInput) {
-                // do something if the first input is grater than the second
-            } else {
-                // do something if the first input is less than the second
-            }
-        }
     </script>
     <script language="javascript" src="js/jquery-1.11.1.min.js"></script>
 
@@ -245,6 +233,35 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 </div>
             </div>
 
+            <label class="col-md-4 control-label" for="selectbasic">Pergunta de segurança</label>
+            <div class="form-group">
+                <div class="col-md-4">
+                    <select id="selectpergunta" name="selectpergunta" class="form-control">
+
+                        <?php
+
+                        $banco = new selects();
+
+                        $perguntas = $banco->getPerguntas();
+                        for ($i = 0; $i < count($perguntas); $i++) { ?>
+                        <option value="<?php echo $perguntas[$i]->id; ?>"><?php echo $perguntas[$i]->perguntas?></option>
+                        <?php }
+                        ?>
+                    </select>
+                    @if(isset($erroPergunta))
+                        <p style="font-size:70%; color:#ac2925">{{$erroPergunta}}</p>
+                    @endif
+                </div>
+            </div>
+
+            <label class="col-md-4 control-label" for="resposta">Resposta</label>
+            <div class="form-group">
+                <div class="col-md-4">
+                    <input id="respostainput" name="resposta" type="text"
+                           placeholder="Digite sua resposta" class="form-control input-md" required="">
+
+                </div>
+            </div>
             <br>
             <br>
 
@@ -254,7 +271,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <div class="agileits-line"></div>
             </div>
 
-            <!-- Select Basic -->
 
 
             <label class="col-md-4 control-label" for="textinput">Nome da propriedade</label>
@@ -267,7 +283,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             <!-- Select input-->
             <label class="col-md-4 control-label" for="selectbasic">Videira</label>
             <div class="form-group">
-                <div class="col-md-2">
+                <div class="col-md-4">
                     <select id="selectcultivar" name="tipoCultivar" class="form-control">
                         <option value="0">Seleciona cultivar</option>
                         <?php
@@ -287,7 +303,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             </div>
             <label class="col-md-4 control-label" for="selectbasic">Estado</label>
             <div class="form-group">
-                <div class="col-md-2">
+                <div class="col-md-4">
                     <select id="selectestado" name="selectestado" class="form-control">
                         <option value="0">Seleciona Estado</option>
                         <?php

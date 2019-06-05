@@ -26,7 +26,9 @@ class RegisterController extends Controller
             'CPF' => $req->input('cpf'),
             'email' => $req->input('email'),
             'estado' => $req->input('selectestado'),
-            'cidade' => $req->input('selectcidade')
+            'cidade' => $req->input('selectcidade'),
+            'IDPergunta' => $req->input('selectpergunta'),
+            'respostaPerguntaSeguranca' => $req->input('resposta')
         );
 
 
@@ -68,15 +70,15 @@ class RegisterController extends Controller
             return view('registro')->with('erroSenhaDif', 'Senhas não coincidem');
         }
 
-        if ($prop['cultivar'] > 0) {
+        if ($propriedade['cultivar'] == "0") {
             return view('registro')->with('erroCultivar', 'Selecione um cultivar valido');
         }
 
-        if ($prop['estado'] > 0) {
+        if ($propriedade['estado'] == "0") {
             return view('registro')->with('erroEstado', 'Selecione um estado valido');
         }
 
-        if ($prop['cidade'] > 0 || $prop['cidade'] == null) {
+        if ($propriedade['cidade'] == "0" || $propriedade['cidade'] == null) {
             return view('registro')->with('erroCidade', 'Selecione uma cidade valida');
         }
 
