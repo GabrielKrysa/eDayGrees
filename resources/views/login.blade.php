@@ -80,9 +80,17 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <!-- //banner -->
     <!-- contact -->
     <div class="loginmenu">
-        <form method="POST" action="{{ route('login') }}" class="form-horizontal">
-            @csrf
+
+        <form method="POST" action="{{ route('login') }}" class="form-horizontal">@csrf
             <fieldset style="">
+                <label class="col-md-4 control-label" for="textinput"></label>
+                <div class="form-group">
+                    <div class="col-md-4">
+                        @if(isset($alert))
+                            <p>{{$alert}}</p>
+                        @endif
+                    </div>
+                </div>
                 <!-- Text input-->
                 <label class="col-md-4 control-label" for="textinput">Login</label>
                 <div class="form-group">
@@ -107,10 +115,17 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <div class="form-group">
                     <label class="col-md-4 control-label" for="singlebutton"></label>
                     <div class="col-md-4">
+                        @if(isset($erro))
+                            <p>{{$erro}}</p>
+                        @endif
+
+
                         <button type="submit" id="singlebutton" name="singlebutton" class="btn btn-primary w-100">Entrar
                         </button>
+
                     </div>
                 </div>
+
 
             </fieldset>
         </form>
@@ -148,13 +163,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     <h3>Navegação</h3>
                     <ul class="agileinfo_footer_grid_nav">
                         <li><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span><a
-                                href="index.php">Inicio</a>
+                                href="route{{'principal.index'}}">Inicio</a>
                         </li>
                         <li><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span><a
-                                href="about.php">Sobre</a>
+                                href="{{route('sobre')}}">Sobre</a>
                         </li>
                         <li><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span><a
-                                href="mail.php">Contato</a>
+                                href="{{route('sobre')}}">Contato</a>
                         </li>
                     </ul>
                 </div>

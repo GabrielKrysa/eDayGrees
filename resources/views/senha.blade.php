@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html>
 
 <head>
@@ -206,10 +205,15 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <div class="col-md-4 agileinfo_footer_grid">
                     <h3>Navegação</h3>
                     <ul class="agileinfo_footer_grid_nav">
-                        <li><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span><a href="index.php">Inicio</a></li>
-                        <li><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span><a href="about.php">Sobre</a>
+                        <li><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span><a
+                                href="{{route('principal.index')}}">Inicio</a>
                         </li>
-                        <li><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span><a href="mail.php">Contato</a></li>
+                        <li><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span><a
+                                href="{{route('sobre')}}">Sobre</a>
+                        </li>
+                        <li><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span><a
+                                href="{{route('sobre')}}">Contato</a>
+                        </li>
                     </ul>
                 </div>
                 <div class="clearfix"> </div>

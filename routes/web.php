@@ -29,10 +29,6 @@ Route::get('/sobre', function () {
     return view('about');
 })->name('sobre');
 
-Route::get('/recuperarsenha', function () {
-    return view('senha');
-})->name('recuperaSenha');
-
 Route::get('/relatorio', function () {
     return view('relatorio');
 })->name('relatorio')->middleware('auth');

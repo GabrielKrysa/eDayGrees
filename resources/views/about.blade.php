@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -24,8 +23,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <!--// css -->
     <!-- font-awesome icons -->
     <link href="{{asset('/css/font-awesome.css')}}" rel="stylesheet">
-    <!-- //font-awesome icons -->
-    <!-- font -->
     <script src="{{asset('/js/jquery-1.11.1.min.js')}}"></script>
     <script src="{{asset('/js/bootstrap.js')}}"></script>
     <script src="{{asset('/js/SmoothScroll.min.js')}}"></script>
@@ -65,14 +62,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         <ul class="nav navbar-nav">
                             <li><a href="{{route('principal.index')}}" class="hvr-sweep-to-bottom">Inicio</a></li>
                             @if(auth()->user() == null)
-                                <li><a href="{{route('login')}}" class="hvr-sweep-to-bottom">Entrar</a></li>
-                                <li><a href="{{route('cadastro')}}" class="hvr-sweep-to-bottom">Registre-se</a></li>
-                                <li><a href="{{route('contato')}}" class="hvr-sweep-to-bottom">Contato</a></li>
+                            <li><a href="{{route('login')}}" class="hvr-sweep-to-bottom">Entrar</a></li>
+                            <li><a href="{{route('cadastro')}}" class="hvr-sweep-to-bottom">Registre-se</a></li>
+                            <li><a href="{{route('contato')}}" class="hvr-sweep-to-bottom">Contato</a></li>
                             @else
-                                <li><a href="{{route('contato')}}" class="hvr-sweep-to-bottom">Contato</a></li>
-                                <li><a href="{{route('relatorio')}}" class="hvr-sweep-to-bottom">Relatório</a></li>
-                                <li><a >Bem vindo, <?php echo auth()->user()->username ?></a></li>  
-                                <li><a href="{{route('logout')}}" class="hvr-sweep-to-bottom">sair</a></li>
+                            <li><a href="{{route('contato')}}" class="hvr-sweep-to-bottom">Contato</a></li>
+                            <li><a href="{{route('relatorio')}}" class="hvr-sweep-to-bottom">Relatório</a></li>
+                            <li><a>Bem vindo, <?php echo auth()->user()->username ?></a></li>
+                            <li><a href="{{route('logout')}}" class="hvr-sweep-to-bottom">sair</a></li>
 
                             @endif
                     </nav>
@@ -83,7 +80,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         <div class="banner about-banner">
             <div class="container">
                 <h2>SOBRE</h2>
-                <div class="agileits-line"> </div>
+                <div class="agileits-line"></div>
             </div>
         </div>
 
@@ -93,31 +90,41 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             <div class="container">
                 <div class="services-heading">
                     <h3>NOSSO TRABALHO</h3>
-                    <div class="agileits-line"> </div>
+                    <div class="agileits-line"></div>
                 </div>
                 <div class="agileits-feature-grids">
                     <div class="col-sm-4 agileinfo-feature-grid">
                         <div class="agileinfo-feature-info">
                             <img src="{{asset('/images/quemSomos.jpg')}}" alt="" />
                             <h5>Quem somos ? </h5>
-                            <p>A história do software eDayGress surgiu com uma parceria entra o departamento de Ciência da Computação com membros Graduados na área da Agronomia, com vista sempre no bem estar e facilidade de uso. Esse sistema foi muito bem planejado com diversas idéias e aplicações usando as melhores técnicas e aprendizados para sua funcionalidade ser a mais completa possivel. Tem a garantir um controle prático de produções em propriedades da cultura da uva. </p>
+                            <p>A história do software eDayGress surgiu com uma parceria entra o departamento de Ciência da
+                                Computação com membros Graduados na área da Agronomia, com vista sempre no bem estar e
+                                facilidade de uso. Esse sistema foi muito bem planejado com diversas idéias e aplicações
+                                usando as melhores técnicas e aprendizados para sua funcionalidade ser a mais completa
+                                possivel. Tem a garantir um controle prático de produções em propriedades da cultura da
+                                uva. </p>
                         </div>
                     </div>
                     <div class="col-sm-4 agileinfo-feature-grid">
                         <div class="agileinfo-feature-info">
                             <img src="{{asset('/images/nossaMissao.jpg')}}" alt="" />
                             <h5>Missão</h5>
-                            <p>Proporcionar as pessoas uma melhor qualidade de vida. Dando suporte a produção, com base nesse método de acompanhamento prático e fácil de usar. Proporcionando assim uma vida mais leve. Aplicação de atualizações para melhoria de nosso suporte para as pessoas que estão utulizando nosso sistema</p>
+                            <p>Proporcionar as pessoas uma melhor qualidade de vida. Dando suporte a produção, com base
+                                nesse método de acompanhamento prático e fácil de usar. Proporcionando assim uma vida mais
+                                leve. Aplicação de atualizações para melhoria de nosso suporte para as pessoas que estão
+                                utulizando nosso sistema</p>
                         </div>
                     </div>
                     <div class="col-sm-4 agileinfo-feature-grid">
                         <div class="agileinfo-feature-info">
                             <img src="{{asset('/images/valores.jpg')}}" alt="" />
                             <h5>Valores</h5>
-                            <p>Nossos valores sempre serão no profissionalismo de toda equipe. O comprometimento pelo desafio de sempre estar ao dispor de melhorias para as pessoas que usam nosso sistema. Mantendo o respeito e dedicação com todos.</p>
+                            <p>Nossos valores sempre serão no profissionalismo de toda equipe. O comprometimento pelo
+                                desafio de sempre estar ao dispor de melhorias para as pessoas que usam nosso sistema.
+                                Mantendo o respeito e dedicação com todos.</p>
                         </div>
                     </div>
-                    <div class="clearfix"> </div>
+                    <div class="clearfix"></div>
                 </div>
             </div>
         </div>
@@ -127,7 +134,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             <div class="container">
                 <div class="services-heading">
                     <h3>NOSSA EQUIPE</h3>
-                    <div class="agileits-line"> </div>
+                    <div class="agileits-line"></div>
                 </div>
                 <div class="team-row">
                     <div class="col-md-3 team-grids">
@@ -136,7 +143,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                             <div class="captn">
                                 <div class="captn-top">
                                     <h4>Tiago Alves</h4>
-                                    <p>Ex militar estudante de graduação em Ciência da Computação</p>
+                                    <p>Ex militar, acadêmico de ciência da Computação bacharel</p>
                                 </div>
                                 <div class="wthree-social-grids">
                                     <ul>
@@ -154,7 +161,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                             <div class="captn">
                                 <div class="captn-top">
                                     <h4>Mark Willian</h4>
-                                    <p>Técnico em Agropecuária estudante de graduação em Ciência da Computação</p>
+                                    <p>Técnico em Agropecuária, acadêmico de ciência da Computação bacharel</p>
                                 </div>
                                 <div class="wthree-social-grids">
                                     <ul>
@@ -172,7 +179,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                             <div class="captn">
                                 <div class="captn-top">
                                     <h4>Gabriel Krysa</h4>
-                                    <p>Estudante de graduação em Ciência da Computação</p>
+                                    <p>Programador, acadêmico de ciência da Computação bacharel</p>
                                 </div>
                                 <div class="wthree-social-grids">
                                     <ul>
@@ -202,7 +209,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                             </div>
                         </div>
                     </div>
-                    <div class="clearfix"> </div>
+                    <div class="clearfix"></div>
                 </div>
             </div>
         </div>
@@ -228,7 +235,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     <div class="col-md-4 agileinfo_footer_grid">
                         <h3>Informação de Contato</h3>
                         <ul class="agileinfo_footer_grid_list">
-                            <li><i class="glyphicon glyphicon-map-marker" aria-hidden="true"></i>END CEDETEG, <span>Guarapuava.</span></li>
+                            <li><i class="glyphicon glyphicon-map-marker" aria-hidden="true"></i>END CEDETEG, <span>Guarapuava.</span>
+                            </li>
                             <li><i class="glyphicon glyphicon-envelope" aria-hidden="true"></i><a href="mailto:edaygrees@gmail.com">edaygrees@gmail.com</a></li>
                             <li><i class="glyphicon glyphicon-earphone" aria-hidden="true"></i>TELEFONE</li>
                         </ul>
@@ -236,13 +244,15 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     <div class="col-md-4 agileinfo_footer_grid">
                         <h3>Navegação</h3>
                         <ul class="agileinfo_footer_grid_nav">
-
-                            <li><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span><a href="index.php">Inicio</a></li>
-                            <li><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span><a href="about.php">Sobre</a></li>
-                            <li><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span><a href="mail.php">Contato</a></li>
+                            <li><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span><a href="route{{'principal.index'}}">Inicio</a>
+                            </li>
+                            <li><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span><a href="{{route('sobre')}}">Sobre</a>
+                            </li>
+                            <li><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span><a href="{{route('sobre')}}">Contato</a>
+                            </li>
                         </ul>
                     </div>
-                    <div class="clearfix"> </div>
+                    <div class="clearfix"></div>
                 </div>
             </div>
         </div>

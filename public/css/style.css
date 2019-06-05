@@ -1635,6 +1635,10 @@ h2.typoh2 {
 	padding: 0.6em 4em;
 }
 
+.form-group{
+
+}
+
 .contact-form input[type="submit"]:hover {
 	background: none;
 	color: #FFFFFF;
