@@ -2,6 +2,7 @@
 
 namespace App;
 
+use Illuminate\Database\QueryException;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Support\Facades\DB;
@@ -37,13 +38,17 @@ class User extends Authenticatable
 
     public function Register($user)
     {
+        try {
+            if(DB::table('users')->insert([$user])){
+                return true;
+            }else{
+                return false;
+            }
 
-        if ($user != null) {
-            DB::table('users')->insert([$user]);
-            return true;
-        } else {
-            return false;
+        } catch (QueryException $e) {
+            return view('registro')->with('erro', '');
         }
+
     }
 
     function getUsername($NameUser)
@@ -53,21 +58,42 @@ class User extends Authenticatable
         return $users[0]->id;
     }
 
-    function getCPF($cpf)
+    function verificaExistenciaCPF($cpf)
     {
         $data = DB::table('users')->select('CPF')->where('CPF', '=', $cpf)->get();
         if (count($data) == 0) {
-            return false;
-        } else {
             return true;
+        } else {
+            return false;
         }
     }
 
+    function verificaExistenciaEmail($email)
+    {
+        $data = DB::table('users')->select('email')->where('email', '=', $email)->get();
+        if (count($data) == 0) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    function verificaExistenciaUsername($username)
+    {
+        $data = DB::table('users')->select('username')->where('username', '=', $username)->get();
+        if (count($data) == 0) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+
     function uptadeLogin($array)
     {
-        if(DB::table('users')->where('CPF', '=',$array['cpf'])->update(['password' => $array['senha']])){
+        if (DB::table('users')->where('CPF', '=', $array['cpf'])->update(['password' => $array['senha']])) {
             return true;
-        }else{
+        } else {
             return false;
         }
     }

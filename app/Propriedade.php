@@ -2,6 +2,7 @@
 
 namespace App;
 
+use Illuminate\Database\QueryException;
 use Illuminate\Support\Facades\DB;
 
 use Illuminate\Database\Eloquent\Model;
@@ -24,12 +25,16 @@ class Propriedade extends Model
         $colunas['id_cultivar'] = $array['cultivar'];
         $colunas['status'] = 'nao definido';
         $colunas['Acumulo_graus'] = 0;
-
-        if (DB::table('propriedade')->insert($colunas)) {
-            return true;
-        } else {
-            return false;
+        try{
+            if (DB::table('propriedade')->insert($colunas)) {
+                return true;
+            } else {
+                return false;
+            }
+        }catch (QueryException $e){
+            dd($e);
         }
+
 
     }
 
