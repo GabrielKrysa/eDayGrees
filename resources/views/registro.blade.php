@@ -31,6 +31,19 @@ include('./php/script.php');
             num = num.replace(/\D/g, "")
             return num
         }
+
+        function repeatpassword() {
+            let firstInput = document.getElementById("passwordinput").value;
+            let secondInput = document.getElementById("passwordinput2").value;
+            let empName = document.getElementById('emp').value;
+            if (firstInput === secondInput) {
+                lbl.innerText = empName;
+            } else if (firstInput > secondInput) {
+                // do something if the first input is grater than the second
+            } else {
+                // do something if the first input is less than the second
+            }
+        }
     </script>
     <script language="javascript" src="js/jquery-1.11.1.min.js"></script>
 
@@ -138,12 +151,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!-- contact -->
 <div class="logincadastro">
     <form method="POST" action="{{ route('registro') }}" class="form-horizontal">
+        @csrf
         <div class="container">
             <b><h3 align="center">Cadastro de Usuário</h3></b>
             </br>
             <div class="agileits-line"></div>
         </div>
-        @csrf
+
         <fieldset>
             <!-- Text input-->
             <label class="col-md-4 control-label" for="textinput">Nome</label>
@@ -159,6 +173,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <div class="col-md-5">
                     <input id="textinput" name="lastname" type="text" placeholder="Digite sobrenome do usuário"
                            class="form-control input-md" required="">
+
                 </div>
             </div>
             <!-- Text input-->
@@ -167,29 +182,52 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <div class="col-md-5">
                     <input id="textinput" name="cpf" onkeydown="javascript: fMasc( this, mCPF );" type="text"
                            placeholder="Digite o CPF do usuário" class="form-control input-md" required="">
+                    @if(isset($erroCpfexiste))
+                        <p style="font-size:70%; color:#ac2925">{{$erroCpfexiste}}</p>
+                    @endif
+                    @if(isset($erroCpf))
+                        <p style="font-size:70%; color:#ac2925">{{$erroCpf}}</p>
+                    @endif
                 </div>
             </div>
+
             <!-- Text input-->
             <label class="col-md-4 control-label" for="textinput">Email</label>
             <div class="form-group">
                 <div class="col-md-5">
                     <input id="textinput" name="email" type="text" placeholder="Digite o email do usuário"
                            class="form-control input-md" required="">
+                    @if(isset($erroEmail))
+                        <p style="font-size:70%; color:#ac2925">{{$erroEmail}}</p>
+                    @endif
                 </div>
             </div>
+
             <!-- Text input-->
             <label class="col-md-4 control-label" for="textinput">Login</label>
             <div class="form-group">
                 <div class="col-md-5">
                     <input id="textinput" name="username" type="text" placeholder="Digite o login do usuário"
                            class="form-control input-md" required="">
+                    @if(isset($erroUsername))
+                        <p style="font-size:70%; color:#ac2925">{{$erroUsername}}</p>
+                    @endif
                 </div>
             </div>
+
+
             <label class="col-md-4 control-label" for="passwordinput">Senha</label>
             <div class="form-group">
                 <div class="col-md-4">
                     <input id="passwordinput" name="password" type="password"
                            placeholder="Digite sua senha para cadastro" class="form-control input-md" required="">
+                    @if(isset($erroSenhaDif))
+                        <p style="font-size:70%; color:#ac2925">{{$erroSenhaDif}}</p>
+                    @endif
+
+                    @if(isset($erroSenhaCurta))
+                        <p style="font-size:70%; color:#ac2925">{{$erroSenhaCurta}}</p>
+                    @endif
                 </div>
             </div>
             <label class="col-md-4 control-label" for="passwordinput">Confirmar senha</label>
@@ -197,8 +235,16 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <div class="col-md-4">
                     <input id="passwordinput2" name="repeatpassaword" type="password"
                            placeholder="Digite novamente sua senha" class="form-control input-md" required="">
+                    @if(isset($erroSenhaDif))
+                        <p style="font-size:70%; color:#ac2925">{{$erroSenhaDif}}</p>
+                    @endif
+
+                    @if(isset($erroSenhaCurta))
+                        <p style="font-size:70%; color:#ac2925">{{$erroSenhaCurta}}</p>
+                    @endif
                 </div>
             </div>
+
             <br>
             <br>
 
@@ -234,6 +280,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         <?php }
                         ?>
                     </select>
+                    @if(isset($erroCultivar))
+                        <p style="font-size:70%; color:#ac2925">{{$erroCultivar}}</p>
+                    @endif
                 </div>
             </div>
             <label class="col-md-4 control-label" for="selectbasic">Estado</label>
@@ -252,6 +301,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         ?>
 
                     </select>
+                    @if(isset($erroEstado))
+                        <p style="font-size:70%; color:#ac2925">{{$erroEstado}}</p>
+                    @endif
                 </div>
             </div>
             <!-- Select Basic -->
@@ -260,6 +312,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <div class="col-md-4">
                     <select id="selectcidade" name="selectcidade" class="form-control">
                     </select>
+                    @if(isset($erroCidade))
+                        <p style="font-size:70%; color:#ac2925">{{$erroCidade}}</p>
+                    @endif
                 </div>
             </div>
             <!-- Button -->
@@ -270,6 +325,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     </button>
                 </div>
             </div>
+
         </fieldset>
     </form>
 </div>
@@ -304,11 +360,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             <div class="col-md-4 agileinfo_footer_grid">
                 <h3>Navegação</h3>
                 <ul class="agileinfo_footer_grid_nav">
-                    <li><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span><a href="index.php">Inicio</a>
+                    <li><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span><a
+                            href="{{route('principal.index')}}">Inicio</a>
                     </li>
-                    <li><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span><a href="about.php">Sobre</a>
+                    <li><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span><a
+                            href="{{route('sobre')}}">Sobre</a>
                     </li>
-                    <li><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span><a href="mail.php">Contato</a>
+                    <li><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span><a
+                            href="{{route('sobre')}}">Contato</a>
                     </li>
                 </ul>
             </div>
