@@ -63,6 +63,12 @@ class selects
         return $relatorio;
     }
 
+    function getPerguntas(){
+        $perguntas = DB::table('perguntas_de_seguranca')->select('id', 'perguntas')->get();
+
+        return $perguntas;
+    }
+
     function selectIdUser()
     {
         return auth()->user()->id;

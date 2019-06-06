@@ -20,7 +20,9 @@ class UsersTableSeeder extends Seeder
             'email' => 'admin@admin.com',
             'CPF' => '000.000.000-00',
             'estado' => 'AD',
-            'cidade' => 'AD'
+            'cidade' => 'AD',
+            'IDPergunta' => 0,
+            'respostaPerguntaSeguranca' => 'TESTE TESTE TESTE'
         ]);
     }
 }

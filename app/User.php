@@ -97,4 +97,14 @@ class User extends Authenticatable
             return false;
         }
     }
+
+    function verificaPerguntaSeguranca($cpf,$IDPergunta, $resposta){
+        $data = DB::table('users')->select('IDPergunta','respostaPerguntaSeguranca')->where('CPF', '=', $cpf)->get();
+        //dd($data,$IDPergunta,$resposta);
+        if (strtoupper($data[0]->IDPergunta) == strtoupper($IDPergunta) && strtoupper($data[0]->respostaPerguntaSeguranca) == strtoupper($resposta)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 }

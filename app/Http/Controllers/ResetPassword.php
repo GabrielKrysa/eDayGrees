@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\User;
 use Illuminate\Http\Request;
-use PhpParser\Node\Stmt\DeclareDeclare;
 
 class ResetPassword extends Controller
 {
@@ -18,7 +17,9 @@ class ResetPassword extends Controller
             'cpf' => $request->input('cpf'),
             'email' => $request->input('email'),
             'senha' => bcrypt($senha),
-            'concordo' => $request->input('checkbox')
+            'concordo' => $request->input('checkbox'),
+            'IDPergunta' => $request->input('selectpergunta'),
+            'respostaPerguntaSeguranca' => $request->input('resposta')
         );
 
 
@@ -35,6 +36,10 @@ class ResetPassword extends Controller
         }
         if ($data['concordo'] == null) {
             return view('redefinirsenha')->with('erroCheck', 'Você precisa concordar com a alteração');
+        }
+
+        if($user->verificaPerguntaSeguranca($data['cpf'],$data['IDPergunta'],$data['respostaPerguntaSeguranca']) == false){
+            return view('redefinirsenha')->with('erroPergunta', 'Pergunta de segurança incorreta');
         }
 
         if ($user->uptadeLogin($data)) {

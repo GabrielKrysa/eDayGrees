@@ -172,7 +172,35 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     @endif
                 </div>
             </div>
+            <label class="col-md-4 control-label" for="selectbasic">Pergunta de segurança</label>
+            <div class="form-group">
+                <div class="col-md-4">
+                    <select id="selectpergunta" name="selectpergunta" class="form-control">
 
+                        <?php
+
+                        $banco = new selects();
+
+                        $perguntas = $banco->getPerguntas();
+                        for ($i = 0; $i < count($perguntas); $i++) { ?>
+                        <option value="<?php echo $perguntas[$i]->id; ?>"><?php echo $perguntas[$i]->perguntas?></option>
+                        <?php }
+                        ?>
+                    </select>
+                    @if(isset($erroPergunta))
+                        <p style="font-size:70%; color:#ac2925">{{$erroPergunta}}</p>
+                    @endif
+                </div>
+            </div>
+
+            <label class="col-md-4 control-label" for="resposta">Resposta</label>
+            <div class="form-group">
+                <div class="col-md-4">
+                    <input id="respostainput" name="resposta" type="text"
+                           placeholder="Digite sua resposta" class="form-control input-md" required="">
+
+                </div>
+            </div>
 
             <div class="form-group">
                 <label class="col-md-4 control-label" for="singlebutton"></label>
