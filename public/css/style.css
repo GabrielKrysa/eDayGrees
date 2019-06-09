@@ -61,10 +61,10 @@ input[type="submit"], .w3l_banner_info_left_grid_left h3 a, .w3agile_footer_copy
 }
 
 .w3layouts-logo h1 a {
-	font-family: 'Righteous', cursive;
-	font-size: .8em;
+	font-family: 'roboto', cursive;
+	font-size: 1.0em;
 	letter-spacing: 6px;
-	color: #FFFFFF;
+	color:white;
 	text-decoration: none;
 }
 
@@ -1635,9 +1635,7 @@ h2.typoh2 {
 	padding: 0.6em 4em;
 }
 
-.form-group{
-
-}
+.form-group {}
 
 .contact-form input[type="submit"]:hover {
 	background: none;
