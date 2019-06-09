@@ -1,8 +1,9 @@
 <?php
 
-class Model
-{
+namespace model\Clima;
 
+class ModelClima
+{
     function connectDB()
     {
         $host = "localhost";
@@ -60,11 +61,8 @@ class Model
 
 
         $query = "INSERT INTO teste_clima (temperatura,umidade,condicao,cidade,estado,time_stamp) values($temperatura,$umidade,'$condicao','$nome','$estado','$timeStamp')";
-        try {
-            $mysqli->query($query);
-        } catch (Exception $e) {
-            echo $e->getMessage();
-        }
+
+        $mysqli->query($query);
 
         mysqli_close($mysqli);
     }

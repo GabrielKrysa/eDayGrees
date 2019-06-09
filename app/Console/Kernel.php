@@ -4,7 +4,6 @@ namespace App\Console;
 
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
-use App\Console\Commands\registraClima;
 class Kernel extends ConsoleKernel
 {
     /**
@@ -13,7 +12,7 @@ class Kernel extends ConsoleKernel
      * @var array
      */
     protected $commands = [
-        'app/Console/Commands'
+        Commands\RegistraClima::class,
     ];
 
     /**
@@ -24,6 +23,8 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
+
+       // $schedule->command('command:resgistraClima')->everyMinute();
         $schedule->command('command:resgistraClima')->twiceDaily(0, 4);
         $schedule->command('command:resgistraClima')->twiceDaily(8, 12);
         $schedule->command('command:resgistraClima')->twiceDaily(16, 20);
@@ -37,7 +38,6 @@ class Kernel extends ConsoleKernel
     protected function commands()
     {
         $this->load(__DIR__.'/Commands');
-
         require base_path('routes/console.php');
     }
 }

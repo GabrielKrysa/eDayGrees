@@ -1,5 +1,5 @@
 <?php
-
+namespace Controller\clima;
 class controller{
     
     function requestCitys(){

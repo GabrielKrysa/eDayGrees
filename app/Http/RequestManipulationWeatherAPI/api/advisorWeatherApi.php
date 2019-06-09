@@ -1,4 +1,5 @@
 <?php
+namespace api\clima;
 require_once 'advisorWeatherApiTokens.php';
 
 class ADVIDOR_API
