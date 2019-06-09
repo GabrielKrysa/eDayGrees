@@ -139,7 +139,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             }
         </style>
         <div class="cont">
-            <span class="text1" style="font-family: 'Righteous', cursive">eDayGrees</span>
+            <span class="text1" style="font-family: 'roboto', cursive">eDayGrees</span>
             <span class="text2">Unindo tecnologia com a agricultura</span>
         </div>
 
