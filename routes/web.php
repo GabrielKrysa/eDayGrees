@@ -42,12 +42,11 @@ Route::get('/redefinirsenha', function () {
 })->name('redefinirsenha');
 
 Route::get('/logout','Auth\LoginController@logout')->name('logout');
-
 Route::post('/logout', 'Auth\LoginController@logout')->name('logout');
 Route::post('/registro', 'RegisterController@Register')->name('registro');
 Route::post('/resetPassword', 'ResetPassword@redefinirSenha')->name('resetPassword');
+Route::post('/salvarContato', 'ContatoController@salvarContato')->name('salvarContato');
 
 Auth::routes();
-
 Route::post('/login', 'Auth\LoginController@login')->name('login');
 

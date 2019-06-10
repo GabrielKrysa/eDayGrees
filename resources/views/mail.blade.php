@@ -96,14 +96,18 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
             <div class="col-md-7 contact-form">
 
-                <form action="#" method="post">
+                <form action="{{route('salvarContato')}}" method="POST">
                     @csrf
-                    <input type="text" name="Name" placeholder="Nome" required="">
+                    <input type="text" name="nome" placeholder="Nome" required="">
                     <input type="email" class="email" name="Email" placeholder="E-mail" required="">
-                    <textarea placeholder="Mensagem" name="Mensagem" required=""></textarea>
+                    <textarea placeholder="mensagem" name="Mensagem" required=""></textarea>
+                    @if(isset($message))
+                        <p style="font-size:70%; color:#ac2925">{{$message}}</p>
+                    @endif
                     <input type="submit" value="Enviar">
                 </form>
             </div>
+
             <div class="col-md-4 contact-right">
                 <div class="contact-text">
                     <h4>HORÁRIO DE ATENDIMENTO : </h4>

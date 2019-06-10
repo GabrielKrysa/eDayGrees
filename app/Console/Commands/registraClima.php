@@ -79,5 +79,7 @@ class RegistraClima extends Command
         for ($i = 0; $i < count($clima); $i++) {
             $insert->insertClima($clima[$i]);
         }
+
+        return "MINHA MÃE";
     }
 }

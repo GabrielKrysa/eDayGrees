@@ -34,8 +34,6 @@ class Propriedade extends Model
         }catch (QueryException $e){
             dd($e);
         }
-
-
     }
 
     function getPro($idd)
@@ -45,7 +43,6 @@ class Propriedade extends Model
 
         return $prop[0]->id;
     }
-
 
     function atualizaGrausAcumulado($id, $calculo) // chama sempre a atualizacao de graus depois fazemos as verificacoes de status, deixei separado para ficar mais completo, mas ambas podem ser feitas dentro de um for com os memos parametros passados um para o outro
     {
