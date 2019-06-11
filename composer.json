@@ -38,7 +38,8 @@
         },
         "classmap": [
             "database/seeds",
-            "database/factories"
+            "database/factories",
+            "app/Console/Commands"
         ]
     },
     "autoload-dev": {
