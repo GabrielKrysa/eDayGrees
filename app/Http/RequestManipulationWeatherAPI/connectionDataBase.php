@@ -55,12 +55,22 @@ class ModelClima
         $temperatura = $array['temp'];
         $umidade = $array['umi'];
         $condicao = utf8_decode($array['cond']);
-        $nome = utf8_decode($array['nome']);
+        $cidade = utf8_decode($array['nome']);
         $estado = utf8_decode($array['estado']);
         $timeStamp = date('d/m/y') . " " . date('H:i:s');
 
 
-        $query = "INSERT INTO teste_clima (temperatura,umidade,condicao,cidade,estado,time_stamp) values($temperatura,$umidade,'$condicao','$nome','$estado','$timeStamp')";
+        $query = "INSERT INTO auxiliar_clima (temperatura,umidade,condicao,cidade,estado,time_stamp) values($temperatura,$umidade,'$condicao','$cidade','$estado','$timeStamp')";
+
+        $mysqli->query($query);
+
+        mysqli_close($mysqli);
+    }
+
+    function limpaTabelaAuxiliarClima(){
+        $mysqli = $this->connectDB();
+
+        $query = "DELETE * FROM auxiliar_clima";
 
         $mysqli->query($query);
 
