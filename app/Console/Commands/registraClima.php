@@ -44,6 +44,7 @@ class RegistraClima extends Command
         $controller = new controller();
 
         $cidadesEstados = $controller->requestCitys();
+
         $insert = new ModelClima();
         $h = array(
             'temp' => 12,
