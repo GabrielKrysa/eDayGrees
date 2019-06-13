@@ -80,6 +80,5 @@ class RegistraClima extends Command
             $insert->insertClima($clima[$i]);
         }
 
-        return "MINHA MÃE";
     }
 }
