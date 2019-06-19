@@ -26,9 +26,10 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
-        $schedule->command('command:resgistraClima')->twiceDaily(0, 4);
-        $schedule->command('command:resgistraClima')->twiceDaily(8, 12);
-        $schedule->command('command:resgistraClima')->twiceDaily(16, 20);
+        $schedule->command('command:registraClima')->everyMinute();
+        $schedule->command('command:registraClima')->twiceDaily(0, 4);
+        $schedule->command('command:registraClima')->twiceDaily(8, 12);
+        $schedule->command('command:registraClima')->twiceDaily(16, 20);
 
         $schedule->command('command:limpaTabale')->dailyAt('20:30');
     }

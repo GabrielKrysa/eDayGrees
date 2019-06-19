@@ -27,7 +27,7 @@ class ContatoController extends Controller
         if ($salvaContato->salvaContato($dados)) {
             return view('mail')->with('message', 'Mensagem enviada com sucesso, lhe responderemos em até X dias por email');
         } else {
-            return view('mail')->with('message', 'occoreu um erro, mensagem não enviada');
+            return view('mail')->with('message', 'Campo de mensagem não preenchido');
         }
     }
 }

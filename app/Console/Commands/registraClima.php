@@ -15,7 +15,7 @@ class RegistraClima extends Command
      *
      * @var string
      */
-    protected $signature = 'command:resgistraClima';
+    protected $signature = 'command:registraClima';
 
     /**
      * The console command description.
