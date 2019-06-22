@@ -12,7 +12,7 @@ class limparTabela extends Command
      *
      * @var string
      */
-    protected $signature = 'command:limpaTabale';
+    protected $signature = 'command:limpaTabela';
 
     /**
      * The console command description.

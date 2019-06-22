@@ -7,9 +7,9 @@ class ModelClima
     function connectDB()
     {
         $host = "localhost";
-        $user = "root";
+        $user = "devKrysa";
         $pasword = "";
-        $db = "teste";
+        $db = "edaygrees";
         $mysqli = new mysqli($host, $user, $pasword, $db) or die;
 
         return $mysqli;
@@ -67,7 +67,8 @@ class ModelClima
         mysqli_close($mysqli);
     }
 
-    function limpaTabelaAuxiliarClima(){
+    function limpaTabelaAuxiliarClima()
+    {
         $mysqli = $this->connectDB();
 
         $query = "DELETE * FROM auxiliar_clima";

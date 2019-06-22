@@ -31,7 +31,7 @@ class Kernel extends ConsoleKernel
         $schedule->command('command:registraClima')->twiceDaily(8, 12);
         $schedule->command('command:registraClima')->twiceDaily(16, 20);
 
-        $schedule->command('command:limpaTabale')->dailyAt('20:30');
+        $schedule->command('command:limpaTabela')->dailyAt('20:30');
     }
 
     /**

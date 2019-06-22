@@ -4,9 +4,9 @@ $estado_id = $_POST['estado_id'];
 
 
 $host = "localhost";
-$user = "root";
+$user = "devKrysa";
 $pasword = "";
-$db = "teste";
+$db = "edaygrees";
 $mysqli = new mysqli($host, $user, $pasword, $db) or die;
 
 $query = "SELECT id,nome FROM cidade WHERE estado_id = " . $estado_id;
