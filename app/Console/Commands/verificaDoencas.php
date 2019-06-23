@@ -18,7 +18,7 @@ class verificaDoencas extends Command
      *
      * @var string
      */
-    protected $description = 'Verifica se existe algum propriedade que está correndo risco de estar com uma plantação doente';
+    protected $description = 'Command description';
 
     /**
      * Create a new command instance.
