@@ -11,14 +11,14 @@ class verificaDoencas extends Command
      *
      * @var string
      */
-    protected $signature = 'command:name';
+    protected $signature = 'command:verificadoencas';
 
     /**
      * The console command description.
      *
      * @var string
      */
-    protected $description = 'Command description';
+    protected $description = 'Verifica se existe algum propriedade que está correndo risco de estar com uma plantação doente';
 
     /**
      * Create a new command instance.
@@ -37,6 +37,6 @@ class verificaDoencas extends Command
      */
     public function handle()
     {
-        //
+
     }
 }

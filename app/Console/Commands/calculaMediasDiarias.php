@@ -2,25 +2,24 @@
 
 namespace App\Console\Commands;
 
-use App\Clima;
+use App\Http\Controllers\ClimaController;
 use Illuminate\Console\Command;
-use model\Clima\ModelClima;
 
-class limparTabela extends Command
+class calculaMediasDiarias extends Command
 {
     /**
      * The name and signature of the console command.
      *
      * @var string
      */
-    protected $signature = 'command:limpaTabela';
+    protected $signature = 'command:medias';
 
     /**
      * The console command description.
      *
      * @var string
      */
-    protected $description = 'Command que limpa a tabela auxiliar de clima';
+    protected $description = 'Calcula e salva as medias climaticas diarias';
 
     /**
      * Create a new command instance.
@@ -39,7 +38,8 @@ class limparTabela extends Command
      */
     public function handle()
     {
-        $climaModel = new Clima();
-        $climaModel->deleteAuxClima();
+        $climaController = new ClimaController();
+
+        $climaController->calculaSalvaMediaDiariasDeClima();
     }
 }

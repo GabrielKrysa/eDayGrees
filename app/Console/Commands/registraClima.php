@@ -2,11 +2,10 @@
 
 namespace App\Console\Commands;
 
+use App\Http\Controllers\ClimaController;
+use App\Propriedade;
 use Illuminate\Console\Command;
-use capturaClima\capturaClima;
-use Controller\clima\controller;
-use model\Clima\ModelClima;
-use api\clima\ADVIDOR_API;
+
 
 class RegistraClima extends Command
 {
@@ -41,45 +40,17 @@ class RegistraClima extends Command
      */
     public function handle()
     {
-        $controller = new controller();
+        $climaController = new ClimaController();
+        $modelPropriedade = new Propriedade();
 
-        $cidadesEstados = $controller->requestCitys();
+        $cidadesEstados = $modelPropriedade->getCidadeEstado();
 
-        $insert = new ModelClima();
-        $h = array(
-            'temp' => 12,
-            'umi' => 12,
-            'cond' => 'ceu aberto',
-            'nome' => 'aqui',
-            'estado' => 'aqui tb'
-        );
-
-        $insert->insertClima($h);
-
-        $tamanho = count($cidadesEstados);
-
-        $cidades = array();
-        $estados = array();
-        $k = 0;
-
-
-        for ($i = 0; $i < $tamanho; $i = $i + 2) {
-            $cidades[$k] = $cidadesEstados[$i];
-            $estados[$k] = $cidadesEstados[$i + 1];
-            $k++;
+        foreach ($cidadesEstados as $ce) {
+            $dadosClimaticos[] = $climaController->getRequestWeather($ce->cidade, $ce->estado);
         }
 
-
-        $api_request = new ADVIDOR_API();
-        date_default_timezone_set('America/Sao_Paulo');
-
-        for ($i = 0; $i < $tamanho / 2; $i++) {
-            $clima[] = $api_request->requestWeather($cidades[$i], $estados[$i]);
+        foreach ($dadosClimaticos as $dados) {
+            $climaController->salvaClima($dados);
         }
-
-        for ($i = 0; $i < count($clima); $i++) {
-            $insert->insertClima($clima[$i]);
-        }
-
     }
 }
