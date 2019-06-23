@@ -101,7 +101,7 @@ class ClimaController extends Controller
 
                 $temperaturaMedia += $dadosClimaticos[$i]->temperatura;
                 $umidadeMedia += $dadosClimaticos[$i]->umidade;
-                $condicao = $dadosClimaticos[$i]->condicao . ", ";
+                $condicao = $dadosClimaticos[$i]->condicao;
             }
 
             $temperaturaMedia = $temperaturaMedia / 6;
@@ -112,7 +112,7 @@ class ClimaController extends Controller
                 "temperaturaMaxima" => $temperaturaMax,
                 "temperaturaMinima" => $temperaturaMin,
                 "temperaturaMedia" => $temperaturaMedia,
-                "precipitacao" => 0,
+                "condicao" => $condicao,
                 "umidadeRelativa" => $umidadeMedia,
                 "data" => $data,
                 "cidade" => $ce->cidade,

@@ -11,7 +11,7 @@ class PropriedadeSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('propriedade')->insert([
+        DB::table('propriedade')->insert([[
             'cidade' => 'Taió',
             'estado' => 'SC',
             'nome_propriedade' => 'ADMIN',
@@ -20,13 +20,13 @@ class PropriedadeSeeder extends Seeder
             'status' => 'OK',
             'Acumulo_graus' => 152.2
         ],[
-            'cidade' => 'Taió',
-            'estado' => 'SC',
+            'cidade' => 'Guarapuava',
+            'estado' => 'PR',
             'nome_propriedade' => 'ADMIN1',
             'id_proprietario' => 1,
             'id_cultivar' => 2,
             'status' => 'OK',
             'Acumulo_graus' => 153.2
-        ]);
+        ]]);
     }
 }

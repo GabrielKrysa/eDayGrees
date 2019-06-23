@@ -17,9 +17,9 @@ class CreateClimaTable extends Migration
             $table->double('temperaturaMaxima');
             $table->double('temperaturaMinima');
             $table->double('temperaturaMedia');
-            $table->double('precipitacao');
+            $table->string('condicao');
             $table->double('umidadeRelativa');
-            $table->date('data');
+            $table->string('data');
             $table->string('cidade');
             $table->string('estado');
             $table->timestamps();
