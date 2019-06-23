@@ -57,7 +57,7 @@ class Propriedade extends Model
         $propriedade->verificaStatus($id, $calculo); // chamada de funcao para atualizacao dos status caso verdadeiro, fazendo assim não precisamos chamar as duas, somente a de atualizacao 
     }
 
-    function verificaStatus($id, $calculo) // esse calculo e o valor de graus dia pela conta feita no dia pelo sistema
+    function verificaStatus($id) // esse calculo e o valor de graus dia pela conta feita no dia pelo sistema
     {
 
         $relato = new Relatorio();
@@ -126,5 +126,12 @@ class Propriedade extends Model
             $relato->guardaRelatorio($id, $desc);
         }
 
+    }
+
+    function getCidadeEstado()
+    {
+        $cidadesEstados = DB::table('propriedade')->select('cidade','estado')->distinct()->get();
+
+        return $cidadesEstados;
     }
 }
