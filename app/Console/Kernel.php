@@ -15,7 +15,9 @@ class Kernel extends ConsoleKernel
      */
     protected $commands = [
         Commands\RegistraClima::class,
-        Commands\limparTabela::class
+        Commands\limparTabela::class,
+        Commands\verificaDoencas::class,
+        Commands\calculaMediasDiarias::class
     ];
 
     /**
@@ -26,10 +28,11 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
-        $schedule->command('command:registraClima')->everyMinute();
         $schedule->command('command:registraClima')->twiceDaily(0, 4);
         $schedule->command('command:registraClima')->twiceDaily(8, 12);
         $schedule->command('command:registraClima')->twiceDaily(16, 20);
+
+        $schedule->command('command:medias')->dailyAt('20:15');
 
         $schedule->command('command:limpaTabela')->dailyAt('20:30');
     }
