@@ -19,6 +19,14 @@ class PropriedadeSeeder extends Seeder
             'id_cultivar' => 1,
             'status' => 'OK',
             'Acumulo_graus' => 152.2
+        ],[
+            'cidade' => 'Taió',
+            'estado' => 'SC',
+            'nome_propriedade' => 'ADMIN1',
+            'id_proprietario' => 1,
+            'id_cultivar' => 2,
+            'status' => 'OK',
+            'Acumulo_graus' => 153.2
         ]);
     }
 }

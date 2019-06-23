@@ -4,7 +4,7 @@ $estado_id = $_POST['estado_id'];
 
 
 $host = "localhost";
-$user = "devKrysa";
+$user = "root";
 $pasword = "";
 $db = "edaygrees";
 $mysqli = new mysqli($host, $user, $pasword, $db) or die;
