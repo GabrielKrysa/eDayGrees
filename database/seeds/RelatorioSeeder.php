@@ -13,7 +13,9 @@ class RelatorioSeeder extends Seeder
     {
         DB::table('relatorio')->insert([
             'descricao' => 'TESTANDO TESTANDOTESTANDO TESTANDOTESTANDO TESTANDOTESTANDO TESTANDO',
-            'propriedade_id' => 1
+            'oQueFazer'  => "nada a ser feito",
+            'propriedade_id' => 1,
+            'data' => "MM/DD/YY"
         ]);
     }
 }

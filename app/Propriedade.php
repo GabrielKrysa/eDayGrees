@@ -25,13 +25,13 @@ class Propriedade extends Model
         $colunas['id_cultivar'] = $array['cultivar'];
         $colunas['status'] = 'nao definido';
         $colunas['Acumulo_graus'] = 0;
-        try{
+        try {
             if (DB::table('propriedade')->insert($colunas)) {
                 return true;
             } else {
                 return false;
             }
-        }catch (QueryException $e){
+        } catch (QueryException $e) {
             dd($e);
         }
     }
@@ -50,11 +50,9 @@ class Propriedade extends Model
 
         $total = $prop[0]->Acumulo_graus + $calculo; // fazemos a soma para atualizacao dos graus dias dentro do banco de dados de determinada propriedade
 
-        DB::table('propriedade')->update(['Acumulo_graus' => $total]); //atualizacao de graus dia da propriedade 
+        DB::table('propriedade')->update(['Acumulo_graus' => $total]); //atualizacao de graus dia da propriedade
 
-        $propriedade = new Propriedade();
-
-        $propriedade->verificaStatus($id, $calculo); // chamada de funcao para atualizacao dos status caso verdadeiro, fazendo assim não precisamos chamar as duas, somente a de atualizacao 
+        $this->verificaStatus($id); // chamada de funcao para atualizacao dos status caso verdadeiro, fazendo assim não precisamos chamar as duas, somente a de atualizacao
     }
 
     function verificaStatus($id) // esse calculo e o valor de graus dia pela conta feita no dia pelo sistema
@@ -64,74 +62,57 @@ class Propriedade extends Model
 
         $acumuloAttPropriedade = DB::table('propriedade')->select('Acumulo_graus')->where('id', '=', $id)->get(); // seleciona acumulo de graus das propriedades pelo id
         $idCult = DB::table('propriedade')->select('id_cultivar')->where('id', '=', $id)->get(); // seleciona id da cultivar que temos na propriedade, assim podemos comparar o acumulo de graus da propriedade com os ciclos que temos na cultivar
-
+        $desc = "";
+        $oqueFazer = "";
+        $status = "";
         //falta fazer as requisicoes para uma funcao que manda para o relatorio a cada mudanca de ciclo dentro do sistema apois o if constatar verdadeiro
 
         $valorGema = DB::table('cultivar')->select('gemaAlgodao')->where($idCult, '=', 'id')->get();
-        if ($acumuloAttPropriedade >= $valorGema) {
-            DB::table('propriedade')->update(['status' => 'gema algodao'])->where($id, '=', 'id');
+        $valorBrotacao = DB::table('cultivar')->select('brotacao')->where($idCult, '=', 'id') - get();
+        $valorFlorescimento = DB::table('cultivar')->select('florescimento')->where($idCult, '=', 'id')->get();
+        $valorAInflorescencia = DB::table('cultivar')->select('aparecimentoInflorescencia')->where($idCult, '=', 'id')->get();
+        $valorInicioMaturacao = DB::table('cultivar')->select('inicioMaturacao')->where($idCult, '=', 'id')->get();
+        $valorColheita = DB::table('cultivar')->select('colheita')->where($idCult, '=', 'id')->get();
 
+        if ($acumuloAttPropriedade >= $valorGema) {
+            $status = "gema algodao";
             $desc = "mudanca de status da cultivar para gema algodao";
             $oqueFazer = "continuar bom gerenciamento da planta";
-            $relato->guardaRelatorio($id, $desc, $oqueFazer);
-        }
-
-
-        $valorBrotacao = DB::table('cultivar')->select('brotacao')->where($idCult, '=', 'id') - get();
-        if ($acumuloAttPropriedade >= $valorBrotacao) {
-            DB::table('propriedade')->update(['status' => 'brotacao'])->where($id, '=', 'id');
-
+        } else if ($acumuloAttPropriedade >= $valorBrotacao) {
+            $status = "Brotação";
             $desc = "mudanca de status da cultivar para brotacao";
             $oqueFazer = "continuar bom gerenciamento da planta";
-            $relato->guardaRelatorio($id, $desc);
-        }
-
-
-        $valorFlorescimento = DB::table('cultivar')->select('florescimento')->where($idCult, '=', 'id')->get();
-        if ($acumuloAttPropriedade >= $valorFlorescimento) {
-            DB::table('propriedade')->update(['status' => 'florecimento'])->where($id, '=', 'id');
-
+        } else if ($acumuloAttPropriedade >= $valorFlorescimento) {
+            $status = "Florecimento";
             $desc = "mudanca de status da cultivar para florescimento";
             $oqueFazer = "continuar bom gerenciamento da planta";
-            $relato->guardaRelatorio($id, $desc);
-        }
-
-
-        $valorAInflorescencia = DB::table('cultivar')->select('aparecimentoInflorescencia')->where($idCult, '=', 'id')->get();
-        if ($acumuloAttPropriedade >= $valorAInflorescencia) {
-            DB::table('propriedade')->update(['status' => 'aparecimento inflorescencia'])->where($id, '=', 'id');
-
+        } else if ($acumuloAttPropriedade >= $valorAInflorescencia) {
+            $status = "Aparecimento de inflorescencia";
             $desc = "mudanca de status da cultivar para aparecimento da inflorescencia";
             $oqueFazer = "continuar bom gerenciamento da planta";
-            $relato->guardaRelatorio($id, $desc);
-        }
-
-
-        $valorInicioMaturacao = DB::table('cultivar')->select('inicioMaturacao')->where($idCult, '=', 'id')->get();
-        if ($acumuloAttPropriedade >= $valorInicioMaturacao) {
-            DB::table('propriedade')->update(['status' => 'inicio maturacao'])->where($id, '=', 'id');
-
+        } else if ($acumuloAttPropriedade >= $valorInicioMaturacao) {
+            $status = "Inicio maturação";
             $desc = "mudanca de status da cultivar para inicio maturacao";
             $oqueFazer = "continuar bom gerenciamento da planta";
-            $relato->guardaRelatorio($id, $desc);
-        }
-
-
-        $valorColheita = DB::table('cultivar')->select('colheita')->where($idCult, '=', 'id')->get();
-        if ($acumuloAttPropriedade >= $valorColheita) {
-            DB::table('propriedade')->update(['status' => 'colheita'])->where($id, '=', 'id');
-
+        } else if ($acumuloAttPropriedade >= $valorColheita) {
+            $status = "Colheita";
             $desc = "mudanca de status da cultivar para videira pronta para colheita";
             $oqueFazer = "continuar bom gerenciamento da planta";
-            $relato->guardaRelatorio($id, $desc);
         }
 
+        DB::table('propriedade')->update(['status' => $status])->where($id, '=', 'id');
+        $relato->guardaRelatorio($id, $desc, $oqueFazer);
     }
 
     function getCidadeEstado()
     {
-        $cidadesEstados = DB::table('propriedade')->select('cidade','estado')->distinct()->get();
+        $cidadesEstados = DB::table('propriedade')->select('cidade', 'estado')->distinct()->get();
 
         return $cidadesEstados;
+    }
+
+    function returnIdPorNomePropriedade($nome){
+        $id = DB::table('propriedade')->select('id')->where('nome_propriedade','=',$nome)->get();
+        return $id[0]->id;
     }
 }

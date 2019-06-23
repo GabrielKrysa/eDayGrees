@@ -117,8 +117,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         if ($i == 0) {
                             "<tr>";
                             echo "<td  width = 250 height = 40 align='center'><b>NOME DA PROPRIEDADE</b></td>";
-                            echo "<td  width = 200 height = 40 align='center'><b>DESCRICAO</b></td>";
+                            echo "<td  width = 500 height = 40 align='center'><b>DESCRICAO</b></td>";
                             echo "<td  width = 200 height = 40 align='center'><b> OQUE FAZER</b></td>";
+                            echo "<td  width = 200 height = 40 align='center'><b> DATA</b></td>";
                             "<tr>";
                         }
 
@@ -128,7 +129,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
                         <?php echo "<td font-size = 6 align='center'>" . $relatorio[$i]->nome_propriedade . "</td>"; ?>
                         <?php echo "<td align='center'>" . $relatorio[$i]->descricao . "</td>"; ?>
-                        <?php echo "<td align='center' >" . 'teste' . "</td>"; ?>
+                        <?php echo "<td align='center' >" . $relatorio[$i]->oQueFazer . "</td>"; ?>
+                        <?php echo "<td align='center' >" . $relatorio[$i]->data . "</td>"; ?>
 
                         <?php echo "</tr>"; ?>
                         <?php "</table>" ?>
