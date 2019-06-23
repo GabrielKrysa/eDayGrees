@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Verifications;
+use App\Relatorio;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Foundation\Validation\ValidatesRequests;
@@ -42,6 +43,7 @@ class RegisterController extends Controller
         $user = new User();
         $prop = new Propriedade();
         $veri = new Verifications();
+        $relatorio = new Relatorio();
 
         ($propriedade);//dd
 
@@ -83,6 +85,8 @@ class RegisterController extends Controller
 
         if ($user->Register($data)) {
             if ($prop->register($propriedade)) {
+                $id = $prop->returnIdPorNomePropriedade($propriedade['nomePropriedade']);
+                $relatorio->primeiroRelatorio($id);
                 return view('login')->with('alert', 'Usuário e propriedade cadastrados com sucesso, realize seu login!');
             }
         }

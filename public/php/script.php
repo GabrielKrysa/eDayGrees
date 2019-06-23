@@ -46,24 +46,33 @@ class selects
         return $data;
     }
 
-    private function getNomePropriedade($idPropriedade){
-        $nome = DB::table('propriedade')->select('nome_propriedade')->where('id','=',$idPropriedade)->get();
+    private function getNomePropriedade($idPropriedade)
+    {
+        $nome = DB::table('propriedade')->select('nome_propriedade')->where('id', '=', $idPropriedade)->get();
         return $nome[0]->nome_propriedade;
     }
 
-    function selectRelatorio($idPropriedade)
+    function selectRelatorio($idProprietario)
     {
-        $relatorio= DB::table('relatorio')->select('propriedade_id', 'descricao')->where('propriedade_id', '=', $idPropriedade)->get();
+        $idPropriedade = $this->getPropriedades($idProprietario);
+        $relatorio = DB::table('relatorio')->select('propriedade_id', 'descricao', 'oQueFazer','data')->where('propriedade_id', '=', $idPropriedade[0]->id)->get();
 
 
-        for($i = 0; $i < count($relatorio);$i++){
+        for ($i = 0; $i < count($relatorio); $i++) {
             $relatorio[$i]->nome_propriedade = $this->getNomePropriedade($relatorio[$i]->propriedade_id);
         }
 
         return $relatorio;
     }
 
-    function getPerguntas(){
+    private function getPropriedades($id)
+    {
+        $id = DB::table('propriedade')->select('id')->where('id_proprietario', '=', $id)->get();
+        return $id;
+    }
+
+    function getPerguntas()
+    {
         $perguntas = DB::table('perguntas_de_seguranca')->select('id', 'perguntas')->get();
 
         return $perguntas;
