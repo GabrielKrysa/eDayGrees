@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateClimaTable extends Migration
+class CreateAuxiliarClimaTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,17 +13,15 @@ class CreateClimaTable extends Migration
      */
     public function up()
     {
-        Schema::create('clima', function (Blueprint $table) {
-            $table->double('temperaturaMaxima');
-            $table->double('temperaturaMinima');
-            $table->double('temperaturaMedia');
+        Schema::create('auxiliar_clima', function (Blueprint $table) {
+            $table->string('temperatura');
+            $table->string('umidade');
             $table->string('condicao');
-            $table->double('umidadeRelativa');
-            $table->string('data');
             $table->string('cidade');
             $table->string('estado');
             $table->timestamps();
-        });}
+        });
+    }
 
     /**
      * Reverse the migrations.
@@ -32,6 +30,6 @@ class CreateClimaTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('clima');
+        Schema::dropIfExists('auxiliar_clima');
     }
 }

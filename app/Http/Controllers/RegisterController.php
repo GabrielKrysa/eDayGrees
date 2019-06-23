@@ -43,22 +43,22 @@ class RegisterController extends Controller
         $prop = new Propriedade();
         $veri = new Verifications();
 
-        //dd($propriedade);
+        ($propriedade);//dd
 
         if (!$veri->validaCPF($data['CPF'])) {
-            return view('registro')->with('erroCpf', 'O CPF '.$data['CPF'].' é invalido');
+            return view('registro')->with('erroCpf', 'Dados inválidos');
         }
 
         if (!$user->verificaExistenciaCPF($data['CPF'])) {
-            return view('registro')->with('erroCpfexiste', 'O CPF '.$data['CPF'].' já está cadastrado');
+            return view('registro')->with('erroCpfexiste', 'Dados já  cadastrado');
         }
 
         if ($user->verificaExistenciaEmail($data['email']) == false) {
-            return view('registro')->with('erroEmail', 'Email '.$data['email'].' já cadastrado');
+            return view('registro')->with('erroEmail', 'Dados já  cadastrado');
         }
 
         if ($user->verificaExistenciaUsername($user['username']) == false) {
-            return view('registro')->with('erroUsername', 'Nome de usuário '.$user['username'].' já cadastrado');
+            return view('registro')->with('erroUsername', 'Dados já  cadastrado');
         }
 
         if (!(strlen($req->input('password') >= 8))) {
@@ -70,15 +70,15 @@ class RegisterController extends Controller
         }
 
         if ($propriedade['cultivar'] == "0") {
-            return view('registro')->with('erroCultivar', 'Selecione um cultivar valido');
+            return view('registro')->with('erroCultivar', 'Dados inválidos');
         }
 
         if ($propriedade['estado'] == "0") {
-            return view('registro')->with('erroEstado', 'Selecione um estado valido');
+            return view('registro')->with('erroEstado', 'Dados inválidos');
         }
 
         if ($propriedade['cidade'] == "0" || $propriedade['cidade'] == null) {
-            return view('registro')->with('erroCidade', 'Selecione uma cidade valida');
+            return view('registro')->with('erroCidade', 'Dado inválido');
         }
 
         if ($user->Register($data)) {

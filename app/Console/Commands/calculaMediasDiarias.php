@@ -3,25 +3,23 @@
 namespace App\Console\Commands;
 
 use App\Http\Controllers\ClimaController;
-use App\Propriedade;
 use Illuminate\Console\Command;
 
-
-class RegistraClima extends Command
+class calculaMediasDiarias extends Command
 {
     /**
      * The name and signature of the console command.
      *
      * @var string
      */
-    protected $signature = 'command:registraClima';
+    protected $signature = 'command:medias';
 
     /**
      * The console command description.
      *
      * @var string
      */
-    protected $description = 'Captura e registra dados climaticos';
+    protected $description = 'Calcula e salva as medias climaticas diarias';
 
     /**
      * Create a new command instance.
@@ -41,16 +39,7 @@ class RegistraClima extends Command
     public function handle()
     {
         $climaController = new ClimaController();
-        $modelPropriedade = new Propriedade();
 
-        $cidadesEstados = $modelPropriedade->getCidadeEstado();
-
-        foreach ($cidadesEstados as $ce) {
-            $dadosClimaticos[] = $climaController->getRequestWeather($ce->cidade, $ce->estado);
-        }
-
-        foreach ($dadosClimaticos as $dados) {
-            $climaController->salvaClima($dados);
-        }
+        $climaController->calculaSalvaMediaDiariasDeClima();
     }
 }

@@ -3,7 +3,6 @@
 /public/storage
 /storage/*.key
 /vendor
-.env
 /storage/
 .phpunit.result.cache
 Homestead.json
@@ -22,7 +21,7 @@ Homestead.json
 Homestead.yaml
 npm-debug.log
 yarn-error.log
-
+edaygrees-homolog.pem
 
 # Created by https://www.gitignore.io/api/phpstorm
 # Edit at https://www.gitignore.io/?templates=phpstorm

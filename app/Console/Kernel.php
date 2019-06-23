@@ -4,6 +4,7 @@ namespace App\Console;
 
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
+use Psy\Command\Command;
 
 class Kernel extends ConsoleKernel
 {
@@ -14,6 +15,9 @@ class Kernel extends ConsoleKernel
      */
     protected $commands = [
         Commands\RegistraClima::class,
+        Commands\limparTabela::class,
+        Commands\verificaDoencas::class,
+        Commands\calculaMediasDiarias::class
     ];
 
     /**
@@ -24,10 +28,13 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
-        $schedule->command('command:resgistraClima')->everyMinute();
-        $schedule->command('command:resgistraClima')->twiceDaily(0, 4);
-        $schedule->command('command:resgistraClima')->twiceDaily(8, 12);
-        $schedule->command('command:resgistraClima')->twiceDaily(16, 20);
+        $schedule->command('command:registraClima')->twiceDaily(0, 4);
+        $schedule->command('command:registraClima')->twiceDaily(8, 12);
+        $schedule->command('command:registraClima')->twiceDaily(16, 20);
+
+        $schedule->command('command:medias')->dailyAt('20:15');
+
+        $schedule->command('command:limpaTabela')->dailyAt('20:30');
     }
 
     /**
