@@ -14,6 +14,7 @@ class CreateClimaTable extends Migration
     public function up()
     {
         Schema::create('clima', function (Blueprint $table) {
+            $table->increments('id');
             $table->double('temperaturaMaxima');
             $table->double('temperaturaMinima');
             $table->double('temperaturaMedia');
