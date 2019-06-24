@@ -39,13 +39,6 @@ class Kernel extends ConsoleKernel
         $schedule->command('command:medias')->cron('10 20 * * *');
         $schedule->command('command:atualizaGrausDias')->cron('20 20 * * *');
         $schedule->command('command:limpaTabela')->cron('30 20 * * *');
-
-        /*$schedule->command('command:verificaDoencas')->everyMinute();
-        $schedule->command('command:registraClima')->twiceDaily(0, 4);
-        $schedule->command('command:registraClima')->twiceDaily(8, 12);
-        $schedule->command('command:registraClima')->twiceDaily(16, 20);*/
-
-
     }
 
     /**
