@@ -48,7 +48,11 @@ class Propriedade extends Model
     {
         DB::table('propriedade')->where('id', '=', $id)->update(['Acumulo_graus' => $calculo]); //atualizacao de graus dia da propriedade
 
+        $this->mandaGrafico($id, $calculo);
         $this->verificaStatus($id, $calculo); // chamada de funcao para atualizacao dos status caso verdadeiro, fazendo assim não precisamos chamar as duas, somente a de atualizacao
+    }
+    function mandaGrafico($id, $calculo){
+        DB::table('grafico')->insert(['idUser' => '$id', 'graus' => '$calculo']);
     }
 
     function verificaStatus($id, $soma) // esse calculo e o valor de graus dia pela conta feita no dia pelo sistema
