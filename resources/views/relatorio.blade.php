@@ -140,35 +140,24 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             </form>
         </div>
         <table>
-        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript">
       google.charts.load('current', {'packages':['corechart']});
       google.charts.setOnLoadCallback(drawChart);
-
+      
+       
+      <?php
+         $prop = new selects();
+         $idG = auth()->user()->id;
+         $a = $prop->retorna($idG); ?>
 
       function drawChart() {
         var data = google.visualization.arrayToDataTable([ 
-        <?php
-        
-        $prop = new selects();
-        $idG = auth()->user()->id;
-        $t = $prop->retornaQuantidade($idG);
-        $a = $prop->retornaValoresGrafico($idG);
+        ['semana', 'Graus'],
+        ['semana 1', 0],
+        ['semana 1', <?php echo $a?> ]
+        ]);
 
-        ['semana', 'Sales'],
-        for($i = 1 ; $i < $t ; $i++){
-          ,['dia' .$i,  $a[$i]->graus]
-        } 
-        
-        ]);?>
-
-        /*
-         ['semana', 'Sales'],
-          ['semana 1 ',  a,   ],
-          ['semana 2',  1170,     ],
-          ['semana 3',  660,      ],
-          ['semana 4',  1030,     ]
-        */
         var options = {
           title: 'Controle de Graus dias semanais',
           curveType: 'function',
@@ -190,11 +179,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         </div>
     </div>
 </div>
-</div>
-<div>
-    <h1 align="center"><b>Grafico com relação a graus dia</b></h1>
-
-
 </div>
 <div class="footer">
     <div class="container">

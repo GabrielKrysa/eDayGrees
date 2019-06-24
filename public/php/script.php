@@ -82,13 +82,14 @@ class selects
     {
         return auth()->user()->id;
     }
-    function retornaQuantidade($id){
-        $totall = DB::table('grafico')->where('idUser', '=' ,'$id')->count('idUser');
-        return $totall;
-    }
+    
     function retornaValoresGrafico($id){
-        $gr = array();
-        $gr = DB::table('grafico')->select('graus')->where('idUser', '=', '$id');
+       
+        $gr = DB::table('grafico')->select('graus')->where('idUser', '=', $id);
         return $gr;
+    }
+    function retorna($id){
+       $t = DB::table('propriedade')->select('Acumulo_graus')->where('id_proprietario', '=', $id)->get();
+       return $t[0]->Acumulo_graus;
     }
 }
