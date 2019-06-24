@@ -44,14 +44,14 @@ class Propriedade extends Model
         return $prop[0]->id;
     }
 
-    function atualizaGrausAcumulado($id, $calculo) // chama sempre a atualizacao de graus depois fazemos as verificacoes de status, deixei separado para ficar mais completo, mas ambas podem ser feitas dentro de um for com os memos parametros passados um para o outro
+    function atualizaGrausAcumulado($id, $calculo, $soma) // chama sempre a atualizacao de graus depois fazemos as verificacoes de status, deixei separado para ficar mais completo, mas ambas podem ser feitas dentro de um for com os memos parametros passados um para o outro
     {
         DB::table('propriedade')->where('id', '=', $id)->update(['Acumulo_graus' => $calculo]); //atualizacao de graus dia da propriedade
 
         $this->verificaStatus($id, $calculo); // chamada de funcao para atualizacao dos status caso verdadeiro, fazendo assim não precisamos chamar as duas, somente a de atualizacao
     }
 
-    function verificaStatus($id, $calculo) // esse calculo e o valor de graus dia pela conta feita no dia pelo sistema
+    function verificaStatus($id, $soma) // esse calculo e o valor de graus dia pela conta feita no dia pelo sistema
     {
 
         $relato = new Relatorio();
@@ -100,7 +100,7 @@ class Propriedade extends Model
         $date = date("j/m/Y");
 
         $data = [
-            'descricao' => "Sua cultivar teve um ganho de " . $calculo . " Graus-Dias",
+            'descricao' => "Sua cultivar teve um ganho de " . $soma . " Graus-Dias",
             'oQueFazer' => "Nada a ser feito ainda. Cultivar em evolução.",
             'propriedade_id' => $id,
             'data' => $date
