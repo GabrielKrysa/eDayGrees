@@ -27,4 +27,9 @@ class Relatorio extends Model
         DB::table('relatorio')->insert($data);
     }
 
+    function atualizacaoGD($data)
+    {
+        $date = date("j/m/Y");
+        DB::table('relatorio')->insert($data);
+    }
 }

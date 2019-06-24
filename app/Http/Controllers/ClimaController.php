@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Clima;
 use PHPUnit\Runner\Exception;
 
-define('ADIVIDOR_API_TOKEN_1', '5f783e9a2377267db617eb2d735bf968');
+define('ADIVIDOR_API_TOKEN_1', '125f8dcb596c262aabce09e28a6b3a05');
 
 class ClimaController extends Controller
 {

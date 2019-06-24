@@ -48,10 +48,10 @@ class Propriedade extends Model
     {
         DB::table('propriedade')->where('id', '=', $id)->update(['Acumulo_graus' => $calculo]); //atualizacao de graus dia da propriedade
 
-        $this->verificaStatus($id); // chamada de funcao para atualizacao dos status caso verdadeiro, fazendo assim não precisamos chamar as duas, somente a de atualizacao
+        $this->verificaStatus($id, $calculo); // chamada de funcao para atualizacao dos status caso verdadeiro, fazendo assim não precisamos chamar as duas, somente a de atualizacao
     }
 
-    function verificaStatus($id) // esse calculo e o valor de graus dia pela conta feita no dia pelo sistema
+    function verificaStatus($id, $calculo) // esse calculo e o valor de graus dia pela conta feita no dia pelo sistema
     {
 
         $relato = new Relatorio();
@@ -92,9 +92,22 @@ class Propriedade extends Model
             $oqueFazer = "continuar bom gerenciamento da planta";
         }
 
-        DB::table('propriedade')->where('id', '=', $id)->update(['status' => $status]);
+        if ($desc != "") {
+            DB::table('propriedade')->where('id', '=', $id)->update(['status' => $status]);
+            $relato->guardaRelatorio($id, $desc, $oqueFazer);
+        }
 
-        $relato->guardaRelatorio($id, $desc, $oqueFazer);
+        $date = date("j/m/Y");
+
+        $data = [
+            'descricao' => "Sua cultivar teve um ganho de " . $calculo . " Graus-Dias",
+            'oQueFazer' => "Nada a ser feito ainda. Cultivar em evolução.",
+            'propriedade_id' => $id,
+            'data' => $date
+        ];
+
+        $relato->atualizacaoGD($data);
+
     }
 
     function getCidadeEstado()
