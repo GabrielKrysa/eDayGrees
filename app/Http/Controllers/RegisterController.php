@@ -63,7 +63,7 @@ class RegisterController extends Controller
             return view('registro')->with('erroUsername', 'Dados já  cadastrado');
         }
 
-        if (!(strlen($req->input('password') >= 8))) {
+        if (strlen($req->input('password') < 8)) {
             return view('registro')->with('erroSenhaCurta', 'Senha curta demais');
         }
 
