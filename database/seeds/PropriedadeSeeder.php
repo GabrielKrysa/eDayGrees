@@ -11,7 +11,7 @@ class PropriedadeSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('propriedade')->insert([[
+        DB::table('propriedade')->insert([
             'cidade' => 'Taió',
             'estado' => 'SC',
             'nome_propriedade' => 'ADMIN',
@@ -27,6 +27,6 @@ class PropriedadeSeeder extends Seeder
             'id_cultivar' => 2,
             'status' => 'OK',
             'Acumulo_graus' => 153.2
-        ]]);
+        ]);
     }
 }

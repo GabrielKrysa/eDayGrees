@@ -46,13 +46,9 @@ class Propriedade extends Model
 
     function atualizaGrausAcumulado($id, $calculo) // chama sempre a atualizacao de graus depois fazemos as verificacoes de status, deixei separado para ficar mais completo, mas ambas podem ser feitas dentro de um for com os memos parametros passados um para o outro
     {
-        $prop = DB::table('propriedade')->select('Acumulo_graus')->where('id', '=', $id)->get(); // pego o graus dia total da minha propriedade
+        DB::table('propriedade')->where('id', '=', $id)->update(['Acumulo_graus' => $calculo]); //atualizacao de graus dia da propriedade
 
-        $total = $prop[0]->Acumulo_graus + $calculo; // fazemos a soma para atualizacao dos graus dias dentro do banco de dados de determinada propriedade
-
-        DB::table('propriedade')->update(['Acumulo_graus' => $total]); //atualizacao de graus dia da propriedade
-
-        $this->verificaStatus($id); // chamada de funcao para atualizacao dos status caso verdadeiro, fazendo assim não precisamos chamar as duas, somente a de atualizacao
+        //$this->verificaStatus($id); // chamada de funcao para atualizacao dos status caso verdadeiro, fazendo assim não precisamos chamar as duas, somente a de atualizacao
     }
 
     function verificaStatus($id) // esse calculo e o valor de graus dia pela conta feita no dia pelo sistema
@@ -101,6 +97,7 @@ class Propriedade extends Model
         }
 
         DB::table('propriedade')->update(['status' => $status])->where($id, '=', 'id');
+
         $relato->guardaRelatorio($id, $desc, $oqueFazer);
     }
 
@@ -111,8 +108,9 @@ class Propriedade extends Model
         return $cidadesEstados;
     }
 
-    function returnIdPorNomePropriedade($nome){
-        $id = DB::table('propriedade')->select('id')->where('nome_propriedade','=',$nome)->get();
+    function returnIdPorNomePropriedade($nome)
+    {
+        $id = DB::table('propriedade')->select('id')->where('nome_propriedade', '=', $nome)->get();
         return $id[0]->id;
     }
 }
