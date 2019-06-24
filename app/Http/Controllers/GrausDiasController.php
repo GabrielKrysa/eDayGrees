@@ -24,7 +24,7 @@ class GrausDiasController extends Controller
                     }
                     $id = $propriedadeCidadeEstado[$i]->id;
 
-                    $propriedadeModel->atualizaGrausAcumulado($id, $calculo);
+                    $propriedadeModel->atualizaGrausAcumulado($id, $calculo,$c->temperaturaMedia);
 
                 }
             }
