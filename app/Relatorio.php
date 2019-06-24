@@ -12,7 +12,7 @@ class Relatorio extends Model
     function guardaRelatorio($idPropriedade, $descricao, $oqueFazer) // id da propriedade que vai receber o aviso / descricao do aviso realizado  
     {
         $data = date("j/m/Y");
-        if (DB::table('relatorio')->insert(['id_propriedade' => $idPropriedade, 'descricao' => $descricao, 'oqueFazer' => $oqueFazer, 'data' => $data])) ;
+        if (DB::table('relatorio')->insert(['propriedade_id' => $idPropriedade, 'descricao' => $descricao, 'oqueFazer' => $oqueFazer, 'data' => $data])) ;
     }
 
     function primeiroRelatorio($idPropriedade)

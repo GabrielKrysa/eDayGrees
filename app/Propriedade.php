@@ -48,7 +48,7 @@ class Propriedade extends Model
     {
         DB::table('propriedade')->where('id', '=', $id)->update(['Acumulo_graus' => $calculo]); //atualizacao de graus dia da propriedade
 
-        //$this->verificaStatus($id); // chamada de funcao para atualizacao dos status caso verdadeiro, fazendo assim não precisamos chamar as duas, somente a de atualizacao
+        $this->verificaStatus($id); // chamada de funcao para atualizacao dos status caso verdadeiro, fazendo assim não precisamos chamar as duas, somente a de atualizacao
     }
 
     function verificaStatus($id) // esse calculo e o valor de graus dia pela conta feita no dia pelo sistema
@@ -63,40 +63,36 @@ class Propriedade extends Model
         $status = "";
         //falta fazer as requisicoes para uma funcao que manda para o relatorio a cada mudanca de ciclo dentro do sistema apois o if constatar verdadeiro
 
-        $valorGema = DB::table('cultivar')->select('gemaAlgodao')->where($idCult, '=', 'id')->get();
-        $valorBrotacao = DB::table('cultivar')->select('brotacao')->where($idCult, '=', 'id') - get();
-        $valorFlorescimento = DB::table('cultivar')->select('florescimento')->where($idCult, '=', 'id')->get();
-        $valorAInflorescencia = DB::table('cultivar')->select('aparecimentoInflorescencia')->where($idCult, '=', 'id')->get();
-        $valorInicioMaturacao = DB::table('cultivar')->select('inicioMaturacao')->where($idCult, '=', 'id')->get();
-        $valorColheita = DB::table('cultivar')->select('colheita')->where($idCult, '=', 'id')->get();
+        $valores = DB::table('cultivar')->select('gemaAlgodao', 'brotacao', 'florescimento', 'aparecimentoInflorescencia', 'inicioMaturacao', 'colheita')->where('id', '=', $idCult[0]->id_cultivar)->get();
 
-        if ($acumuloAttPropriedade >= $valorGema) {
-            $status = "gema algodao";
-            $desc = "mudanca de status da cultivar para gema algodao";
-            $oqueFazer = "continuar bom gerenciamento da planta";
-        } else if ($acumuloAttPropriedade >= $valorBrotacao) {
-            $status = "Brotação";
-            $desc = "mudanca de status da cultivar para brotacao";
-            $oqueFazer = "continuar bom gerenciamento da planta";
-        } else if ($acumuloAttPropriedade >= $valorFlorescimento) {
-            $status = "Florecimento";
-            $desc = "mudanca de status da cultivar para florescimento";
-            $oqueFazer = "continuar bom gerenciamento da planta";
-        } else if ($acumuloAttPropriedade >= $valorAInflorescencia) {
-            $status = "Aparecimento de inflorescencia";
-            $desc = "mudanca de status da cultivar para aparecimento da inflorescencia";
-            $oqueFazer = "continuar bom gerenciamento da planta";
-        } else if ($acumuloAttPropriedade >= $valorInicioMaturacao) {
-            $status = "Inicio maturação";
-            $desc = "mudanca de status da cultivar para inicio maturacao";
-            $oqueFazer = "continuar bom gerenciamento da planta";
-        } else if ($acumuloAttPropriedade >= $valorColheita) {
+        if ($acumuloAttPropriedade[0]->Acumulo_graus >= $valores[0]->colheita) {
             $status = "Colheita";
             $desc = "mudanca de status da cultivar para videira pronta para colheita";
             $oqueFazer = "continuar bom gerenciamento da planta";
+        } else if ($acumuloAttPropriedade[0]->Acumulo_graus >= $valores[0]->inicioMaturacao) {
+            $status = "Inicio maturação";
+            $desc = "mudanca de status da cultivar para inicio maturacao";
+            $oqueFazer = "continuar bom gerenciamento da planta";
+        }
+        if ($acumuloAttPropriedade[0]->Acumulo_graus >= $valores[0]->florescimento) {
+            $status = "Florecimento";
+            $desc = "mudanca de status da cultivar para florescimento";
+            $oqueFazer = "continuar bom gerenciamento da planta";
+        } else if ($acumuloAttPropriedade[0]->Acumulo_graus >= $valores[0]->aparecimentoInflorescencia) {
+            $status = "Aparecimento de inflorescencia";
+            $desc = "mudanca de status da cultivar para aparecimento da inflorescencia";
+            $oqueFazer = "continuar bom gerenciamento da planta";
+        } else if ($acumuloAttPropriedade[0]->Acumulo_graus >= $valores[0]->brotacao) {
+            $status = "Brotação";
+            $desc = "mudanca de status da cultivar para brotacao";
+            $oqueFazer = "continuar bom gerenciamento da planta";
+        } else if ($acumuloAttPropriedade[0]->Acumulo_graus >= $valores[0]->gemaAlgodao) {
+            $status = "gema algodao";
+            $desc = "mudanca de status da cultivar para gema algodao";
+            $oqueFazer = "continuar bom gerenciamento da planta";
         }
 
-        DB::table('propriedade')->update(['status' => $status])->where($id, '=', 'id');
+        DB::table('propriedade')->where('id', '=', $id)->update(['status' => $status]);
 
         $relato->guardaRelatorio($id, $desc, $oqueFazer);
     }
