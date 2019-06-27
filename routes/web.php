@@ -12,7 +12,11 @@
 */
 
 use Illuminate\Support\Facades\Route;
+Route::get('/', function () {
+    return view('maintenance');
+})->name('maintenance');
 
+/*
 Route::get('/', function () {
     return view('index');
 })->name('principal.index');
@@ -50,3 +54,4 @@ Route::post('/salvarContato', 'ContatoController@salvarContato')->name('salvarCo
 Auth::routes();
 Route::post('/login', 'Auth\LoginController@login')->name('login');
 
+*/

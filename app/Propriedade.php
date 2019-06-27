@@ -25,6 +25,7 @@ class Propriedade extends Model
         $colunas['id_cultivar'] = $array['cultivar'];
         $colunas['status'] = 'nao definido';
         $colunas['Acumulo_graus'] = 0;
+
         try {
             if (DB::table('propriedade')->insert($colunas)) {
                 return true;
