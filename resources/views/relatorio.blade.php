@@ -154,8 +154,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
       function drawChart() {
         var data = google.visualization.arrayToDataTable([ 
         ['semana', 'Graus'],
-        ['semana 1', 0],
-        ['semana 1', <?php echo $a?> ]
+        ['inicio ', 0],
+        ['atual ', <?php echo $a?> ]
         ]);
 
         var options = {
