@@ -1,0 +1,38 @@
+version: '2'
+
+services:
+  db:
+      image: mysql:5.7
+      restart: always
+      environment:
+        MYSQL_DATABASE: 'edaygrees'
+        # So you don't have to use root, but you can if you like
+        MYSQL_USER: 'root'
+        # You can use whatever password you like
+        MYSQL_PASSWORD: ''
+        # Password for root access
+        MYSQL_ROOT_PASSWORD: ''
+      ports:
+        # <Port exposed> : < MySQL Port running inside container>
+        - '3306:3306'
+      expose:
+        # Opens port 3306 on the container
+        - '3306'
+        # Where our data will be persisted
+      volumes:
+        - /db:/var/lib/mysql
+
+  edaygrees:
+    tty: true
+    build: .
+    environment:
+      - DB_HOST=db
+      - DB_USERNAME=root
+      - DB_DATABASE=edaygrees
+      - DB_PASSWORD=
+    depends_on:
+      - db
+    ports:
+      - 3000:3000
+    volumes:
+      - ./:/app

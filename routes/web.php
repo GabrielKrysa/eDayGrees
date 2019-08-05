@@ -12,11 +12,12 @@
 */
 
 use Illuminate\Support\Facades\Route;
+
 Route::get('/', function () {
-    return view('maintenance');
+    return view('index');
 })->name('maintenance');
 
-/*
+
 Route::get('/', function () {
     return view('index');
 })->name('principal.index');
@@ -50,8 +51,9 @@ Route::post('/logout', 'Auth\LoginController@logout')->name('logout');
 Route::post('/registro', 'RegisterController@Register')->name('registro');
 Route::post('/resetPassword', 'ResetPassword@redefinirSenha')->name('resetPassword');
 Route::post('/salvarContato', 'ContatoController@salvarContato')->name('salvarContato');
+Route::get('/teste', 'API\WeatherAPIRequest@hg_request')->name('teste');
 
 Auth::routes();
 Route::post('/login', 'Auth\LoginController@login')->name('login');
 
-*/
+
