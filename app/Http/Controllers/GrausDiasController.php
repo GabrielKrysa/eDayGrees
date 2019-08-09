@@ -18,7 +18,9 @@ class GrausDiasController extends Controller
                 if ($propriedadeCidadeEstado[$i]->cidade == $c->cidade) {
                     $propriedadeModel = new Propriedade();
                     if ($c->temperaturaMedia >= 10) {
-                        $calculo = $propriedadeCidadeEstado[$i]->Acumulo_graus + $c->temperaturaMedia;
+                        $sub = $c->temperaturaMedia - 10;
+                        $calculo = $propriedadeCidadeEstado[$i]->Acumulo_graus + $sub;
+                        
                     } else {
                         $calculo = $propriedadeCidadeEstado[$i]->Acumulo_graus + 0;
                     }

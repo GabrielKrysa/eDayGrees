@@ -139,6 +139,38 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 </table>
             </form>
         </div>
+        <table>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+      
+       
+      <?php
+         $prop = new selects();
+         $idG = auth()->user()->id;
+         $a = $prop->retorna($idG); ?>
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([ 
+        ['semana', 'Graus'],
+        ['inicio ', 0],
+        ['atual ', <?php echo $a?> ]
+        ]);
+
+        var options = {
+          title: 'Controle de Graus dias semanais',
+          curveType: 'function',
+          legend: { position: 'bottom' }
+        };
+
+        var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+
+        chart.draw(data, options);
+      }
+     </script>
+        </table>
+        <div id="curve_chart" style="width: 900px; height: 500px" align = "center"></div>
         <br/>
         <br/>
         <br/>
@@ -147,11 +179,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         </div>
     </div>
 </div>
-</div>
-<div>
-    <h1 align="center"><b>Grafico com relação a graus dia</b></h1>
-
-
 </div>
 <div class="footer">
     <div class="container">
