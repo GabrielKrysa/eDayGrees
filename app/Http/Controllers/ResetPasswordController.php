@@ -2,16 +2,21 @@
 
 namespace App\Http\Controllers;
 
-use App\User;
+use App\User1;
 use Illuminate\Http\Request;
 
-class ResetPassword extends Controller
+class ResetPasswordController extends Controller
 {
+
+    public function index(){
+        return view('resetPassword');
+    }
+
     function redefinirSenha(Request $request)
     {
 
         $senha = $request->input('password');
-        $user = new User();
+        $user = new User1();
 
         $data = array(
             'cpf' => $request->input('cpf'),

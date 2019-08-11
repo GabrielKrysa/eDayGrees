@@ -2,109 +2,22 @@
 
 namespace App;
 
-use Illuminate\Database\QueryException;
-use Illuminate\Notifications\Notifiable;
-use Illuminate\Foundation\Auth\User as Authenticatable;
-use Illuminate\Support\Facades\DB;
+use Illuminate\Database\Eloquent\Model;
 
-class User extends Authenticatable
+class User extends Model
 {
-    use Notifiable;
+    protected $connection = 'mongodb';
 
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var array
-     */
+    protected $collection = 'users';
+
     protected $fillable = [
-        'username',
-        'nome',
-        'sobrenome',
+        'name_lastname',
         'email',
-        'CPF',
-        'estado',
-        'cidade'
     ];
 
-    /**
-     * The attributes that should be hidden for arrays.
-     *
-     * @var array
-     */
     protected $hidden = [
         'password',
         'remenber_token'
     ];
 
-    public function Register($user)
-    {
-        try {
-            if(DB::table('users')->insert([$user])){
-                return true;
-            }else{
-                return false;
-            }
-
-        } catch (QueryException $e) {
-            return view('registro')->with('erro', '');
-        }
-
-    }
-
-    function getUsername($NameUser)
-    {
-        $users = DB::table('users')->select('id')->where('nome', '=', $NameUser)->get();
-
-        return $users[0]->id;
-    }
-
-    function verificaExistenciaCPF($cpf)
-    {
-        $data = DB::table('users')->select('CPF')->where('CPF', '=', $cpf)->get();
-        if (count($data) == 0) {
-            return true;
-        } else {
-            return false;
-        }
-    }
-
-    function verificaExistenciaEmail($email)
-    {
-        $data = DB::table('users')->select('email')->where('email', '=', $email)->get();
-        if (count($data) == 0) {
-            return true;
-        } else {
-            return false;
-        }
-    }
-
-    function verificaExistenciaUsername($username)
-    {
-        $data = DB::table('users')->select('username')->where('username', '=', $username)->get();
-        if (count($data) == 0) {
-            return true;
-        } else {
-            return false;
-        }
-    }
-
-
-    function uptadeLogin($array)
-    {
-        if (DB::table('users')->where('CPF', '=', $array['cpf'])->update(['password' => $array['senha']])) {
-            return true;
-        } else {
-            return false;
-        }
-    }
-
-    function verificaPerguntaSeguranca($cpf,$IDPergunta, $resposta){
-        $data = DB::table('users')->select('IDPergunta','respostaPerguntaSeguranca')->where('CPF', '=', $cpf)->get();
-        //dd($data,$IDPergunta,$resposta);
-        if (strtoupper($data[0]->IDPergunta) == strtoupper($IDPergunta) && strtoupper($data[0]->respostaPerguntaSeguranca) == strtoupper($resposta)) {
-            return true;
-        } else {
-            return false;
-        }
-    }
 }

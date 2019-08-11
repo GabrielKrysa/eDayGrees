@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class DoencasController extends Controller
+class oencasController extends Controller
 {
 
 }

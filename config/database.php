@@ -15,7 +15,7 @@ return [
     |
     */
 
-    'default' => env('DB_CONNECTION', 'mysql'),
+    'default' => env('DB_CONNECTION', 'mongodb'),
 
     /*
     |--------------------------------------------------------------------------
@@ -34,6 +34,18 @@ return [
     */
 
     'connections' => [
+
+        'mongodb' => [
+            'driver' => 'mongodb',
+            'host' => ['localhost'],
+            'port' => env('DB_PORT', 27017),
+            'database' => env('DB_DATABASE'),
+            'username' => env('DB_USERNAME'),
+            'passworkd' => env('DB_PASSWORD'),
+            'options' => [
+                'db' => 'admin'
+            ]
+        ],
 
         'sqlite' => [
             'driver' => 'sqlite',
@@ -90,6 +102,7 @@ return [
             'prefix' => '',
             'prefix_indexes' => true,
         ],
+
 
     ],
 

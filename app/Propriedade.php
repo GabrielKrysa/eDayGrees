@@ -11,7 +11,7 @@ class Propriedade extends Model
 {
     function register($array)
     {
-        $user = new User();
+        $user = new User1();
         $cidadeEstado = new CidadeEstado();
 
         $array['idproprietario'] = $user->getUsername($array['nomeProprietario']);

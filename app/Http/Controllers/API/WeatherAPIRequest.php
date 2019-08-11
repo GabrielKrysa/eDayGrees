@@ -124,31 +124,40 @@ class WeatherAPIRequest extends Controller
 
     const key = '4485fb90';
 
+    private function contruct_URL($url, $parameters)
+    {
+        foreach ($parameters as $key => $value) {
+            if (empty($value)) continue;
+            $url .= $key . '=' . urlencode($value) . '&';
+        }
+
+        return $url;
+    }
+
     function hg_request($endpoint = 'weather')
     {
         $ip = $_SERVER["REMOTE_ADDR"];
-        $chave = self::key;
+        $key = self::key;
 
-        $parametros = array(
+        $parameters = array(
             'user_ip' => $ip,
-            'lat' => "25",
-            'lon' => "51"
+            'lat' => "51",
+            'lon' => "25"
         );
+
         $url = 'http://api.hgbrasil.com/' . $endpoint . '/?format=json&';
 
-        if (is_array($parametros)) {
+        if (is_array($parameters)) {
             // Insere a chave nos parametros
-            if (!empty($chave)) $parametros = array_merge($parametros, array('key' => $chave));
+            if (!empty($key)) $parameters = array_merge($parameters, array('key' => $key));
 
             // Transforma os parametros em URL
-            foreach ($parametros as $key => $value) {
-                if (empty($value)) continue;
-                $url .= $key . '=' . urlencode($value) . '&';
-            }
+            $url = $this->contruct_URL($url, $parameters);
 
             // Obtem os dados da API
             $resposta = file_get_contents(substr($url, 0, -1));
 
+            //realiza a decodificação para json
             $decode = json_decode($resposta, true);
 
             $data = array(
@@ -156,6 +165,8 @@ class WeatherAPIRequest extends Controller
                 "humidity" => $decode['results']['humidity'],
                 "city" => $decode['results']['city']
             );
+
+            dd($data);
 
             return $data;
         } else {

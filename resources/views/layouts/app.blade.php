@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
 <head>
@@ -26,7 +25,6 @@
     <link href="{{asset('/css/flexslider.css')}}" rel="stylesheet">
     <script src="{{asset('/js/jquery-1.11.1.min.js')}}"></script>
     <script src="{{asset('/js/bootstrap.js')}}"></script>
-    <script src="{{asset('/js/SmoothScroll.min.js')}}"></script>
     <script defer src="{{asset('/js/jquery.flexslider.js')}}"></script>
 
     <script type="text/javascript">
@@ -76,7 +74,7 @@
                     <span class="icon-bar"></span>
                 </button>
                 <div class="w3layouts-logo">
-                    <h1><a href="{{route('principal.index')}}">eDayGrees</a></h1>
+                    <h1><a href="{{route('main.index')}}">eDayGrees</a></h1>
                 </div>
             </div>
 
@@ -84,17 +82,17 @@
             <div class="collapse navbar-collapse nav-wil" id="bs-example-navbar-collapse-1">
                 <nav>
                     <ul class="nav navbar-nav">
-                        <li class="active"><a href="{{route('principal.index')}}">Inicio</a></li>
-                        <li><a href="{{route('sobre')}}" class="hvr-sweep-to-bottom">Sobre</a></li>
+                        <li class="active"><a href="{{route('main.index')}}">Inicio</a></li>
+                        <li><a href="{{route('about')}}" class="hvr-sweep-to-bottom">Sobre</a></li>
                         @guest
-                            <li><a href="{{route('login')}}" class="hvr-sweep-to-bottom">Entrar</a></li>
-                            @if (Route::has('cadastro'))
-                                <li><a href="{{route('cadastro')}}" class="hvr-sweep-to-bottom">Registre-se</a></li>
+                            <li><a href="{{route('main.login')}}" class="hvr-sweep-to-bottom">Entrar</a></li>
+                            @if (Route::has('main.register'))
+                                <li><a href="{{route('main.register')}}" class="hvr-sweep-to-bottom">Registre-se</a></li>
                             @endif
-                            <li><a href="{{route('contato')}}" class="hvr-sweep-to-bottom">Contato</a></li>
+                            <li><a href="{{route('contact')}}" class="hvr-sweep-to-bottom">Contato</a></li>
                         @else
-                            <li><a href="{{route('relatorio')}}" class="hvr-sweep-to-bottom">Relatório</a></li>
-                            <li><a>Bem vindo, {{ Auth::user()->name }}</a></li>
+                            <li><a href="{{route('main.report')}}" class="hvr-sweep-to-bottom">Relatório</a></li>
+                            <li><a>{{ Auth::user()->name }}</a></li>
                             <li><a href="{{route('logout')}}" class="hvr-sweep-to-bottom">sair</a></li>
                         @endguest
                     </ul>
@@ -103,7 +101,9 @@
         </nav>
     </div>
 </div>
+
 @yield('body')
+
 
 <!-- footer -->
 <div class="footer">
@@ -111,7 +111,7 @@
         <div class="agileinfo_footer_grids">
             <div class="col-md-4 agileinfo_footer_grid">
                 <div class="agile-logo">
-                    <h4><a href="{{route('principal.index')}}">eDayGrees</a></h4>
+                    <h4><a href="{{route('main.index')}}">eDayGrees</a></h4>
                 </div>
                 <p>Unindo tecnologia com campo.</p>
                 <div class="agileinfo-social-grids">
@@ -137,13 +137,13 @@
                 <ul class="agileinfo_footer_grid_nav">
 
                     <li><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span><a
-                            href="{{route('principal.index')}}">Inicio</a>
+                            href="{{route('main.index')}}">Inicio</a>
                     </li>
                     <li><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span><a
-                            href="{{route('sobre')}}">Sobre</a>
+                            href="{{route('about')}}">Sobre</a>
                     </li>
                     <li><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span><a
-                            href="{{route('sobre')}}">Contato</a>
+                            href="{{route('contact')}}">Contato</a>
                     </li>
                 </ul>
             </div>
