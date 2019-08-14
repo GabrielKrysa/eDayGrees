@@ -15,20 +15,20 @@
                     <div class="card-header"></div>
 
                     <div class="card-body">
-                        <form method="POST" action="{{ route('main.register') }}" class="form-horizontal">
+                        <form method="POST" action="{{ route('registerUser') }}" class="form-horizontal">
                             @csrf
                             <div class="form-group">
                                 <label for="name"
                                        class="col-md-4 text-md-right">{{ __('Nome completo') }}</label>
 
                                 <div class="col-md-6">
-                                    <input id="name" type="text"
-                                           class="form-control" name="name"
+                                    <input id="name_lastname" type="text"
+                                           class="form-control" name="name_lastname"
                                            required autofocus>
 
                                     @error('name')
                                     <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
+                                        <strong>{{ $nameError }}</strong>
                                     </span>
                                     @enderror
                                 </div>
@@ -45,7 +45,7 @@
 
                                     @error('email')
                                     <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
+                                        <strong>{{ $emailError }}</strong>
                                     </span>
                                     @enderror
                                 </div>
@@ -57,14 +57,14 @@
 
                                 <div class="col-md-6">
                                     <input id="password" type="password"
-                                           class="form-control @error('password') is-invalid @enderror"
+                                           class="form-control"
                                            name="password" required autocomplete="new-password">
+                                    @if(isset($alert))
+                                        <span class="is-invalid" role="alert">
+                                            <strong>{{ $alert }}</strong>
+                                        </span>
+                                    @endif
 
-                                    @error('password')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                    @enderror
                                 </div>
                             </div>
 
@@ -74,7 +74,7 @@
 
                                 <div class="col-md-6">
                                     <input id="password-confirm" type="password" class="form-control"
-                                           name="password_confirmation"
+                                           name="Auth::attempt("
                                            required autocomplete="new-password">
                                 </div>
                             </div>

@@ -13,20 +13,50 @@
 
 use Illuminate\Support\Facades\Route;
 
-//rotas padrão de usuário
-Route::get('/','IndexController@index')->name('main.index');
-Route::get('/cadastro','RegisterController@index')->name('main.register');
-Route::get('/entrar','Auth\LoginController@index')->name('main.login');
-Route::get('/relatorio','DailyReport@index')->name('main.report')->middleware('auth');;
+//---------------------------------------------------rotas padrão de usuario------------------------------------------------
+Route::get('/', 'IndexController@index')
+    ->name('main.index');
 
-//rotas alternativas de usuario
-Route::get('/sobre','AboutUsController@index')->name('about');
-Route::get('/contato','ContactUsController@index')->name('contact');
-Route::get('/resefinirsenha','ResetPasswordController@index')->name('reset');
+Route::get('/cadastro', 'RegisterController@index')
+    ->name('main.register');
 
-//rotas de ações
-Route::get('/logout','Auth\LoginController@logout')->name('logout');
-Route::post('/logout', 'Auth\LoginController@logout')->name('logout');
-Route::post('/login', 'Auth\LoginController@login')->name('login');
+Route::get('/entrar', 'Auth\LoginController@index')
+    ->name('main.login');
+
+Route::get('/relatorio', 'DailyReport@index')
+    ->name('main.report')
+    ->middleware('auth'); // autenticada
+
+
+
+//---------------------------------------------------rotas alternativas de usuario------------------------------------------
+Route::get('/sobre', 'AboutUsController@index')
+    ->name('about');
+
+Route::get('/contato', 'ContactUsController@index')
+    ->name('contact');
+
+Route::get('/resefinirsenha', 'ResetPasswordController@index')
+    ->name('reset');
+
+Route::get('/cadastropropriedade', 'PropertyRegisterController@index')
+    ->name('propertyregister')
+    ->middleware('auth'); // autenticada
+
+Route::get('/teste', 'GalleryController@index')
+    ->name('teste');
+
+//---------------------------------------------------rotas de ações---------------------------------------------------------
+Route::get('/logout', 'Auth\LoginController@logout')
+    ->name('logout');
+
+Route::post('/logout', 'Auth\LoginController@logout')
+    ->name('logout');
+
+Route::post('/login', 'LoginController@login')
+    ->name('login');
+
+Route::post('/register', 'RegisterController@registerUser')
+    ->name('registerUser');
 
 

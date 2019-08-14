@@ -94,6 +94,7 @@
                             <li><a href="{{route('main.report')}}" class="hvr-sweep-to-bottom">Relatório</a></li>
                             <li><a>{{ Auth::user()->name }}</a></li>
                             <li><a href="{{route('logout')}}" class="hvr-sweep-to-bottom">sair</a></li>
+                            <li><a href="{{route('propertyregister')}}" class="hvr-sweep-to-bottom">cadastrar propriedade</a></li>
                         @endguest
                     </ul>
                 </nav>
