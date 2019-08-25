@@ -26,6 +26,9 @@
     <script src="{{asset('/js/jquery-1.11.1.min.js')}}"></script>
     <script src="{{asset('/js/bootstrap.js')}}"></script>
     <script defer src="{{asset('/js/jquery.flexslider.js')}}"></script>
+    <link rel="stylesheet" href="{{asset('/css/lightbox.css')}}">
+    <script src="{{asset('/js/SmoothScroll.min.js')}}"></script>
+
 
     <script type="text/javascript">
         $(window).load(function () {
@@ -82,7 +85,7 @@
             <div class="collapse navbar-collapse nav-wil" id="bs-example-navbar-collapse-1">
                 <nav>
                     <ul class="nav navbar-nav">
-                        <li class="active"><a href="{{route('main.index')}}">Inicio</a></li>
+                        <li class="hvr-sweep-to-bottom"><a href="{{route('main.index')}}">Inicio</a></li>
                         <li><a href="{{route('about')}}" class="hvr-sweep-to-bottom">Sobre</a></li>
                         @guest
                             <li><a href="{{route('main.login')}}" class="hvr-sweep-to-bottom">Entrar</a></li>
@@ -92,9 +95,32 @@
                             <li><a href="{{route('contact')}}" class="hvr-sweep-to-bottom">Contato</a></li>
                         @else
                             <li><a href="{{route('main.report')}}" class="hvr-sweep-to-bottom">Relatório</a></li>
-                            <li><a>{{ Auth::user()->name }}</a></li>
-                            <li><a href="{{route('logout')}}" class="hvr-sweep-to-bottom">sair</a></li>
-                            <li><a href="{{route('propertyregister')}}" class="hvr-sweep-to-bottom">cadastrar propriedade</a></li>
+                            <li><a href="{{route('contact')}}" class="hvr-sweep-to-bottom">Contato</a></li>
+                            <li>
+                                <a id="navbarDropdown" class="nav-link dropdown-toggle hvr-sweep-to-bottom" href="#"
+                                   role="button"
+                                   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                    {{ Auth::user()->fullname }} <span class="caret"></span>
+                                </a>
+
+                                <div class="dropdown-menu dropdown-menu-right " aria-labelledby="navbarDropdown">
+
+                                    <a href="{{route('propertyregister')}}" class="hvr-sweep-to-bottom">cadastrar
+                                        propriedade</a>
+
+                                    <a class="hvr-sweep-to-bottom" href="{{ route('logout') }}"
+                                       onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                        {{ __('Sair') }}
+                                    </a>
+
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST"
+                                          style="display: none;">
+                                        @csrf
+                                    </form>
+                                </div>
+
+                            </li>
                         @endguest
                     </ul>
                 </nav>

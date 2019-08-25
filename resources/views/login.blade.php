@@ -24,7 +24,7 @@
                 <label class="col-md-4 control-label" for="textinput">Login</label>
                 <div class="form-group row">
                     <div class="col-md-4">
-                        <input id="textinput" name="username" type="text"
+                        <input id="textinput" name="email" type="email"
                                placeholder="Digite o nome do Usuário"
                                class="form-control input-md" required="" style="">
                     </div>

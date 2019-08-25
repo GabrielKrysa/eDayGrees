@@ -23,7 +23,7 @@ Route::get('/cadastro', 'RegisterController@index')
 Route::get('/entrar', 'Auth\LoginController@index')
     ->name('main.login');
 
-Route::get('/relatorio', 'DailyReport@index')
+Route::get('/relatorio', 'DailyReportController@index')
     ->name('main.report')
     ->middleware('auth'); // autenticada
 
@@ -50,7 +50,10 @@ Route::get('/logout', 'Auth\LoginController@logout')
 Route::post('/logout', 'Auth\LoginController@logout')
     ->name('logout');
 
-Route::post('/login', 'LoginController@login')
+Route::get('/login', 'Auth\LoginController@login')
+    ->name('login');
+
+Route::post('/login', 'Auth\LoginController@login')
     ->name('login');
 
 Route::post('/cadastro', 'RegisterController@registerUser')

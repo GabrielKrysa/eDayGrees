@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\User;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
 
 class RegisterController extends Controller
 {
@@ -16,14 +15,14 @@ class RegisterController extends Controller
     public function registerUser(Request $request)
     {
         $user = new User();
-        $users = DB::table('users')->get();
+        $users = User::all();
 
         $erro_two = false;
         $erro_one = false;
+
         $user->fullname = $request->get('name_lastname');
         $user->email = $request->get('email');
         $user->password = bcrypt($request->get('password'));
-        $password_confirm = $request->get('password1');
 
         foreach ($users as $u) {
             $email = $u->email;
