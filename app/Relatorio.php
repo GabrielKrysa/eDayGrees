@@ -32,4 +32,12 @@ class Relatorio extends Model
         $date = date("j/m/Y");
         DB::table('relatorio')->insert($data);
     }
+
+    protected $fillable = [
+      "id",
+      "descricao",
+      "oQueFazer",
+      "propriedade_id",
+      "data"  
+    ];
 }

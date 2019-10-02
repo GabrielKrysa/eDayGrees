@@ -1,9 +1,3 @@
-<?php
-
-include('./php/script.php');
-
-?>
-
 <html>
 
 
@@ -168,7 +162,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         </div>
     </div>
     <!-- //banner -->
-    <!-- contact -->
+    <!-- CADASTRO DE USUARIO -->
+
     <div class="logincadastro">
         <form method="POST" action="{{ route('registro') }}" class="form-horizontal">
             @csrf
@@ -181,47 +176,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             </div>
 
             <fieldset>
-                <!-- Text input-->
-                <label class="col-md-4 control-label" for="textinput">Nome</label>
-                <div class="form-group">
-                    <div class="col-md-5">
-                        <input id="textinput" name="name" type="text" placeholder="Digite nome do usuário " class="form-control input-md w-25" required="">
-                    </div>
-                </div>
-                <!-- Text input-->
-                <label class="col-md-4 control-label" for="textinput">Último nome</label>
-                <div class="form-group">
-                    <div class="col-md-5">
-                        <input id="textinput" name="lastname" type="text" placeholder="Digite sobrenome do usuário" class="form-control input-md" required="">
 
-                    </div>
-                </div>
-                <!-- Text input-->
-                <label class="col-md-4 control-label" for="textinput">CPF</label>
-                <div class="form-group">
-                    <div class="col-md-5">
-                        <input id="textinput" name="cpf" onkeydown="javascript: fMasc( this, mCPF );" type="text" placeholder="Digite o CPF do usuário" class="form-control input-md" required="">
-                        @if(isset($erroCpfexiste))
-                        <p style="font-size:70%; color:#ac2925">{{$erroCpfexiste}}</p>
-                        @endif
-                        @if(isset($erroCpf))
-                        <p style="font-size:70%; color:#ac2925">{{$erroCpf}}</p>
-                        @endif
-                    </div>
-                </div>
 
-                <!-- Text input-->
-                <label class="col-md-4 control-label" for="textinput">Email</label>
-                <div class="form-group">
-                    <div class="col-md-5">
-                        <input id="textinput" name="email" type="text" placeholder="Digite o email do usuário" class="form-control input-md" required="">
-                        @if(isset($erroEmail))
-                        <p style="font-size:70%; color:#ac2925">{{$erroEmail}}</p>
-                        @endif
-                    </div>
-                </div>
-
-                <!-- Text input-->
+                <!-- Nome de login -->
                 <label class="col-md-4 control-label" for="textinput">Login</label>
                 <div class="form-group">
                     <div class="col-md-5">
@@ -232,7 +189,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     </div>
                 </div>
 
-
+                <!-- Senha para login -->
                 <label class="col-md-4 control-label" for="passwordinput">Senha</label>
                 <div class="form-group">
                     <div class="col-md-4">
@@ -246,6 +203,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         @endif
                     </div>
                 </div>
+
+                <!-- Confirmação da senha para login -->
                 <label class="col-md-4 control-label" for="passwordinput">Confirmar senha</label>
                 <div class="form-group">
                     <div class="col-md-4">
@@ -260,107 +219,21 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     </div>
                 </div>
 
-                <label class="col-md-4 control-label" for="selectbasic">Pergunta de segurança</label>
-                <div class="form-group">
-                    <div class="col-md-4">
-                        <select id="selectpergunta" name="selectpergunta" class="form-control">
-
-                            <?php
-
-                            $banco = new selects();
-
-                            $perguntas = $banco->getPerguntas();
-                            for ($i = 0; $i < count($perguntas); $i++) { ?>
-                                <option value="<?php echo $perguntas[$i]->id; ?>"><?php echo $perguntas[$i]->perguntas ?></option>
-                            <?php }
-                        ?>
-                        </select>
-                        @if(isset($erroPergunta))
-                        <p style="font-size:70%; color:#ac2925">{{$erroPergunta}}</p>
-                        @endif
-                    </div>
-                </div>
-
-                <label class="col-md-4 control-label" for="resposta">Resposta</label>
-                <div class="form-group">
-                    <div class="col-md-4">
-                        <input id="respostainput" name="resposta" type="text" placeholder="Digite sua resposta" class="form-control input-md" required="">
-
-                    </div>
-                </div>
-                <br>
-                <br>
-
-                <div class="container">
-                    <b align="center">
-                        <h3>Cadastro de Propriedade</h3>
-                    </b>
-                    </br>
-                    <div class="agileits-line"></div>
-                </div>
-
-
-
-                <label class="col-md-4 control-label" for="textinput">Nome da propriedade</label>
+                <!-- Email para poder entrar em contato -->
+                <label class="col-md-4 control-label" for="textinput">Email</label>
                 <div class="form-group">
                     <div class="col-md-5">
-                        <input id="textinput" name="nomePropriedade" type="text" placeholder="Digite o nome da propriedade " class="form-control input-md w-25" required="">
-                    </div>
-                </div>
-                <!-- Select input-->
-                <label class="col-md-4 control-label" for="selectbasic">Videira</label>
-                <div class="form-group">
-                    <div class="col-md-4">
-                        <select id="selectcultivar" name="tipoCultivar" class="form-control">
-                            <option value="0">Seleciona cultivar</option>
-                            <?php
-
-                            $banco = new selects();
-
-                            $cultivar = $banco->selectVideiras();
-                            for ($i = 0; $i < count($cultivar); $i++) { ?>
-                                <option value="<?php echo $cultivar[$i]->id; ?>"><?php echo $cultivar[$i]->cultivar ?></option>
-                            <?php }
-                        ?>
-                        </select>
-                        @if(isset($erroCultivar))
-                        <p style="font-size:70%; color:#ac2925">{{$erroCultivar}}</p>
+                        <input id="textinput" name="email" type="text" placeholder="Digite o email do usuário" class="form-control input-md" required="">
+                        @if(isset($erroEmail))
+                            <p style="font-size:70%; color:#ac2925">{{$erroEmail}}</p>
                         @endif
                     </div>
                 </div>
-                <label class="col-md-4 control-label" for="selectbasic">Estado</label>
-                <div class="form-group">
-                    <div class="col-md-4">
-                        <select id="selectestado" name="selectestado" class="form-control">
-                            <option value="0">Seleciona Estado</option>
-                            <?php
 
-                            $banco = new selects();
+                <br>
+                <br>
 
-                            $states = $banco->selectState();
-                            for ($i = 0; $i < count($states); $i++) { ?>
-                                <option value="<?php echo $states[$i]->id; ?>"><?php echo $states[$i]->nome ?></option>
-                            <?php }
-                        ?>
-
-                        </select>
-                        @if(isset($erroEstado))
-                        <p style="font-size:70%; color:#ac2925">{{$erroEstado}}</p>
-                        @endif
-                    </div>
-                </div>
-                <!-- Select Basic -->
-                <label class="col-md-4 control-label" for="selectbasic">Cidade</label>
-                <div class="form-group">
-                    <div class="col-md-4">
-                        <select id="selectcidade" name="selectcidade" class="form-control">
-                        </select>
-                        @if(isset($erroCidade))
-                        <p style="font-size:70%; color:#ac2925">{{$erroCidade}}</p>
-                        @endif
-                    </div>
-                </div>
-                <!-- Button -->
+                <!-- Botão para cadastrar -->
                 <div class="form-group">
                     <label class="col-md-4 control-label" for="singlebutton"></label>
                     <div class="col-md-4">

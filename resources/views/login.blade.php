@@ -86,8 +86,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <label class="col-md-4 control-label" for="textinput"></label>
                 <div class="form-group">
                     <div class="col-md-4">
-                        @if(isset($alert))
-                            <p>{{$alert}}</p>
+                        @if(isset($mensagem))
+                            <p>{{$mensagem}}</p>
                         @endif
                     </div>
                 </div>

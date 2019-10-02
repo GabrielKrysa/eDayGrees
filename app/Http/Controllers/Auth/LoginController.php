@@ -39,19 +39,14 @@ class LoginController extends Controller
         $this->middleware('guest')->except('logout');
     }
 
-    protected function sendFailedLoginResponse(Request $request)
-    {
-        return view('login')->with('erro', 'Login e/ou senha incorreto(s)');
-    }
-
     public function showLoginForm()
     {
         return view('login');
     }
 
-    public function username()
-    {
+    public function username(){
         return 'username';
     }
+
 
 }

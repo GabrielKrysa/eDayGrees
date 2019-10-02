@@ -14,17 +14,10 @@ class CreateUsersTable extends Migration
     public function up()
     {
         Schema::create('users', function (Blueprint $table) {
-            $table->bigIncrements('id'); // chave primária 
+            $table->bigIncrements('id'); // chave primária
             $table->string('username')->unique(); // unico dentro do sistema de cada produtor
             $table->string('password');
-            $table->string('nome'); // nome unico dentro do sistema de cada produtor
-            $table->string('sobrenome'); 
             $table->string('email')->unique();
-            $table->string('CPF')->unique(); // devemos deixar cadastrar somente um usuario com o mesmo cpf eu acho, mas depois caso esqueça o login, deverá entrar em contato
-            $table->string('estado');
-            $table->string('cidade');
-            $table->integer('IDPergunta')->references('id')->on('perguntas_de_seguranca');
-            $table->string('respostaPerguntaSeguranca');
             $table->rememberToken();
             $table->timestamps();
         });

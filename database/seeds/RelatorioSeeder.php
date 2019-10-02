@@ -11,7 +11,7 @@ class RelatorioSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('relatorio')->insert([[
+        DB::table('relatorios')->insert([[
         'descricao' => 'Usuário e propriedade cadastrados',
         'oQueFazer' => "nada a ser feito",
         'propriedade_id' => 1,
