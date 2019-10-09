@@ -27,7 +27,13 @@ Route::get('/sobre', function () {
     return view('about');
 })->name('sobre');
 
-Route::get('/relatorio', "RelatorioController@index")->name('relatorio')->middleware('auth');
+Route::get('/relatorio', "RelatorioController@index")
+    ->name('relatorio')
+    ->middleware('auth');
+
+Route::get('/cadastrocultivar', "CultivarController@index")
+    ->name('cadastrocultivar')
+    ->middleware('auth');
 
 Route::get('/contato', function () {
     return view('mail');
