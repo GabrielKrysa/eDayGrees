@@ -2549,7 +2549,7 @@ output {
 .form-control {
   display: block;
   width: 100%;
-  height: 34px;
+  height: 35px;
   padding: 6px 12px;
   font-size: 14px;
   line-height: 1.42857143;
@@ -2564,6 +2564,14 @@ output {
        -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
           transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
 }
+.opcaoSelecionaCadastro{
+
+    min-width: 20px;
+    min-height: 20px;
+    margin-right: 5px;
+
+}
+
 .form-control:focus {
   border-color: #66afe9;
   outline: 0;
@@ -2972,7 +2980,7 @@ select[multiple].form-group-lg .form-control {
 }
 @media (min-width: 768px) {
   .form-horizontal .control-label {
-    padding-top: 7px;
+    padding-top: 1px;
     margin-bottom: 0;
     text-align: right;
   }
@@ -3093,7 +3101,7 @@ fieldset[disabled] .btn-default.active {
   color: #fff;
   background-color: #aebe27;
   border-color: #aebe27;
-  
+
 }
 
 .btn-primary:hover,
