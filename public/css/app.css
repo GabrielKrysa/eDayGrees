@@ -1613,7 +1613,7 @@ pre code {
 }
 
 .table-dark td, .table-dark th, .table-dark thead th {
-    border-color: #32383e
+    border-color: #32383e;
 }
 
 .table-dark.table-bordered {

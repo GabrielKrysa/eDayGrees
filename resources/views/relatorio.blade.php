@@ -4,7 +4,7 @@
     <title>eDayGrees</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="keywords" content="Farming Company Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+    <meta name="keywords" content="Farming Company Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
 Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
     <script type="application/x-javascript">
         addEventListener("load", function() {
@@ -85,7 +85,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <!-- //banner -->
     <!-- contact -->
 
-    <button type="button" class="btn btn-success">Cadastro nova Propriedade</button>
+    <a href="{{route('cadastrocultivar')}}"><font color="white"><button type="button" class="btn btn-success">Cadastro nova Propriedade</button></font></a>
     <select id="selectcultivar" name="tipoCultivar" class="form-control" place-houder>
         <option value="">Seleciona cultivar a visualizar</option>
         <option value="1">pantanera</option>
@@ -110,17 +110,17 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                 <table class="table" id="tabelaRelatorio" border=2>
                                     <tr>
                                         <thead>
-            
+
                                             <td width=500 height=40 align='center'><b>DESCRICAO</b></td>
                                             <td width=200 height=40 align='center'><b> OQUE FAZER</b></td>
                                             <td width=200 height=40 align='center'><b> DATA</b></td>
-                                            
+
                                         </thead>
                                     </tr>
                                     <tbody>
                                         @foreach($data as $d)
                                         <tr>
-    
+
                                             <td font-size=6 align='center'> {{$d->descricao}}</td>
                                             <td font-size=6 align='center'> {{$d->oQueFazer}}</td>
                                             <td font-size=6 align='center'> {{$d->data}}</td>

@@ -201,7 +201,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         <input type="checkbox" name="emp_liq" id="emp_liq" onchange="habilitar()"/>
                         <br>
                         <br>
-                        <a href="@" onmouseover="abrir();">Para saber mais passe o mouse</a>
+                        <a href="@" onmouseover="abrir();">?</a>
                         <br>
                         <a href="@" onmouseover="fechar();">Fechar</a>
                         <input class="form-control" id="motivo" name="motivo" type="text"

@@ -35,6 +35,11 @@ Route::get('/cadastrocultivar', "CultivarController@index")
     ->name('cadastrocultivar')
     ->middleware('auth');
 
+Route::get('/administracao', "AdministracaoController@index")
+    ->name('administracao')
+    ->middleware('auth');
+
+
 Route::get('/contato', function () {
     return view('mail');
 })->name('contato');
