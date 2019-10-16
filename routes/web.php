@@ -55,5 +55,9 @@ Route::post('/registro', 'RegisterController@Register')->name('registro');
 Route::post('/resetPassword', 'ResetPassword@redefinirSenha')->name('resetPassword');
 Route::post('/salvarContato', 'ContatoController@salvarContato')->name('salvarContato');
 
+Route::get('home-cidade', ['as' => 'home' , 'uses' => 'CidadeController@index']);
+Route::get('get-cidades/{idEstado}', 'CidadeController@getCidades');
+
 Auth::routes();
 Route::post('/login', 'Auth\LoginController@login')->name('login');
+

@@ -20,6 +20,7 @@
     </script>
 </head>
 
+
 <body>
 
 <title>eDayGrees</title>
@@ -57,6 +58,17 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     });
 </script>
 <!-- header -->
+
+
+@section('content')
+    {!! Form::label('estado', 'Estados:') !!}
+    {!! Form::select('estado', '$estados') !!}
+
+    {!! Form::label('cidade', 'Cidades:') !!}
+    {!! Form::select('cidade', []) !!}
+
+@endsection
+
 <div class="header">
     <div class="container">
         <nav class="navbar navbar-default">
@@ -131,6 +143,17 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     <label class="col-md-4 control-label" for="selectbasic">Estado</label>
                     <div class="form-group-lg">
                         <div class="col-md-5">
+                            <script type="text/javascript">
+                                $('select[name=estado]').change(function () {
+                                    var idEstado = $(this).val();
+                                    $.get('/get-cidades/' + idEstado, function (cidades) {
+                                        $('select[name=cidade]').empty();
+                                        $.each(cidades, function (key, value) {
+                                            $('select[name=cidade]').append('<option value=' + value.id + '>' + value.cidade + '</option>');
+                                        });
+                                    });
+                                });
+                            </script>
                             <select id="selectestado" name="selectestado" class="form-control">
                                 <option value="0">Seleciona Estado</option>
                             </select>
