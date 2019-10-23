@@ -60,15 +60,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!-- header -->
 
 
-@section('content')
-    {!! Form::label('estado', 'Estados:') !!}
-    {!! Form::select('estado', '$estados') !!}
-
-    {!! Form::label('cidade', 'Cidades:') !!}
-    {!! Form::select('cidade', []) !!}
-
-@endsection
-
 <div class="header">
     <div class="container">
         <nav class="navbar navbar-default">
@@ -90,7 +81,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     <ul class="nav navbar-nav">
                         <li><a href="{{route('principal.index')}}" class="hvr-sweep-to-bottom">Inicio</a></li>
                         <li><a href="{{route('sobre')}}" class="hvr-sweep-to-bottom">Sobre</a></li>
+                        <li><a href="{{route('relatorio')}}" class="hvr-sweep-to-bottom">Relatório</a></li>
+                        <li><a>Bem vindo, <?php echo auth()->user()->username ?></a></li>
                         <li><a href="{{route('contato')}}" class="hvr-sweep-to-bottom">Contato</a></li>
+                        <li><a href="{{route('logout')}}" class="hvr-sweep-to-bottom">sair</a></li>
                     </ul>
                 </nav>
             </div>

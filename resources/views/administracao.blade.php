@@ -88,27 +88,55 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         <!-- TELA COMPLETA DE ADMINISTRACAO -->
         <form method="POST" action="{{ route('administracao') }}" class="form-horizontal">@csrf
 
-            @csrf
-            <!-- Dados de usuarios e propriedades cadastradas -->
-            <div class="totalUsuarios">
-                <table class="tabelaCadastros" width="200px" align="center" border="2">
-                    <thead>
-                    <tr>
-                        <th align="center">Total de usuários cadastrados</th>
-                        <th align="center">Propriedades cadastradas</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <td align="center" >102</td>
-                        <td align="center">403</td>
-                    </tr>
-                    </tbody>
-                </table>
+        @csrf
+        <!-- Dados de usuarios e propriedades cadastradas -->
+            <table class="table" border="2">
+                <thead>
+                <tr>
+
+                    <th scope="col">Número de usuários cadastrados</th>
+                    <th scope="col">Propriedades cadastradas</th>
+
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>{{$data[0]}}</td>
+                    <td>{{$data[1]}}</td>
+                </tr>
+                </tbody>
+            </table>
+
+            <div class="container">
+                <h2>Email´s recebidos</h2>
             </div>
+            <br>
+            <br>
+
+            <table class="table" border="2">
+                <thead>
+                <tr>
+
+                    <th scope="col">Nome proprietário</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Mensagem</th>
+
+                </tr>
+                </thead>
+                <tbody>
 
 
+                @foreach($contatos as $contato)
+                    <tr>
+                        <td>{{$contato->nome}}</td>
+                        <td>{{$contato->email}}</td>
+                        <td>{{$contato->mensagem}}</td>
+                    </tr>
+                @endforeach
 
+
+                </tbody>
+            </table>
 
         </form>
     </div>

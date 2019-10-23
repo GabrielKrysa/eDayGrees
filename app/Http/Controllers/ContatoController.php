@@ -14,20 +14,5 @@ class ContatoController extends Controller
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
 
-    function salvarContato(Request $request)
-    {
-        $dados = array(
-            'nome' => $request->input('nome'),
-            'email' => $request->input('Email'),
-            'mensagem' => $request->input('Mensagem')
-        );
 
-        $salvaContato = new Contato();
-
-        if ($salvaContato->salvaContato($dados)) {
-            return view('mail')->with('message', 'Mensagem enviada com sucesso, lhe responderemos por email em até X dias');
-        } else {
-            return view('mail')->with('message', 'Campo de mensagem não preenchido');
-        }
-    }
 }

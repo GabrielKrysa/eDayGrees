@@ -9,6 +9,17 @@ use Illuminate\Database\Eloquent\Model;
 
 class Propriedade extends Model
 {
+    protected $fillable = [
+        'id',
+        'cidade',
+        'estado',
+        'nome_propriedade',
+        'id_proprietario',
+        'id_cultivar',
+        'status',
+        'Acumulo_graus'
+    ];
+
     function register($array)
     {
         $user = new User();
@@ -51,7 +62,9 @@ class Propriedade extends Model
         $this->mandaGrafico($id, $calculo);
         $this->verificaStatus($id, $calculo); // chamada de funcao para atualizacao dos status caso verdadeiro, fazendo assim não precisamos chamar as duas, somente a de atualizacao
     }
-    function mandaGrafico($id, $calculo){
+
+    function mandaGrafico($id, $calculo)
+    {
         DB::table('grafico')->insert(['idUser' => '$id', 'graus' => '$calculo']);
     }
 

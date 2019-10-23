@@ -8,15 +8,10 @@ use Illuminate\Support\Facades\DB;
 
 class Contato extends Model
 {
-    function salvaContato($dados)
-    {
-
-        try {
-            DB::table('contato')->insert($dados);
-                return true;
-        } catch (QueryException $query) {
-            return false;
-        }
-
-    }
+    protected $fillable = [
+        'id',
+        'nome',
+        'email',
+        'mensagem'
+    ];
 }
