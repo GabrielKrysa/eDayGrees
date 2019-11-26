@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Cultivare;
+use App\Estado;
 use Illuminate\Http\Request;
 
 class CultivarCadastradoController extends Controller
@@ -13,12 +15,12 @@ class CultivarCadastradoController extends Controller
 
     public function index()
     {
-        return view('cultivarsRegister');
+        return view('cultivarsRegister', ["estados" => Estado::all(), "cultivares" => Cultivare::all()]);
     }
 
     public function register(Request $request)
     {
         $data = $request->all();
-
+        dd($data);
     }
 }

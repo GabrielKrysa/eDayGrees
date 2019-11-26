@@ -30,5 +30,6 @@ Route::get('/logout', 'Auth\LoginController@logout')->name('logout');
 
 Route::get('/popular','CidadesSeederController@run');
 
+Route::post('/salvarculivar', 'CultivarCadastradoController@register')->name('cultivar.salvar')->middleware('auth');
 Auth::routes();
 

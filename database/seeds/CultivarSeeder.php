@@ -21,7 +21,6 @@ class CultivarSeeder extends Seeder
             'aparecimentoInflorescencia' => 109.3,
             'inicioMaturacao' => 817.1,
             'colheita' => 1260.8,
-
         ], [
             'cultivar' => 'Isabel/IAC 766',
             'ciclo' => 'medio',

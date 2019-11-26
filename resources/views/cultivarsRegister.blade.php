@@ -96,31 +96,43 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <div class="col-md-4">
         <div class="card">
             <div class="container box">
-                <div class="form-group">
-                    <label for="country"></label><select name="country" id="country"
-                                                         class="form-control input-lg dynamic" data-dependent="state"
-                                                         onchange="dynamic()">
-                        <option value="">Select Country</option>
-                        @foreach($country_list as $country)
-                            <option value="{{ $country->id}}">{{ $country->title }}</option>
-                        @endforeach
-                    </select>
-                </div>
-                <br/>
-                <div class="form-group">
-                    <select name="state" id="state" class="form-control input-lg dynamic" data-dependent="city">
-                        <option value="">Select State</option>
-                    </select>
-                </div>
-                <br/>
-                <div class="form-group">
-                    <select name="city" id="city" class="form-control input-lg">
-                        <option value="">Select City</option>
-                    </select>
-                </div>
-                {{ csrf_field() }}
-                <br/>
-                <br/>
+                <form action="{{route('cultivar.salvar')}}" method="post">
+                    <div class="form-group">
+                        <label>Estados</label>
+                        <select name="state" id="state" class="form-control dynamic">
+                            <option value="">Selecione o estado</option>
+                            @foreach($estados as $estado)
+                                <option value="{{$estado->title}}" id="{{$estado->id}}">{{$estado->title}}</option>
+                            @endforeach
+                        </select>
+                    </div>
+                    <br/>
+                    <label>Cidade</label>
+                    <div class="form-group">
+                        <input type="text" id="cidade" name="cidade" class="form-control dynamic">
+                    </div>
+                    <br>
+                    <label>Nome identificador</label>
+                    <div class="form-group">
+                        <input type="text" id="nome_propriedade" name="nome_propriedade"
+                               class="form-control dynamic">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Cultivar</label>
+                        <select name="cultivar" id="cultivar" class="form-control dynamic">
+                            <option value="">Selecione o estado</option>
+                            @foreach($cultivares as $cultivar)
+                                <option value="{{$cultivar->cultivar}}"
+                                        id="{{$cultivar->id}}">{{$cultivar->cultivar}}</option>
+                            @endforeach
+                        </select>
+                    </div>
+                    {{ csrf_field() }}
+                    <br/>
+                    <br/>
+                    <button type="submit" class="btn btn-primary">salvar</button>
+                </form>
             </div>
 
         </div>
