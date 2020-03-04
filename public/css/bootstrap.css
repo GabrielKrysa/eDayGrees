@@ -1383,7 +1383,7 @@ a.bg-primary:hover {
   background-color: #286090;
 }
 .bg-success {
-  background-color: #dff0d8;
+  background-color: #3c763d;
 }
 a.bg-success:hover {
   background-color: #c1e2b3;
@@ -1401,7 +1401,7 @@ a.bg-warning:hover {
   background-color: #f7ecb5;
 }
 .bg-danger {
-  background-color: #f2dede;
+  background-color: #a94442;
 }
 a.bg-danger:hover {
   background-color: #e4b9b9;
@@ -2366,7 +2366,7 @@ table th[class*="col-"] {
 .table > thead > tr.success > th,
 .table > tbody > tr.success > th,
 .table > tfoot > tr.success > th {
-  background-color: #dff0d8;
+  background-color: #3c763d;
 }
 .table-hover > tbody > tr > td.success:hover,
 .table-hover > tbody > tr > th.success:hover,
@@ -2429,7 +2429,7 @@ table th[class*="col-"] {
 .table > thead > tr.danger > th,
 .table > tbody > tr.danger > th,
 .table > tfoot > tr.danger > th {
-  background-color: #f2dede;
+  background-color: #a94442;
 }
 .table-hover > tbody > tr > td.danger:hover,
 .table-hover > tbody > tr > th.danger:hover,
@@ -2826,7 +2826,7 @@ select[multiple].form-group-lg .form-control {
 }
 .has-success .input-group-addon {
   color: #3c763d;
-  background-color: #dff0d8;
+  background-color: #3c763d;
   border-color: #3c763d;
 }
 .has-success .form-control-feedback {
@@ -2886,7 +2886,7 @@ select[multiple].form-group-lg .form-control {
 }
 .has-error .input-group-addon {
   color: #a94442;
-  background-color: #f2dede;
+  background-color: #a94442;
   border-color: #a94442;
 }
 .has-error .form-control-feedback {
@@ -3093,7 +3093,7 @@ fieldset[disabled] .btn-default.active {
   color: #fff;
   background-color: #aebe27;
   border-color: #aebe27;
-  
+
 }
 
 .btn-primary:hover,
@@ -5016,8 +5016,8 @@ a.thumbnail.active {
 }
 .alert-success {
   color: #3c763d;
-  background-color: #dff0d8;
-  border-color: #d6e9c6;
+  background-color: #3c763d;
+  border-color: #3c763d;
 }
 .alert-success hr {
   border-top-color: #c9e2b3;
@@ -5049,11 +5049,11 @@ a.thumbnail.active {
 }
 .alert-danger {
   color: #a94442;
-  background-color: #f2dede;
-  border-color: #ebccd1;
+  background-color: #a94442;
+  border-color: #a94442;
 }
 .alert-danger hr {
-  border-top-color: #e4b9c0;
+  border-top-color: #a94442;
 }
 .alert-danger .alert-link {
   color: #843534;
@@ -5273,7 +5273,7 @@ a.list-group-item:focus {
 }
 .list-group-item-success {
   color: #3c763d;
-  background-color: #dff0d8;
+  background-color: #3c763d;
 }
 a.list-group-item-success {
   color: #3c763d;
@@ -5339,7 +5339,7 @@ a.list-group-item-warning.active:focus {
 }
 .list-group-item-danger {
   color: #a94442;
-  background-color: #f2dede;
+  background-color: #a94442;
 }
 a.list-group-item-danger {
   color: #a94442;
@@ -5635,22 +5635,22 @@ a.list-group-item-danger.active:focus {
   border-bottom-color: #337ab7;
 }
 .panel-success {
-  border-color: #d6e9c6;
+  border-color: #3c763d;
 }
 .panel-success > .panel-heading {
   color: #3c763d;
-  background-color: #dff0d8;
-  border-color: #d6e9c6;
+  background-color: #3c763d;
+  border-color: #3c763d;
 }
 .panel-success > .panel-heading + .panel-collapse > .panel-body {
-  border-top-color: #d6e9c6;
+  border-top-color: #3c763d;
 }
 .panel-success > .panel-heading .badge {
-  color: #dff0d8;
+  color: #3c763d;
   background-color: #3c763d;
 }
 .panel-success > .panel-footer + .panel-collapse > .panel-body {
-  border-bottom-color: #d6e9c6;
+  border-bottom-color: #3c763d;
 }
 .panel-info {
   border-color: #bce8f1;
@@ -5689,22 +5689,22 @@ a.list-group-item-danger.active:focus {
   border-bottom-color: #faebcc;
 }
 .panel-danger {
-  border-color: #ebccd1;
+  border-color: #a94442;
 }
 .panel-danger > .panel-heading {
   color: #a94442;
-  background-color: #f2dede;
-  border-color: #ebccd1;
+  background-color: #a94442;
+  border-color: #a94442;
 }
 .panel-danger > .panel-heading + .panel-collapse > .panel-body {
-  border-top-color: #ebccd1;
+  border-top-color: #a94442;
 }
 .panel-danger > .panel-heading .badge {
-  color: #f2dede;
+  color: #a94442;
   background-color: #a94442;
 }
 .panel-danger > .panel-footer + .panel-collapse > .panel-body {
-  border-bottom-color: #ebccd1;
+  border-bottom-color: #a94442;
 }
 .embed-responsive {
   position: relative;

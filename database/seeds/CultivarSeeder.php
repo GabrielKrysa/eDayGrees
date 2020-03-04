@@ -11,8 +11,8 @@ class CultivarSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('cultivar')->insert([[
-            'cultivar' => 'Isabel/420 A',
+        DB::table('cultivares')->insert([[
+                'cultivar' => 'Isabel/420 A',
             'ciclo' => 'medio',
             'temperatura_base' => 10,
             'gemaAlgodao' => 72.2,

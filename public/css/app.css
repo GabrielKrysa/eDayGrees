@@ -1568,11 +1568,11 @@ pre code {
 }
 
 .table-danger, .table-danger > td, .table-danger > th {
-    background-color: #f7c6c5
+    background-color: #761b18
 }
 
 .table-hover .table-danger:hover, .table-hover .table-danger:hover > td, .table-hover .table-danger:hover > th {
-    background-color: #f4b0af
+    background-color: #761b18
 }
 
 .table-light, .table-light > td, .table-light > th {
@@ -4586,12 +4586,12 @@ input[type=button].btn-block, input[type=reset].btn-block, input[type=submit].bt
 
 .alert-danger {
     color: #761b18;
-    background-color: #f9d6d5;
-    border-color: #f7c6c5
+    background-color: #761b18;
+    border-color: #761b18
 }
 
 .alert-danger hr {
-    border-top-color: #f4b0af
+    border-top-color: #761b18
 }
 
 .alert-danger .alert-link {
@@ -4846,12 +4846,12 @@ input[type=button].btn-block, input[type=reset].btn-block, input[type=submit].bt
 
 .list-group-item-danger {
     color: #761b18;
-    background-color: #f7c6c5
+    background-color: #761b18
 }
 
 .list-group-item-danger.list-group-item-action:focus, .list-group-item-danger.list-group-item-action:hover {
     color: #761b18;
-    background-color: #f4b0af
+    background-color: #761b18
 }
 
 .list-group-item-danger.list-group-item-action.active {

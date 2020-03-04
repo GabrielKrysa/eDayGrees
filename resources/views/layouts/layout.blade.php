@@ -2,7 +2,6 @@
 
 <head>
     <title>eDayGrees</title>
-    <link rel="shortcut icon" href="{{asset('/images/uvinha.png')}}">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta name="keywords" content="Farming Company Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
@@ -24,6 +23,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <!--// css -->
     <!-- font-awesome icons -->
     <link href="{{asset('/css/font-awesome.css')}}" rel="stylesheet">
+    <!-- font -->
     <script src="{{asset('/js/jquery-1.11.1.min.js')}}"></script>
     <script src="{{asset('/js/bootstrap.js')}}"></script>
     <script src="{{asset('/js/SmoothScroll.min.js')}}"></script>
@@ -44,7 +44,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <div class="header">
     <div class="container">
         <nav class="navbar navbar-default">
-            <!-- Marque e alterne para agrupar para melhor exibição em dispositivos móveis -->
+            <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
                         data-target="#bs-example-navbar-collapse-1">
@@ -58,7 +58,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 </div>
             </div>
 
-            <!-- Centro de navegação top com opções -->
+            <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse nav-wil" id="bs-example-navbar-collapse-1">
                 <nav>
                     <ul class="nav navbar-nav">
@@ -88,137 +88,31 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     </ul>
                 </nav>
             </div>
+            <!-- /.navbar-collapse -->
         </nav>
     </div>
 </div>
-<div class="banner">
+<!-- //header -->
+<!-- banner -->
+<div class="banner about-banner">
     <div class="container">
-        <style>
-            * {
-                padding: 0;
-                margin: 0;
-                font-family: sans-serif;
-            }
-
-            .cont {
-                text-align: center;
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                width: 100%;
-            }
-
-            .cont span {
-                display: block;
-            }
-
-            .text1 {
-                color: white;
-                font-size: 60px;
-                font-weight: 700;
-                letter-spacing: 8px;
-                margin-bottom: 20px;
-                background: black;
-                position: relative;
-                animation: text 3s 1;
-            }
-
-            .text2 {
-                font-size: 30px;
-                color: #fff;
-            }
-
-            @Keyframes text {
-                0% {
-                    color: black;
-                    margin-bottom: -40px;
-                }
-
-                30% {
-                    latter-spacing: 25px;
-                    margin-bottom: -40px;
-                }
-
-                85% {
-                    latter-spacing 8px;
-                    margin-bottom: -40px;
-                }
-            }
-        </style>
-        <div class="cont">
-            <span class="text1" style="font-family: 'roboto', cursive">eDayGrees</span>
-            <span class="text2">Unindo tecnologia com a agricultura</span>
-        </div>
-
-        <link rel="stylesheet" href="{{asset('../../public/css/flexslider.css')}}" type="text/css" media="screen"
-              property=""/>
-        <script defer src="{{asset('/js/jquery.flexslider.js')}}"></script>
-        <script type="text/javascript">
-            $(window).load(function () {
-                $('.flexslider').flexslider({
-                    animation: "slide",
-                    start: function (slider) {
-                        $('body').removeClass('loading');
-                    }
-                });
-            });
-        </script>
-        <!-- //flexSlider -->
+        <main class="py-4">
+            @yield('title')
+        </main>
+        <div class="agileits-line"></div>
     </div>
 </div>
-<div class="blog">
+<!-- //banner -->
+<!-- contact -->
+<div class="contact-top">
     <div class="container">
-        <div class="services-heading">
-            <h3>SERVIÇOS QUE OFERECEMOS EM NOSSO SISTEMA</h3>
-            <div class="agileits-line"></div>
-        </div>
-        <!--imagem e uma descrição-->
-        <div class="agileinfo-blog-grids">
-            <div class="col-md-4 wthree-blog">
-                <div class="w3-agileits-blog">
-                    <div class="w3-agileits-blog-img">
-                        <a><img src="{{asset('/images/controleClima.jpg')}}" alt=""/></a>
-                    </div>
-                    <div align='justify' class="w3-agileits-blog-text">
-                        <a>Analise Climática</a>
-                        <p>Sistema tem incluso um controle de clima, aonde pode buscar por dados
-                            reais da propriedade, fazendo um balanço de humidade e temperatura. Com isso
-                            é realizado diversas análises de acúmulo de graus e possíveis doenças.</p>
-                    </div>
-                </div>
-            </div>
-            <!--imagem e uma descrição-->
-            <div class="col-md-4 wthree-blog">
-                <div class="w3-agileits-blog">
-                    <div class="w3-agileits-blog-img">
-                        <a><img src="{{asset('/images/doencaUva.jpg')}}" alt=""/></a>
-                    </div>
-                    <div align='justify' class="w3-agileits-blog-text">
-                        <a>Avisos e análises de doenças</a>
-                        <p>Através de busca de dados, o sistema pode dar avisos de possíveis
-                            doenças que podem estar presente na cultura.</p>
-                    </div>
-                </div>
-            </div>
-            <!--imagem e uma descrição-->
-            <div class="col-md-4 wthree-blog">
-                <div class="w3-agileits-blog">
-                    <div class="w3-agileits-blog-img">
-                        <a><img src="{{asset('/images/relatorios.jpg')}}" alt=""/></a>
-                    </div>
-                    <div align='justify' class="w3-agileits-blog-text">
-                        <a>Geração de relatórios diários</a>
-                        <p>Geração de relatórios diários para possivel acompanhamento e o andamento da
-                            cultura. Dados como graus acumulados, ciclo e avisos.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="clearfix"></div>
-        </div>
+        <main class="py-4">
+            @yield('content')
+        </main>
     </div>
 </div>
-
+<!-- //contact -->
+<!-- footer -->
 <div class="footer">
     <div class="container">
         <div class="agileinfo_footer_grids">
@@ -226,31 +120,33 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <div class="agile-logo">
                     <h4><a href="{{route('main.index')}}">eDayGrees</a></h4>
                 </div>
-                <p>Unindo tecnologia com campo.</p>
+                <p>Unindo a tecnologia com o campo.</p>
                 <div class="agileinfo-social-grids">
                     <h4 style="color: white"> Mídias Sociais </h4>
                     <ul>
-                        <li><a href="https://www.instagram.com/eday.grees"><i class="fa fa-instagram"></i></a></li>
-                        <li><a href="https://twitter.com/edaygrees"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
                     </ul>
                 </div>
             </div>
             <div class="col-md-4 agileinfo_footer_grid">
                 <h3>Informação de Contato</h3>
                 <ul class="agileinfo_footer_grid_list">
+                    <li><i class="glyphicon glyphicon-map-marker" aria-hidden="true"></i>END CEDETEG,
+                        <span>Guarapuava.</span></li>
                     <li><i class="glyphicon glyphicon-envelope" aria-hidden="true"></i><a
                             href="mailto:edaygrees@gmail.com">edaygrees@gmail.com</a></li>
+                    <li><i class="glyphicon glyphicon-earphone" aria-hidden="true"></i>TELEFONE</li>
                 </ul>
             </div>
             <div class="col-md-4 agileinfo_footer_grid">
                 <h3>Navegação</h3>
                 <ul class="agileinfo_footer_grid_nav">
-
                     <li><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span><a
                             href="{{route('main.index')}}">Inicio</a>
                     </li>
                     <li><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span><a
-                            href="{{route('main.about')}}">Sobre</a>
+                            href="{{route('main.index')}}">Sobre</a>
                     </li>
                     <li><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span><a
                             href="{{route('main.contact')}}">Contato</a>
@@ -261,6 +157,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         </div>
     </div>
 </div>
+<!-- //footer -->
 <script type="text/javascript" src="{{asset('/js/move-top.js')}}"></script>
 <script type="text/javascript" src="{{asset('/js/easing.js')}}"></script>
 <!-- here stars scrolling icon -->
@@ -271,6 +168,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         });
     });
 </script>
+<!-- //here ends scrolling icon -->
 </body>
 
 </html>

@@ -15,16 +15,21 @@ class CreateCadastroCultivaresTable extends Migration
     {
         Schema::create('cadastro_cultivares', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('cidade');
-            $table->string('estado');
+            $table->integer('id_cidade')->unsigned();
+            $table->integer('id_estado')->unsigned();
             $table->string('nome_propriedade');
             $table->unsignedInteger('id_proprietario');
             $table->unsignedInteger('id_cultivar');
             $table->string('status');
+            $table->double('Acumulo_graus');
+
             $table->foreign('id_proprietario')->references('id')->on('users');
             $table->foreign('id_cultivar')->references('id')->on('cultivares');
-            $table->double('Acumulo_graus');
+            $table->foreign('id_cidade')->references('id')->on('cidades');
+            $table->foreign('id_estado')->references('id')->on('estados');
+
             $table->softDeletes();
+            $table->timestamps();
         });
     }
 
