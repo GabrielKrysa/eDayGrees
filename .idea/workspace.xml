@@ -2,44 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="72488586-6d91-4431-ae6a-4f2d77244174" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Cadastro_cultivare.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/eDayGrees.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/eDayGrees.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Cadastro_cultivar.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Cidade.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Cidade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Clima.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Clima.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Contato.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Contato.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Estado.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Estado.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CidadesSeederController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ContactController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ContactController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CultivarCadastradoController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CultivarCadastradoController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/DynamicDependent.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ReportController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ReportController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Relatorio.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Relatorio.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_05_13_045606_create_cadastro_cultivares_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_05_22_045606_create_cadastro_cultivares_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_05_21_140540_create_estados_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_05_21_140540_create_estados_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_05_21_140708_create_cidades_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_05_21_140708_create_cidades_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/CidadeTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/CidadeTableSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/CultivarSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/CultivarSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/EstadoTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/EstadoTableSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/bootstrap.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/bootstrap.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/en/auth.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/auth.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/about.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/about.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/cultivarsRegister.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/cultivarsRegister.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/login.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/mail.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/mail.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/register.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/register.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/report.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/report.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -204,7 +167,8 @@
       <workItem from="1574860642263" duration="3556000" />
       <workItem from="1582151148945" duration="3272000" />
       <workItem from="1582215705258" duration="69000" />
-      <workItem from="1583297195596" duration="8678000" />
+      <workItem from="1583297195596" duration="8985000" />
+      <workItem from="1583309848139" duration="23000" />
     </task>
     <servers />
   </component>
