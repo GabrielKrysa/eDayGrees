@@ -17,8 +17,10 @@ class CreateAuxiliarClimasTable extends Migration
             $table->string('temperatura');
             $table->string('umidade');
             $table->string('condicao');
-            $table->string('cidade');
-            $table->string('estado');
+            $table->integer('estado')->unsigned();
+            $table->integer('cidade')->unsigned();
+            $table->foreign('estado')->references('id')->on('estados');
+            $table->foreign('cidade')->references('id')->on('cidades');
             $table->timestamps();
         });
     }

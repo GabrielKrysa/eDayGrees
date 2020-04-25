@@ -7,6 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 class Cidade extends Model
 {
     protected $fillable = [
-        'id', 'name'
+        'id', 'name', 'state_id'
     ];
 }
