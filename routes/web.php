@@ -28,9 +28,10 @@ Route::get('/logout', 'Auth\LoginController@logout')->name('logout');
 
 Route::get('/cultivar/cadastro', 'CultivarCadastradoController@index')->name('guest.registerCultivar')->middleware('auth')->middleware('cultivar.limit');
 Route::post('/cultivar/salvar', 'CultivarCadastradoController@register')->name('cultivar.salvar')->middleware('auth');
+
 Route::group(['middleware' => 'auth'], function () {
     Route::get('/{state}/cities','CitiesController@getCitiesFromState')->name('cities.search');
-    Route::get('/teste','ClimaController@saveDayWeater');
+    Route::get('/get-weater','ClimaController@saveDayWeater');
 });
 
 Auth::routes();
